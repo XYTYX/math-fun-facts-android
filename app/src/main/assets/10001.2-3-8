@@ -1,0 +1,42 @@
+Title: Bike with Square Wheels
+Keywords: bicycle
+Subject: 2, 3, 8
+Level: 1
+FF Description: Ride a bike with round wheels and it rolls smoothly on
+a flat road (i.e., the axle remains level).
+Can you get a bike with square wheels to
+roll smoothly on a road of some other shape?
+
+<P>Surprisingly, yes.  A road made up of
+inverted catenaries will do the trick!
+A <i>catenary</i> is a portion of a FFact(cosh+curve).
+FFig(1) shows how such a bike would roll
+(thanks to Stan Wagon for providing this photo of
+Wayne Roberts on one at Macalester College).
+
+
+
+Presentation suggestions: You can demonstrate this to your class using
+<i>Mathematica</i> code available in the reference.
+
+
+
+Behind the fact: You may wonder:
+what about bikes with other shapes for wheels?
+What road shape would allow the bike to roll smoothly?
+The reference by Wagon and Hall discusses the
+fundamental FFact(differential equation) that solves this problem.
+
+
+Submitted by: 
+Date submitted: 
+name: Stan Wagon
+email: 
+phone: 
+Commenters: 
+Reference: L. Hall and S. Wagon, "Roads and Wheels",
+<i>Math. Magazine</i> 65(1992), 283-301.
+<BR>
+S. Wagon, ISBN(071672202X,Mathematica in Action).
+
+

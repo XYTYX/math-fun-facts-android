@@ -1,0 +1,89 @@
+Title: Leapfrog Addition
+Keywords: golden mean, Fibonacci sequence
+Subject: 1, 4
+Level: 1
+FF Description: Here's a nice FFact(mathematical magic) trick
+based on properties of the FFact(Fibonacci) sequence.
+<P>
+Give your friend a card with ten blank lines,
+numbered 1 through 10.  Have your friend
+think of two numbers between 1 and 20
+and write them down on the first 2 lines of the card.
+Now in each of the successive lines, have your friend write the sum of the previous two lines.
+For instance, in line 3, write the sum of lines 1 and 2.
+In line 4, write the sum of lines 2 and 3, etc. until
+finally in line 10, your friend has written the sum of lines 8 and 9.
+<P>
+Ask your friend to total the numbers.  If you've practiced the FFact(Multiplication+by+11) Fun Fact, you'll be able to tell your friend the total faster than she can add the numbers (because the total will be just
+11 times the number in line 7).  Also, you can announce the quotient of line 10 divided by line 9... to 2 decimal places, it will be 1.61!
+<P>
+Let's do an example.  Suppose your friend tells gives you the numbers 3 and 7.  Her card will then have these numbers:
+<OL>
+<LI>7
+<LI>3
+<LI>10
+<LI>13
+<LI>23
+<LI>36
+<LI>59
+<LI>95
+<LI>154
+<LI>249
+</OL>
+The total is 649 (which is just 11 times 59, do this in your head with the FFact(Multiplication+by+11) Fun Fact.
+<BR>
+The quotient 249/154 is 1.61 (to 2 decimal places).
+
+
+
+Presentation suggestions: Write down the quotient 1.61 on another card, and place it in an envelope before the start of your magic trick.  Then you can have your friend open that envelope after she has computed the quotient.
+
+
+
+
+
+
+Behind the fact: The trick works for the following reason.
+If the number X is in line 1, and the number Y is in line 2,
+then the number X+Y will be in line 3,
+the number (X+Y)+Y=(X+2Y) will be in line 4, and so on.
+Continuing, you will find that line 7 contains (5X+8Y),
+line 9 contains (21X+34Y), and
+line 10 contains (55X+88Y),
+which is indeed just 11 times line 7.
+<P>
+For the ratio of line 10 divided by line 9, we appeal
+to a property of "adding fractions badly":
+for positive numbers A, B, C, D where (A/B) < (C/D),
+it is a neat fact that the fraction you get by "adding badly": (A+C)/(B+D), must lie <i>in between</i> the values (A/B) and (C/D).
+So the ratio (55X+88Y)/(21X+34Y) must lie in between
+(55X/21X)=1.615... and (88Y/34Y)=1.619...
+<P>
+An even more stunning fact is that if you continue
+this leapfrog procedure with many more lines, then the
+ratio of successive lines
+will approach the <i>golden ratio</i>:  1.6180339...
+(If you know some linear algebra, this follows because the leapfrog procedure can be written as a 2-dimensional linear system of equations, and the largest eigenvalue of this system happens to be the golden ratio.)
+
+<P>This magic trick may be found in the delightful book in the reference.
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: A. Benjamin and M. Shermer,
+ISBN(0307338401,Secrets of Mental Math),
+Three Rivers Press, 2006.
+
+
+
+
+
+

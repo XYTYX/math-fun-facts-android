@@ -1,0 +1,65 @@
+Title: Dinner Party Problem
+Keywords: graph theory, Ramsey theory
+Subject: 4
+Level: 3
+FF Description: How many people must you have at dinner to ensure that
+there are a subset of 3 people who all either
+mutual acquaintances, or mutual strangers?
+
+<P>
+We can model this using <i>FFact(graph theory)</i>;
+for background see the Fun Fact FFact(Six+Degrees+of+Separation).
+Let people be vertices, and draw a red edge between two
+people if they know each other, and a blue edge if they
+do not.  So every pair of people are connected by either
+a red or blue edge.
+
+<P>
+The question then becomes, what is the least number of
+vertices for which every complete red-blue graph
+on those vertices has
+either a red or blue triangle?
+
+<P>
+Answer: 6 people!  First we show that 6 people are enough:
+take any vertex, Fred.  Fred has 5 edges emanating from
+him; at least 3 are the same color.
+Suppose without loss of generality it is red.  If any of
+those 3 people that Fred knows know each other, then
+we have a red triangle!  If none of
+those 3 know each other, we have a blue triangle!
+
+<P>
+Now, using red-blue graphs, can you draw a red-blue
+complete graph on 5 vertices with no blue nor red triangle?
+(This shows that 5 people are not enough.)
+See the Figure for a solution (it appears after several
+seconds).
+
+
+
+
+Presentation suggestions: Bring colored chalk into the class;
+draw pictures as you are giving the proof.
+It doesn't matter if students don't follow the
+exact argument in class--- they will probably go home
+and want to think about it anyways--- but they will
+draw the pictures you draw and it will help them
+construct the argument later.
+
+
+
+
+Behind the fact: Generalizations of this problem, involving the
+least number of people you have to invite to ensure
+subgraphs of other types, fall under the category of
+something called FFact(Ramsey Theory).
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

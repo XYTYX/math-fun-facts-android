@@ -1,0 +1,102 @@
+Title: Why an International Date Line?
+Keywords: calculus, analysis, topology
+Subject: 3, 7
+Level: 1
+FF Description: Can you find a FFact(continuous) one-to-one function from the
+circle to the real line?
+
+<P>Put it another way: is it possible, for every
+longitude on the earth, to assign a time so that each
+longitude has a <i>different</i> time, but the times at
+nearby longitudes are close?
+
+<P>In fact, no.  Any attempt to construct such a function
+will inevitably fail.  This explains why the world has an
+"international date line":
+assigning time to geographical location is a function from
+a circle (longitude) to an interval (time).
+
+<P>
+By convention, we normally assign times in discrete
+chunks (time zones), but the idea is the same.  Our current
+method says that if it is 10 AM on Wednesday in Claremont,
+then it is 11 AM in Denver,
+and 12 noon in Minneapolis.
+Continuing around the globe in this manner,
+one finds that to keep nearby points having nearby times,
+one would have to assign Claremont a different time
+as well--- 10AM on THURSDAY!  The only other alternative
+is to give up the continuity in favor of one-to-oneness,
+and put the discontinuity along a longitude of the earth
+that would affect the fewest people,
+i.e., somewhere in the Pacific,
+and call the discontinuity a "date line".
+
+
+
+
+
+
+
+Presentation suggestions: Do the presentation above (adjusted to your locale).  Then
+read from the diary of Magellan's circumnavigation of the
+globe about returning to Europe (See Winfree, p.11):
+
+<UL>
+<LI>
+The 18 survivors of Magellan's expedition around the world were the first to
+present this dilemma for the bewilderment of all Europe.  After three years
+westward sailing, they first made contact with European civilization again on
+Wednesday 9 July, 1522 by ship's log.  But in Europe it was already Thursday!
+Pigafetta writes (translated in The First Voyage Around the World, Hakluyt
+Society, vol. 52, 1874, p. 161):
+
+<P>"In order to see whether we had kept an exact account of the days, we charged
+those who went ashore to ask what day of the week it was, and they were told by
+the Portuguese inhabitants of the island that it was Thursday, which was a
+great cause of wondering to us, since with us it was only Wednesday.  We could
+not persuade ourselves that we were mistaken; and I was more surprised than the
+others, since having always been in good health, I had every day, without
+intermission, written down the day that was current."
+</UL>
+
+
+
+
+
+
+Behind the fact: The fact that there does not exist any continuous
+one-to-one function from the circle onto the interval
+follows from the FFact(Borsuk-Ulam+Theorem) in dimension 1.
+Topologists often study 1-1 and onto functions which are
+continuous in both directions; such functions are called
+homeomorphisms and yield an equivalence relation for
+objects in FFact(topology).
+
+
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Thomas LoFaro
+email: tlofaro@gustavus.edu
+phone: 507-931-7361
+Commenters: 
+Reference: A.T. Winfree, <i>The Geometry of Biological Time</i>,
+Springer-Verlag, NY, 1990.
+
+
+
+
+
+
+
+
+
+

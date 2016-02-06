@@ -1,0 +1,106 @@
+Title: Birthday Problem
+Keywords: demonstration
+Subject: 6
+Level: 1
+FF Description: <P>
+How many people do you need in a group to ensure at least a
+50 percent probability that 2 people in the group
+share a birthday?
+
+<P>Let's take a show of hands. How many people think
+30 people is enough? 60? 90? 180? 360?
+
+<P>Surprisingly, the answer is only 23 people to have
+at least a 50 percent chance of a match.
+This goes up to 70 percent for 30 people, 90 percent for
+41 people, 95 percent for 47 people. With 57 people
+there is better than a 99 percent chance of a birthday
+match!
+
+
+
+
+
+
+
+
+
+
+
+
+
+Presentation suggestions: If you have a large class, it is fun to try to take a poll
+of birthdays: have people call out their birthdays.
+But of course, whether or not you have a
+match proves nothing...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Behind the fact: Most people find this result surprising because they
+are tempted to calculate the FFact(probability) of a birthday
+match with one particular person.
+But the calculation should be done over all pairs of people. Here is a trick
+that makes the calculation easier.
+
+<P>To calculate the probability of a match, calculate
+the probability of no match and subtract from 1. But the
+probability of no match among n people is just
+<CENTER>
+(365/365)(364/365)(363/365)(362/365)...((366-n)/365),
+</CENTER>
+where the k-th term in the product arises from considering
+the probability that the k-th person in the group doesn't
+have a birthday match with the (k-1) people before her.
+
+<P>If you want to do this calculation quickly, you can
+use an approximation:
+note that for <i>i</i> much smaller than <i>365</i>,
+the term (1-i/365) can be approximated by EXP(-i/365).
+Hence, for n much smaller than 365,
+the probability of no match is close to
+<center>
+<br>
+EXP( - SUM<sub>i=1 to (n-1)</sub> i/365) = EXP( - n(n-1)/(2*365)).
+</center>
+<br>
+When n=23, this evaluates to 0.499998 for the probability of no match.  The probability of at least one match is thus 1 minus this quantity.
+
+<P>For still more fun, if you know some probability: to find the probability that in a given set of n people there are exactly M matches, you can use a Poisson approximation.
+The Poisson distribution is usually used to model a random variable
+that counts a number of "rare events", each independent and identically distributed and with average frequency lambda.
+
+<P>
+
+Here, the probability of a match in a given pair is 1/365.  The matches can be considered to be approximately independent.  The frequency lambda is the product of the number of pairs times the probability of a match in a pair:
+(n choose 2)/365.  Then the approximate probability that there are exactly M matches is:
+<center>
+(lambda)<sup>M</sup> * EXP(-lambda) / M!
+</center>
+which gives the same formula as above when M=0 and n=-365.
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: Paul Young, Aaron Archer / aarcher@orie.cornell.edu
+Reference: 

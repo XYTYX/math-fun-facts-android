@@ -1,0 +1,92 @@
+Title: Medical Tests and Bayes' Theorem
+Keywords: probability
+Subject: 6
+Level: 3
+FF Description: Suppose that you are worried that you might have a
+rare disease. You decide to get tested, and
+suppose that the testing methods for this disease
+are accurate 99 percent of the time
+(regardless of whether the results come back positive
+or negative).  Suppose this disease is actually quite
+rare, occurring randomly in the general population
+in only one of every 10,000 people.
+
+<P>
+If your test results come back positive,
+what are your chances
+that you actually have the disease?
+
+<P>
+Do you think it is approximately: (a) .99, (b) .90,
+(c) .10, or (d) .01?
+<P>
+Surprisingly, the answer is (d), less than 1 percent
+chance that you have the disease!
+
+
+
+
+Presentation suggestions: After discussing the reasons why the test results are
+not so reliable (below), see how changing the parameters
+affects the outcome.  Would the result be so surprising
+if the disease were more common?  How would things change
+if you allow the percentage of false positives and
+false negatives to be different?
+
+
+
+Behind the fact: This fact may be deduced using something called
+Bayes' theorem, which helps us find
+the FFact(probability) of event A given event B,
+written P(A|B),
+in terms of the probability of B given A, written P(B|A),
+and the probabilities of A and B:
+<br>
+<center>
+P(A|B)=P(A)P(B|A) / P(B)
+</center>
+<br>
+In this case, event A is the event you have this disease,
+and event B is the event that you test positive.  Here,
+P(B|A)=.99, P(A)=.0001, and P(B) may be derived by
+conditioning on whether event A does or does not occur:
+<center>
+P(B)=P(B|A)P(A)+P(B|not A)P(not A)
+</center>
+or .99*.0001+.01*.9999, which is less than 1 percent.
+
+<P>The basic reason we get such a surprising result is because
+the disease is so rare that the number of false positives greatly
+outnumbers the people who truly have the disease.  This can
+be seen by thinking about
+what we can expect in 1 million cases.
+In those million, about 100 will have the disease,
+and about 99 of those cases will be correctly
+diagnosed as having it.  Otherwise about 999,900 of the
+million will not have the disease, but of those cases
+about 9999 of those will be false positives
+(test results that are positive because of errors).
+So, if you test positive, then the likelihood that
+you actually have the disease is about 99/(99+9999), which
+gives the same fraction as above, approximately .0098
+or less than 1 percent!
+
+<P>
+Note that these calculations wouldn't hold if the disease were not
+independently and FFact(identically distributed)
+throughout the population (e.g., in the case of cancer due to
+familial tendency, environmental factor, asbestos exposure, etc.).
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

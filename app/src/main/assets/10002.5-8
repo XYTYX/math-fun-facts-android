@@ -1,0 +1,64 @@
+Title: Kaprekar's Constant
+Keywords: iteration, functions, dynamical systems
+Subject: 5, 8
+Level: 1
+FF Description: Take any four digit number
+(whose digits are not all identical), and do the following:
+<OL>
+<LI>Rearrange the string of digits to form the
+largest and smallest 4-digit numbers possible.
+<LI>Take these two numbers and subtract
+the smaller number from the larger.
+<LI>Use the number you obtain and repeat the above
+process.
+</OL>
+What happens if you repeat the above process over and over?
+Let's see...
+
+<P>Suppose we choose the number 3141.
+<BR>4311-1134=3177.
+<BR>7731-1377=6354.
+<BR>6543-3456=3087.
+<BR>8730-0378=8352.
+<BR>8532-2358=6174.
+<BR>7641-1467=6174...
+<BR>
+The process eventually hits 6174 and then stays there!
+<P>But the more amazing thing is this: <i>every</i>
+four digit number whose digits are not all the same
+will eventually hit 6174, in at most 7 steps, and
+then stay there!
+
+
+
+
+Presentation suggestions: Remember that if you encounter any numbers with fewer than has fewer 4 digits, it must be treated as though it had 4 digits, using leading zeroes.  Example: if you start with
+3222 and subtract 2333, then the difference is 0999.  The next step would then consider the difference 9990-0999=8991, and so on.
+
+You might ask students to investigate what happens for
+strings of other lengths or in other bases.
+
+
+
+
+
+
+Behind the fact: Each number in the sequence uniquely determines the
+next number in the sequence.  Since there are only
+finitely many possibilities, eventually the sequence
+must return to a number it hit before, leading to a
+cycle.  So any starting number will give a FFact(sequence)
+that eventually cycles.  There can be many cycles; however,
+for length 4 strings in base 10, there
+happens to be 1 non-trivial cycle, and it has length 1
+(involving the number 6174).
+
+
+
+Submitted by: 
+Date submitted: 
+name: Byron Walden
+email: 
+phone: 
+Commenters: Sammy Black / sblack@pitzer.edu
+Reference: 

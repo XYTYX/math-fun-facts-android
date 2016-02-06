@@ -1,0 +1,66 @@
+Title: Pythagorean Triples
+Keywords: Pythagoras
+Subject: 5
+Level: 2
+FF Description: Which triples of whole numbers {a, b, c} satisfy
+<CENTER>
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> ?
+</CENTER>
+<P>
+Such triples are called <I>Pythagorean triples</I>
+because they are integer solutions to the FFact(Pythagorean theorem).
+You probably know {3, 4, 5} and {5, 12, 13}.  But can
+you classify all possible Pythagorean triples?
+
+<P>Answer: it is possible to prove that <I>all</I>
+Pythagorean triples are of the form
+<CENTER>
+{ M<sup>2</sup>-N<sup>2</sup>, 2MN, M<sup>2</sup>+N<sup>2</sup> }
+</CENTER>
+for some integers M and N, or they are
+multiples of this form.
+
+<P>Thus setting M=2,N=1 gives {3,4,5} and M=3,N=2
+gives {5,12,13}.
+
+
+Presentation suggestions: If you are really motivated and have time to practice this,
+you can try to following.
+Before telling students the rule for construction,
+tell them to give you
+any number and that in your head
+you will construct a Pythagorean triple using
+that number.  If they give you an even number K=2M,
+let N=1; if they give you an
+odd number K=2N+1, let M=N+1.  If you can do this quickly
+for several examples, you can say "Well, since I'm
+not that good with mental calculations, there's obviously
+a trick.  It turns out that all Pythagorean triples are
+of this form..."
+
+
+Behind the fact: Simple number theory arguments using FFact(parity) will give
+this conclusion.  Assume
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+for an integer triple (a, b, c).  By removing any common factors, if needed,
+we may assume a, b, and c have no common factor.
+
+<P>
+Since odd perfect squares must be congruent to 1 mod 4, and even squares are congruent to 0 mod 4, we can conclude that c must be odd, and at exactly one of a or b must be even.  Suppose b is even.  Then b=2k for some integer k, hence
+<CENTER>
+4k<sup>2</sup> = b<sup>2</sup> = c<sup>2</sup> - a<sup>2</sup> = (c+a)(c-a).
+</CENTER>
+
+Since (c+a) and (c-a) must have the same parity (evenness or oddness), they must both be even.
+Then c+a=2r, c-a=2s and rs=k<sup>2</sup>.  It is easy to check that c=r+s, and a=r-s.  But r and s can have FFact(no common factors) because otherwise c and a would both share that common factor as well.  So they must both be perfect squares, say a=M<sup>2</sup> and b=N<sup>2</sup>.  This gives the desired result.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: Bill Jones / b92057@ yahoo.com
+Reference: 

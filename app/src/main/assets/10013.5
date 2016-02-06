@@ -1,0 +1,54 @@
+Title: Divisibility by Eleven
+Keywords: 
+Subject: 5
+Level: 1
+FF Description: It is easy to tell that the following are multiples of 11: 22, 33, 44, 55, etc.  But how about: 2728, or 31415?  Are they divisible by 11?
+
+<p>
+Here an easy way to test for divisibility by 11.
+Take the alternating sum of the digits in the number, read from left to right.
+If that is divisible by 11, so is the original number.
+
+<p>
+So, for instance, 2728 has alternating sum of digits 2-7+2-8 = -11.
+Since -11 is divisible by 11, so is 2728.
+
+<p>
+Similarly, for 31415, the alternating sum of digits is 3-1+4-1+5 = 10.
+This is not divisible by 11, so neither is 31415.
+
+
+
+
+Presentation suggestions: Students may enjoy thinking about how this divisibility test is
+related to the Fun Fact FFact(Divisibility+by+Seven).
+
+Behind the fact: This curious fact can be easily shown using modular arithmetic.
+Since 10<sup>n</sup> is congruent to (-1)<sup>n</sup> mod 11,
+we see that 1, 100, 10000, 1000000, etc. have remainders 1 when divided by 11,
+and 10, 1000, 10000, etc. have remainders (-1) when divided by 11.
+Thus
+<center>
+2728= 2*1000+7*100+2*10+8,
+</center>
+<br>
+so its remainder when divided by 11 is just 2(-1)+7(1)+2(-1)+8(1),
+the alternating sum of the digits.  (It's sum is the negative of what we
+found above because the alternation here begins with a -1.)
+But either way, if this alternating sum is divisible by 11,
+then so is the original number.
+
+<p>
+In fact, our observation shows more: that in fact when we
+take the FFact(alternating sum) of the digits read from <i>right to left</i>
+(so that the sign of the units digit is always positive), then we obtain N mod 11.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

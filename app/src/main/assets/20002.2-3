@@ -1,0 +1,58 @@
+Title: Arclength Surprise
+Keywords: 
+Subject: 2, 3
+Level: 2
+FF Description: Consider a FFact(unit circle), and any arc S
+on the unit circle in the first quadrant.
+No matter where S is placed, the area between S and
+the x-axis plus the area between S and y-axis is constant!
+Moreover, that constant is equal to the length of S:
+<CENTER>
+<BR>
+A + B = s<sub>2</sub> - s<sub>1</sub>.
+</CENTER>
+<BR>
+In FFig(1), note that regions A and B overlap; in that
+portion the area is counted twice.  The quantity
+(s<sub>2</sub> - s<sub>1</sub>)
+represents the length of S along the arc from
+s<sub>2</sub> to s<sub>1</sub>.
+
+
+
+
+
+Presentation suggestions: Draw a couple of pictures with arcs of the same
+length in different positions.  Perhaps assign the
+computation of the areas as a fun homework exercise.
+
+
+
+
+
+
+
+Behind the fact: Use FFact(calculus), or sector-triangle formulas from
+FFact(geometry), to compute the corresponding areas.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Putnam examination, 1998, in ISBN(088385807X,The William Lowell Putnam Mathematical Competition 1985-2000).
+
+
+
+
+
+
+
+
+
+
+

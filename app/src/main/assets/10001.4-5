@@ -1,0 +1,44 @@
+Title: Toggling Light Switches
+Keywords: number theory, combinatorics
+Subject: 4, 5
+Level: 1
+FF Description: Imagine 100 light bulbs with light switches numbered
+1 through 100, all in a row, all off.
+Suppose you do the following:
+toggle all switches that are multiples of 1, then
+toggle all switches that are multiples of 2, then
+toggle all switches that are multiples of 3, etc.
+
+<P>By the time you are finished (and have toggled multiples
+of 100, which is just the last switch), which light bulbs
+are on and which are off?
+
+<P>Fun fact:  The light bulbs which are on are the ones
+numbered 1, 4, 9, 16, ... all the squares!
+
+
+Presentation suggestions: Draw a suggestive picture and work out whether the first
+few light bulbs are on or off.  Let them see or conjecture
+a FFact(pattern),
+then have them (as a fun homework) see and
+figure out why it is true!  Maybe a light bulb will go on
+when they do this!
+
+
+Behind the fact: The <I>n</I>-th light bulb is toggled once for every
+factor of <I>n</I>.  Squares are the only numbers with an
+odd number of FFact(factors),
+which can be seen because every factor J of a number,
+has a co-factor K for which JK=n.
+This pairs up all the factors of n, unless J=K, which only
+occurs when n is a square.
+
+
+
+Submitted by: 
+Date submitted: 
+name: 
+email: 
+phone: 
+Commenters: 
+Reference: 

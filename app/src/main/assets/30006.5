@@ -1,0 +1,67 @@
+Title: Liouville Numbers
+Keywords: number theory
+Subject: 5
+Level: 3
+FF Description: Are there any real numbers that are NOT <i>algebraic</i>, i.e., expressible as the root of a non-zero FFact(polynomial) with integer coefficients?
+
+<p>
+In fact, not only are there infinitely many, there uncountably many
+<i>FFact(transcendental)</i> numbers, as they are called.
+This may be seen by noting there are only FFact(countably) many polynomials
+with integer coefficients (each having finitely many roots),
+but there are uncountably many real numbers.
+But finding an explicit example of such a number is not easy!
+
+<p>
+Here is one such number, called a <i>Liouville number</i>---it has a decimal expansion with a 1 in every factorial-numbered position, and 0 in every other position:
+<center>
+L = 0.110001000000000000000001000000...
+</center>
+<br>
+So it is the FFact(infinite sum)
+of 10<sup>-n!</sup> for positive whole numbers n.
+
+<p>
+What a crazy number!
+
+Presentation suggestions: 
+Behind the fact: We can sketch why this Liouville number L can't be the root of a polynomial p(x) with integer coefficients.  For the sake of an example, suppose
+p(x) is a cubic polynomial.
+
+<p>
+In the infinite sum expression for L,
+let L<sub>n</sub> be the n-th partial sum,
+e.g., L<sub>n</sub> truncates L at the n!-th decimal place.
+
+<p>
+Now write p(x)=f(x)-g(x) where f and g have only non-negative coefficients.
+As f(x) is at most a cubic, write L=L<sub>n</sub>+E.  Note that L<sub>n</sub> terminates after the n!-th decimal place, but E is approximately 10<sup>-(n+1)!</sup>.  So the cube of L<sub>3</sub>,
+which terminates after (3n!) places, will not interact with E in its decimal expansion.  So choose n large enough (bigger than N, say) so that the coefficients of f(x) will not cause L<sub>n</sub> and E to interact.
+
+<p>
+Thus f(L) will agree with f(L<sub>n</sub>) on its first 3n! digits.
+And a similar situation holds for g(L) and g(L<sub>n</sub>).
+Thus if p(L) were 0, then f(L)=g(L), and since they agree on their first 3n! digits, we'd see f(L<sub>n</sub>)=g(L<sub>n</sub>)
+for <i>every</i> n > N.
+
+<p>
+But that would imply that p(x)=f(x)-g(x) has infinitely many roots, a FFact(contradiction), as it is was a non-zero polynomial!
+
+<p>
+Liouville found the first transcendental number in 1844.
+The first non-contrived demonstration of a transcendental number was Lindemann's 1882 proof that Pi is transcendental.
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Conway and Guy, ISBN(038797993X, The Book of Numbers), p.240.
+
+
+
+
+
+
+

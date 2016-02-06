@@ -1,0 +1,81 @@
+Title: Thinned-Out Harmonic Series
+Keywords: infinite series, calculus
+Subject: 3
+Level: 2
+FF Description: You're probably already aware that the FFact(harmonic+series),
+which is the sum of
+the reciprocals of all natural numbers, diverges.
+In fact, it diverges if you take away every other term.
+It even diverges if you take away nine out of every
+ten terms.
+
+<p>
+So, what do you think would happen if we tried to take
+the sum of reciprocals of all natural numbers
+that do not contain the number nine
+(when written in decimal expansion)?
+
+<P>
+Amazingly, this series converges!
+
+
+
+
+
+
+
+Presentation suggestions: Write out the first several terms.
+Allow students to guess whether or not this converges.
+For instance, it may appear that this series is divergent,
+especially when contrasting it with sums of reciprocals of
+numbers with one or more 9's.
+That series diverges (easy to show), and this series seems
+to have "more" terms in it...
+
+
+
+Behind the fact: Group the terms based on the number of digits
+in their denominator.
+There are 8 terms in (1/1+...+ 1/8) each of which
+is no larger than 1.
+Consider the next group (1/10+...+1/88).  The number of
+terms is <i>at most</i> the number of ways to choose
+two ordered digits out of the digits 0..8, and each such
+term is clearly no larger than 1/10.
+So this group's sum is no larger than 9<sup>2</sup>/10.
+Similarly, the sum of the terms in
+(1/100+...+1/999) is at most
+9<sup>3</sup>/10<sup>2</sup>, etc.
+
+<P>
+So the entire sum is no larger than
+<CENTER>
+9*1 + 9*(9/10) + 9*(9<sup>2</sup>/10<sup>2</sup>) +
+... + 9*(9<sup>n</sup>/10<sup>n</sup>) + ...
+</CENTER>
+<BR>
+This a FFact(geometric series) that converges.  Thus by
+the comparison test, the original sum (which is
+smaller term-by-term) must converge!
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Dominic Mazzoni
+email: dmazzoni@cs.cmu.edu
+phone: 412-683-5136
+Commenters: 
+Reference: G.H. Behforooz, "Thinning out the Harmonic Series",
+<BR><i>Math. Mag.</i>, vol. 68, number 4, October 1995.
+
+
+
+
+
+
+

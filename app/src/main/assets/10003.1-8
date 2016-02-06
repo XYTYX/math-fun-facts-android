@@ -1,0 +1,37 @@
+Title: Red-Black Card Trick
+Keywords: magic trick
+Subject: 1, 8
+Level: 1
+FF Description: Here's a pretty easy card trick that you can do that can also be pretty surprising.  Here's how the trick you do will appear to others:
+<P>
+Take a deck of cards, and give it to a spectator and ask her to shuffle the deck and return it to you face down.  You take the cards, and (with a little showmanship but without looking at the fronts of the cards) separate them into two piles, and then say "I've made two piles so that the number of red cards in the first pile is the number of black cards in the second pile."
+<P>
+Have your spectator turn over the cards and verify!
+
+
+Presentation suggestions: Your spectator can shuffle the cards as many times as she likes--- it won't matter!  When she gives the cards to you, all you are really doing (though don't make it obvious) is counting the cards into two piles so that there are 26 cards in each pile.
+
+
+Behind the fact: The reason this trick works is simple... if the number of red cards in the first and second piles is R and S,
+and the number of black cards in the first and second piles
+is A and B, then we know that R+S=26 (since the total number of red cards is 26) and S+B=26 (since the total number of cards in the second pile is 26).  These two equations can be subtracted from one another to show that R-B=0, or R=B.
+
+<P>For more fun, try the FFact(Red-Black Pairs Card Trick),
+or one of the other Fun Facts on FFact(mathematical magic).
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: R. Vakil, ISBN(1895997046,A Mathematical Mosaic), 1996, p.44.
+
+
+
+
+

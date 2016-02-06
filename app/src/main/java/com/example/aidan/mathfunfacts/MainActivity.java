@@ -8,11 +8,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.content.Context;
+import java.io.*;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    TextView funFactTextView;
+    String funFactTitle;
+    String funFactSubject;
+    int funFactLevel;
+    String[] funFactKeywords;
+    String funFactDescription;
+    String funFactContent;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -26,6 +40,24 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        funFactTextView = (TextView)findViewById(R.id.funFactTextView);
+        try {
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open("10001.1")));
+            StringBuilder total = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                total.append(line);
+            }
+            String message=total.toString();
+           funFactTextView.setText(message);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     @Override
