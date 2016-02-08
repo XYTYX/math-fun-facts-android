@@ -43,21 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         funFactTextView = (TextView)findViewById(R.id.funFactTextView);
-        try {
-
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("10001.1")));
-            StringBuilder total = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                total.append(line);
-            }
-            String message=total.toString();
-           funFactTextView.setText(message);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        String contents = this.getFileContent("10001.1");
+        funFactTextView.setText(contents);
     }
 
     @Override
@@ -80,5 +67,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /**
+     * On Click, set the displayed text to a new file's text
+     * @param v
+     */
+    public void NextButton(View v) {
+        TextView text = (TextView) findViewById(R.id.funFactTextView);
+        String contents = this.getFileContent("10001.2");
+        text.setText(contents);
+    }
+
+    /**
+     * Return string with all contents of a given file name
+     * @param fileName File name
+     * @return
+     */
+
+    public String getFileContent(String fileName) {
+        try {
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open(fileName)));
+            StringBuilder total = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                total.append(line);
+            }
+            String message=total.toString();
+            return message;
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
     }
 }
