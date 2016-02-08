@@ -1,0 +1,116 @@
+Title: Fibonacci GCD's, please
+Keywords: number theory, greatest common divisor
+Subject: 5
+Level: 2
+FF Description: Fibonacci numbers exhibit striking patterns.  Here's one
+that may not be so obvious, but is striking when you see it.
+Recall the FFact(Fibonacci) numbers:
+<P>
+<font face="courier" size="-1">
+ n: 0, 1, 2, 3, 4, 5, 6,  7,  8,   9, 10, 11,  12,  13,  14,...
+<BR>
+f<sub>n</sub>: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,...
+</font>
+<P>
+Now let's look at some of their greatest common divisors (gcd's):
+<CENTER>
+gcd(f<sub>10</sub>,f<sub>7</sub>)
+= gcd(55, 13) = 1 = f<sub>1</sub>
+<BR>
+gcd(f<sub>6</sub>,f<sub>9</sub>)
+= gcd(8, 34) = 2 = f<sub>3</sub>
+<BR>
+gcd(f<sub>6</sub>,f<sub>12</sub>)
+= gcd(8, 144) = 8 = f<sub>6</sub>
+<BR>
+gcd(f<sub>7</sub>,f<sub>14</sub>)
+= gcd(13, 377) = 13 = f<sub>7</sub>
+<BR>
+gcd(f<sub>10</sub>,f<sub>12</sub>)
+= gcd(55, 144) = 1 = f<sub>2</sub>
+</CENTER>
+<P>
+Do you see the pattern?  The greatest common divisor
+of any two Fibonacci numbers is also a Fibonacci number!
+Which one?  If you look even closer, you'll see the
+amazing general result:
+<P>
+<CENTER>
+gcd(f<sub>m</sub>,f<sub>n</sub>) = f<sub>gcd(m,n)</sub>.
+</CENTER>
+
+
+
+
+
+
+
+
+
+
+
+
+Presentation suggestions: After presenting the general result, go back to the
+examples to verify that it holds.  You may wish to prepare
+a transparency beforehand with a table of Fibonacci
+numbers on it, so you can refer to it throughout
+the presentation.
+
+
+
+
+
+
+
+
+
+
+
+
+Behind the fact: The proof is based on the following lemmas which are
+interesting in their own right. All can be proved by
+FFact(induction).
+<BR>
+a) gcd(f<sub>n</sub>, f<sub>n-1</sub>) = 1, for all n
+<BR>
+b) f<sub>m+n</sub>
+= f<sub>m+1</sub> f<sub>n</sub>
++ f<sub>m</sub> f<sub>n-1</sub>
+<BR>
+c) if m divides n, then f<sub>m</sub>
+divides f<sub>n</sub>
+<BR>
+and the ever important Euclidean Algorithm which states:
+if n=qm+r, then gcd(n,m)=gcd(m,r).  For such n,m we have
+<center>
+gcd(f<sub>m</sub>,f<sub>n</sub>)
+= gcd(f<sub>m</sub>,f<sub>qm+r</sub>)
+= gcd(f<sub>m</sub>,f<sub>qm+1</sub>f<sub>r</sub>+f<sub>qm</sub>f<sub>r-1</sub>)
+= gcd(f<sub>m</sub>,f<sub>qm+1</sub>f<sub>r</sub>)
+= gcd(f<sub>m</sub>,f<sub>r</sub>)
+</center>
+<br>
+where the 2nd equality follows from (b),
+the 3rd equality from (c) noting that m divides qm,
+and the 4th equality from noting that
+f<sub>m</sub> divides f<sub>qm</sub>
+which is relatively prime to f<sub>qm+1</sub>.
+Thus
+<center>
+gcd(f<sub>n</sub>,f<sub>m</sub>)=gcd(f<sub>m</sub>,f<sub>r</sub>)
+</center>
+<br>
+which looks a lot like the Euclidean algorithm but with f's
+on top!
+For example since gcd(100,80)=gcd(80,20)=gcd(20,0)=20, then
+gcd(f<sub>100</sub>,f<sub>80</sub>)=gcd(f<sub>80</sub>,f<sub>20</sub>)=gcd(f<sub>20</sub>,f<sub>0</sub>=0)=f<sub>20</sub>.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: benjamin@hmc.edu
+phone: 909-621-8688
+Commenters: 
+Reference: 

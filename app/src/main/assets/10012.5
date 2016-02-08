@@ -1,0 +1,94 @@
+Title: Why Does 0.999... = 1?
+Keywords: 
+Subject: 5
+Level: 1
+FF Description: Consider the real number that is represented by a zero and a decimal point, followed by a never-ending string of nines:
+<P>
+<CENTER>
+0.99999...
+</CENTER>
+<P>
+It may come as a surprise when you first learn the fact
+that this real number is actually EQUAL to the integer 1.
+A common argument that is often given to show this is
+as follows.  If S = 0.999..., then 10*S = 9.999...
+so by subtracting the first equation from the second, we get
+<P>
+<CENTER>
+9*S = 9.000...
+</CENTER>
+<P>
+and therefore S=1.  Here's another argument.
+The number
+0.1111... = 1/9,
+so if we multiply both sides by 9, we obtain 0.9999...=1.
+
+
+
+
+
+
+
+
+
+
+
+Presentation suggestions: You might also mention that by similar arguments,
+every rational number with a terminating decimal expansion
+has another expansion that ends in a never-ending string of 9's.
+So, for instance, the rational 7/20 can be represented
+as 0.35 (the same as 0.35000...) or 0.34999...
+
+
+
+
+
+Behind the fact: When seeing these arguments,
+many people feel that there is something shady going on
+here.  Since they do not have a clear idea what
+a FFact(decimal expansion) represents,
+they cannot believe that a number can have two different representations.
+<P>
+We can try to clear that up by explaining what a decimal
+representation means.
+Recall that the digit in each place of a decimal expansion
+is associated with a (positive or negative) power of 10.
+The k-th place to the left of the decimal
+corresponds to the power 10^k.
+The k-th place to the right of the decimal
+corresponds to the power 10^(-k) or 1/10^k.
+
+<P>
+If the digits in each place are multiplied by
+their corresponding power of 10 and then added together,
+one obtains the real number that is represented by
+this decimal expansion.
+
+<P>
+So the decimal expansion 0.9999... actually represents the
+infinite sum
+<P>
+<CENTER>
+9/10 + 9/100 + 9/1000 + 9/10000 + ...
+</CENTER>
+<P>
+which can be summed as a FFact(geometric+series)
+to get 1.  Note that 1 has decimal representation 1.000...
+which is just 1 + 0/10 + 0/100 + 0/1000 + ...
+so if one realizes that decimal expansions are just
+a code for an infinite sum, it may be less surprising
+that two infinite sums can have the same sum.
+<P>
+Hence 0.999... equals 1.
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,85 @@
+Title: Zero to the Zero Power
+Keywords: 0^0
+Subject: 3, 5
+Level: 1
+FF Description: It is commonly taught that
+any number to the zero power is 1,
+and zero to any power is 0.
+But if that is the case, what is zero to the zero power?
+
+<P>Well, it is undefined
+(since x<sup>y</sup> as a function of 2 variables
+is not continuous at the origin).
+
+<P>But if it could be defined,
+what "should" it be? 0 or 1?
+
+
+
+Presentation suggestions: Take a poll to see what people think before you show
+them any of the reasons below.
+
+
+
+Behind the fact: We'll give several arguments to show that the answer
+"should" be 1.
+<UL>
+<LI>
+The alternating sum of binomial coefficients
+from the n-th row of FFact(Pascal's triangle) is
+what you obtain by expanding (1-1)<sup>n</sup>
+using the binomial theorem, i.e., 0<sup>n</sup>.
+But the alternating sum of the entries of
+every row except the top row is 0, since 0<sup>k</sup>=0
+for all k greater than 1.
+But the top row of Pascal's triangle
+contains a single 1, so its alternating sum is 1,
+which supports the notion that (1-1)<sup>0</sup>=0<sup>0</sup>
+if it were defined, should be 1.
+
+<LI>
+The FFact(limit) of x<sup>x</sup>
+as x tends to zero (from the right) is 1.
+In other words, if we want the x<sup>x</sup> function to
+be right continuous at 0, we should define it to be 1.
+
+<LI>
+The expression m<sup>n</sup> is the 
+FFact(product) of m
+with itself n times.  Thus m<sup>0</sup>,
+the "empty product", should be 1 (no matter what m is).
+
+<LI>
+Another way to view the expression m<sup>n</sup> is as the
+FFact(number of ways) 
+to map an n-element set to an m-element set.
+For instance, there are 9 ways to map a 2-element set
+to a 3-element set.
+There are NO ways to map a 2-element set
+to the empty set (hence 0<sup>2</sup>=0).
+However, there is exactly one way to map the empty set
+to itself: use the identity map!  Hence 0<sup>0</sup>=1.
+
+<LI>
+Here's an aesthetic reason.  A power series is often
+compactly expressed as
+<BR>
+<CENTER>
+SUM<sub>n=0 to INFINITY</sub> a<sub>n</sub> (x-c)<sup>n</sup>.
+<BR>
+</CENTER>
+We desire this expression to evaluate to a<sub>0</sub>
+when x=c, but the n=0 term in the above expression is
+problematic at x=c.  This can be fixed by
+separating the a<sub>0</sub> term (not as nice) or
+by defining 0<sup>0</sup>=1.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: Michael Beeson, Michael Vrable, Johannes Huisman/ beeson@cruzio.com, michael_vrable@hmc.edu, huisman@univ-rennes1.fr
+Reference: 

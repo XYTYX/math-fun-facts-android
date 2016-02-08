@@ -1,0 +1,44 @@
+Title: Making History by Card Shuffling
+Keywords: 
+Subject: 4, 6
+Level: 1
+FF Description: Did you know that whenever you shuffle a deck of cards, it is quite likely that you are making history?
+
+<p>
+A deck of 52 cards can be ordered in 52! = 52 x 51 x 50 x...x 2 x 1 ways.
+This is because there are 52 ways to choose the first card, 51 ways to choose the 2nd, 50 ways to choose the 3rd, etc.  But 52! is a very large number: larger than
+<center>
+<p>
+8 x 10<sup>67</sup>.
+</p>
+</center>
+How big is this number?  Well, someone shuffling a deck of cards once per second since the beginning of the universe (believed to be about 14 billion years ago) would not have shuffled the deck more than 10<sup>15</sup> times.
+
+<p>
+Thus it is quite likely that any given configuration achieved through FFact(random) shuffling has never appeared before in the history of shuffling!
+
+
+Presentation suggestions: You might also compare 10<sup>67</sup> to other large numbers or the number of stars in the universe (10<sup>23</sup>).
+
+
+
+
+
+Behind the fact: We ought to be a little careful here.  In reality, there are many
+kinds of shuffles and not all of them involve randomness, e.g., see the Fun Fact FFact(Perfect+Shuffles).  In order for the result of a shuffle to produce an independent configuration, we must use a shuffle with inherent randomness.
+
+<p>
+But even a single random riffle shuffle
+does not make every configuration equally likely, so a single random riffle shuffle will not produce an independent ordering of cards.
+However a single random riffle shuffle produces nearly 2<sup>52</sup> possible configurations,
+which is still a very large number (4.5x10<sup>15</sup>), and after seven random riffle shuffles nearly every configuration is equally likely to occur,
+as explained in the Fun Fact FFact(Seven+Shuffles).
+So it is still very likely that each random riffle shuffle is truly "making history".
+
+Submitted by: 
+Date submitted: 
+name: Lew Ludwig
+email: 
+phone: 
+Commenters: 
+Reference: 

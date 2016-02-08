@@ -1,0 +1,75 @@
+Title: Inductive Tiling
+Keywords: combinatorics
+Subject: 4
+Level: 2
+FF Description: <p>
+Can all but one square of an n by n chessboard be
+covered by L-shaped trominoes?
+
+<p>
+In general, it may not be possible,
+but if n is a power of 2, it can!
+See the Figure for an 8x8 example.
+
+<p>
+Is there a method for finding such a tiling?
+Yes, and we can find it by FFact(induction)!
+
+
+
+
+
+Presentation suggestions: This is a terrific application of induction.  Ask students to try to tile an 8x8 or a 16x16 board with
+L-shaped tiles before showing them this proof.
+
+
+
+Behind the fact: A simple proof by induction shows this property.
+The simplest case is a 2x2 chessboard.  Clearly if one
+square is removed, the remainder can be tiled by one
+L-shaped tromino.  This is the base case.
+
+<P>
+Now, given a large chessboard of size 2<sup>n</sup>x2<sup>n</sup>,
+with one square removed, it can be divided into <i>four</i>
+2<sup>(n-1)</sup>x2<sup>(n-1)</sup> smaller chessboards
+(the corners of the original board).
+One of those corners contains the removed tile, so by the inductive step, it can be tiled by L-shaped trominoes.
+Now notice that the remaining three
+2<sup>(n-1)</sup>x2<sup>(n-1)</sup> boards all meet at a common corner at the center of the original board.
+
+<p>
+The 3 corner tiles there form an L-shaped set that can be covered by one tromino!  And by removing them,
+those 3 chessboards each have a tile removed, and by the inductive step
+they can be tiled by trominoes as well!  Thus we have covered the
+entire chessboard (apart from the removed square) by trominos!
+
+<P>
+This proof actually leads to a method for constructing such a tiling,
+by successive applications of induction.
+As an example, consider FFig(1) above without any tiling and with
+one square removed (here, the black square).
+We divide the board into four 4x4 boards, one in each quadrant.
+The bottom left board can be tiled by the inductive step, because it has a square removed.
+And in the three other boards, we can cover the corner squares
+where they meet by a single L-shaped tromino (here, orange).
+These three 4x4 boards will then have a single tile removed, hence by the inductive step they can be tiled too.
+
+<p>
+But how can each of these 4x4 boards with a square removed be tiled?
+We apply our inductive method again, cutting each into four 2x2 boards:
+one of which has a square removed, and the
+other three of which don't have a square removed.
+Cover their 3 center tiles by a (green) tromino.
+What remains uncovered are 2x2 boards with a square removed...
+these can easily be covered by (red and green) trominoes!
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: 
+phone: 
+Commenters: 
+Reference: 

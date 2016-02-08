@@ -1,0 +1,75 @@
+Title: How many Rationals?
+Keywords: countable infinity
+Subject: 3, 4
+Level: 3
+FF Description: <P> How many rational numbers are there? Yes, infinitely
+many, I hear you say. But how large is that infinity?
+Are there just as many rational numbers as integers?
+
+<P> Well, this requires us to be precise about "just
+as many". A mathematician would say that set A has
+"just as many" objects as set B if the objects in A and
+B can be put into <I>one-to-one correspondence</I> with each
+other. Seem plausible?
+
+<P>Using this definition we can show that lots of infinite
+sets have the same "size" or <i>FFact(cardinality)</i>.
+For instance the even integers can be placed in 1-1
+correspondence with the odd integers, using N->N+1.
+
+<P>
+Perhaps surprising is that the set of all integers
+and the set of even integers have the same cardinality,
+via N->2N.
+
+<P>The natural numbers {1, 2, 3, ...} and the integers
+have the same cardinality, because the integers can be
+"listed" in the order {0, 1, -1, 2, -2, 3, -3, ...} and
+this ordering gives the correspondence with the natural
+numbers.  Any set with the same cardinality as the
+natural numbers is called a <i>FFact(countable)</i> set.
+
+<P>
+The rationals seem even more densely populated in the real
+line than the integers, but it is possible show that
+they are countable!  The 1-1 correspondence
+is given by drawing a double array of rationals
+(as in the Figure) and then listing them in the order
+given by snaking diagonally through the array to
+hit every one.
+
+
+
+
+
+
+Presentation suggestions: Draw arrows to indicated one-to-one correspondence.
+Draw a picture to illustrate this.
+Possibly split this one into several fun facts, over
+successive days.  Ask students if they think there are
+infinite sets that are not countable?
+Then follow the next day with the Fun Fact FFact(Cantor+Diagonalization).
+
+
+
+
+
+
+Behind the fact: Mathematicians try to make precise definitions that
+correspond to our usual intuition, but help to resolve
+issues when intuition fails.
+Cantor tried to make precise the notion of the size of
+an infinite set.
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: 
+phone: 
+Commenters: 
+Reference: 

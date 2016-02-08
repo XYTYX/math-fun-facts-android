@@ -1,0 +1,82 @@
+Title: Impossible Integral?
+Keywords: multivariable calculus
+Subject: 3
+Level: 2
+FF Description: The following integral may be problematic for
+a freshman calculus student, even if armed with
+a list of antiderivatives:
+<CENTER>
+<BR>
+INTEGRAL<sub>0 to infinity</sub> exp(-x<sup>2</sup>) dx.
+</CENTER>
+<BR>
+Why?  Well, there isn't a closed-form expression for
+the antiderivative of the integrand, so the
+Fundamental Theorem of Calculus won't help.
+But the expression is meaningful,
+since the it represents the area under the curve
+from 0 to infinity.
+
+<P>Furthermore, there is a nice trick to find the answer!
+Call the integral I.
+Multiply the integral by itself: this gives
+<CENTER>
+<BR>I<sup>2</sup> =
+[ INTEGRAL<sub>0 to infinity</sub> exp(-x<sup>2</sup>) dx ]
+[ INTEGRAL<sub>0 to infinity</sub> exp(-y<sup>2</sup>) dy ]
+</CENTER>
+<BR>
+then view as an integral over the first quadrant in
+the plane:
+<CENTER>
+<BR>
+= [ INTEGRAL<sub>0 to infinity</sub>
+INTEGRAL<sub>0 to infinity</sub>
+exp(-x<sup>2</sup>-y<sup>2</sup>) dx dy]
+</CENTER>
+<BR>
+then change to FFact(polar coordinates)
+(!):
+<CENTER>
+<BR>
+= INTEGRAL<sub>0 to Pi/2</sub>
+INTEGRAL<sub>0 to infinity</sub>
+exp(-r<sup>2</sup>) r dr d(THETA).
+</CENTER>
+<BR>
+Now this is quite easy to evaluate: you find that
+I<sup>2</sup>=Pi/4.  This means that I, the original
+value of the integral you were looking for, is Sqrt[Pi]/2.
+<P>
+Wow!
+
+
+
+
+Presentation suggestions: This trick is often learned in
+FFact(multivariable calculus) course; it is best to show it
+right after learning to integrate in polar coordinates.
+If polar coordinates have not been introduced yet,
+you can view the squared integral as the volume
+of a solid of revolution, and evaluate using shells.
+
+
+
+
+Behind the fact: You may recognize the integrand as the familiar
+(unscaled) <i>bell curve</i>.  An alternate way of
+evaluating this integral (without appealing to an
+unmotivated trick!) is to view it as a
+complex integral and use residue theory.  You can
+learn more about this in a course on <i>FFact(complex analysis)</i>.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Lesley Ward
+email: 
+phone: 
+Commenters: Bruce O'Neill
+Reference: 

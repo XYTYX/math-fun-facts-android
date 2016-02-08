@@ -1,0 +1,44 @@
+Title: Sliding Chords
+Keywords: 
+Subject: 2, 3
+Level: 2
+FF Description: Take a circle C, and a FFact(chord) in the circle.
+Now slide the chord around the circle.  As you do this,
+the midpoint of the curve will trace out
+a smaller concentric circle.  Call the area between
+the two circles A(C).
+
+<P>Now suppose you do the same thing with a larger
+circle C' but with the same length chord?
+Will A(C') be larger or smaller than A(C)?
+
+<P>Surprise: they will actually be the same area!
+In otherwords A(C) does not depend on what circle C
+you start with, only the length of the chord!
+
+
+
+Presentation suggestions: From this fact, ask students if they can see quickly
+what the fixed area must be!  [Hint: start with a circle
+whose diameter is the length of the chord.]
+
+
+
+Behind the fact: In fact, an even more amazing fact is true: take
+<i>any FFact(convex) shape C</i> and place a chord of fixed
+length in it.  Now slide as you slide the chord around
+C, the midpoint traces out another figure D.  The area
+between C and D does not depend on what shape you
+started with!
+
+
+
+Submitted by: 
+Date submitted: 
+name: Ravi Vakil
+email: 
+phone: 
+Commenters: 
+Reference: R. Vakil, ISBN(1895997046,A Mathematical Mosaic), 1996.
+
+

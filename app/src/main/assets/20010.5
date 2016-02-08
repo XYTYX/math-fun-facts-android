@@ -1,0 +1,72 @@
+Title: Finding the N-th digit of Pi
+Keywords: number theory, computational mathematics
+Subject: 5
+Level: 2
+FF Description: Here is a very interesting formula for pi, discovered by
+David Bailey, Peter Borwein, and Simon Plouffe in 1995:
+<center>
+<br>
+Pi = SUM<sub>k=0 to infinity</sub> 16<sup>-k</sup>
+[ 4/(8k+1) - 2/(8k+4) - 1/(8k+5) - 1/(8k+6) ].
+</center>
+<br>
+The reason this pi formula is so interesting is because
+it can be used to calculate the N-th digit of Pi (in base 16)
+<i>without having to calculate all of the previous digits</i>!
+
+<P>Moreover, one can even do the calculation
+in a time that is essentially linear in N,
+with memory requirements only logarithmic in N.
+This is far better than previous algorithms for
+finding the N-th digit of Pi, which required keeping track of
+all the previous digits!
+
+
+Presentation suggestions: You might start off by asking students how they might
+calculate the 100-th digit of pi using one of the other
+FFact(pi.formula)s they have learned.  Then show them
+this one...
+
+
+Behind the fact: Here's a sketch of how the BBP formula can be used to
+find the N-th hexadecimal digit of Pi.
+For simplicity, consider just the
+first of the sums in the expression, and multiply this by
+16<sup>N</sup>.  We are interested in the fractional part
+of this expression.  The numerator of a given term
+in this sum is 16<sup>N-k</sup>, and it can
+be evaluated very easily mod (8k+1) using a binary
+algorithm for exponentiation.  Division by (8k+1)
+is straightforward via floating point arithmetic.
+Not many more than N terms of this sum need be evaluated,
+since the numerator decreases very quickly as k gets large
+so that terms become negligible.
+The other sums in the BBP formula are handled similarly.
+This yields the hexadecimal expansion of Pi starting at the
+(N+1)-th digit.  More details can be found in the
+Bailey-Borwein-Plouffe reference.
+
+<P>
+The BBP formula was discovered using the
+PSLQ Integer Relation Algorithm.  However, the
+Adamchik-Wagon reference
+shows how similar relations can be discovered in a way
+that the proof accompanies the discovery, and gives
+a 3-term formula for a base 4 analogue of the BBP result.
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: David Bailey, Peter Borwein, and Simon Plouffe.
+"On the rapid computation of various polylogarithmic constants",
+<i>Math. Comp.</i> 66(1997), 903-913.
+
+<P>
+Victor Adamchik and Stan Wagon,
+"A simple formula for pi",
+<i>Amer. Math. Monthly</i> 104(1997), 852-855.
+

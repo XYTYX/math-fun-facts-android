@@ -1,0 +1,42 @@
+Title: Quick Square Roots
+Keywords: Newton's method, dynamical systems
+Subject: 1, 3, 5
+Level: 2
+FF Description: <P>
+Here's a very quick way to generate the square root of N.
+Let A<sub>0</sub>=N. Then generate a FFact(sequence) of numbers
+A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>, etc.
+(on your calculator, for instance) by using the formula:
+<CENTER>
+<BR>
+A<sub>k+1</sub> = 1/2 ( A<sub>k</sub> + (N/A<sub>k</sub>) ).
+</CENTER>
+<BR>
+This will give a sequence that converges very quickly to
+the square root of N. In fact, it converges so quickly,
+that it generally doubles the number of correct digits
+after each step!
+
+<P> This formula arises as a result of using FFact(Newton's method).
+Can you figure out how?
+
+
+Presentation suggestions: Draw a picture, if it is helpful, of how Newton's method works.
+Challenge them to explore what happens if you start off
+with different values of A<sub>0</sub>.
+
+
+Behind the fact: Repeatedly applying a function over and over is called
+<I>iteration</I>.  Iterated functions
+are studied in <I>FFact(dynamical systems)</I>.
+Newton's method is one example of how iteration can be
+very useful.
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

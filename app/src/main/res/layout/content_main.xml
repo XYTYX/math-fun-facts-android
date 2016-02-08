@@ -15,5 +15,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Displaying a hardcoded Fun Fact: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non nisl non turpis sollicitudin eleifend quis non est. Donec tempus euismod congue. Nulla in viverra libero. Nunc ullamcorper lorem purus, et efficitur sem tincidunt a. Aliquam ac commodo ex, quis euismod massa. Ut ullamcorper ex vitae nisl luctus ornare. Sed sit amet eros et libero pharetra efficitur. Integer ligula nisl, efficitur vitae risus ac, efficitur finibus metus. In vel tempor mauris, ut porttitor nisi. Donec ullamcorper ipsum in turpis mattis pulvinar. Vivamus at varius enim. Donec pellentesque venenatis rutrum. Donec maximus posuere dolor vitae vestibulum. Sed sollicitudin, magna lobortis dictum imperdiet, ex velit ultrices metus, id pharetra dolor tellus ac felis. Duis euismod tellus lacinia porttitor auctor."
+        android:id="@+id/funFactTextView"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp" />
 </RelativeLayout>
