@@ -1,6 +1,8 @@
 package com.example.aidan.mathfunfacts;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.content.Context;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         funFactTextView = (TextView)findViewById(R.id.funFactTextView);
-        String contents = this.getFileContent("10001.1");
+
+        // Getting file names
+        String contents = this.getRandomFile();
         funFactTextView.setText(contents);
+
     }
 
     @Override
@@ -76,14 +83,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void NextButton(View v) {
         TextView text = (TextView) findViewById(R.id.funFactTextView);
-        String contents = this.getFileContent("10001.2");
+        String contents = this.getRandomFile();
         text.setText(contents);
     }
 
     /**
      * Return string with all contents of a given file name
      * @param fileName File name
-     * @return
+     * @return file contents in a string
      */
 
     public String getFileContent(String fileName) {
@@ -102,5 +109,25 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             return null;
         }
+    }
+
+    /**
+     * Get a random file and then return the contents of it in a file
+     * @return File contents in a string
+     */
+    public String getRandomFile() {
+        AssetManager assetManager = getApplicationContext().getAssets();
+        String files[] = null;
+        try {
+            files = assetManager.list("");
+            Random random = new Random();
+            String fileName = files[random.nextInt(files.length)];
+            String contents = this.getFileContent(fileName);
+            return contents;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Random File Not Found";
+        }
+
     }
 }
