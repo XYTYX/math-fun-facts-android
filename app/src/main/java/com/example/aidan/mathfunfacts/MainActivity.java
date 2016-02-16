@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         funFactTextView = (TextView)findViewById(R.id.funFactTextView);
 
-        // Getting file names
+        // Getting random file and displaying it
         String contents = this.getRandomFile();
         funFactTextView.setText(contents);
 
@@ -95,19 +95,26 @@ public class MainActivity extends AppCompatActivity {
 
     public String getFileContent(String fileName) {
         try {
+
+            // Read from file
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(getAssets().open(fileName)));
+
+            // REad file contents and build the string
             StringBuilder total = new StringBuilder();
             String line;
+
+            // Read line-by-line and store it in the StringBuilder
             while ((line = reader.readLine()) != null) {
                 total.append(line);
             }
+
+            // Create the string and return it
             String message=total.toString();
             return message;
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            return null;
+            return "File Not Found";
         }
     }
 
@@ -116,13 +123,25 @@ public class MainActivity extends AppCompatActivity {
      * @return File contents in a string
      */
     public String getRandomFile() {
+
+        // Get all assets from the Asset Folder
         AssetManager assetManager = getApplicationContext().getAssets();
+
+        // Array to store all the file names
         String files[] = null;
         try {
+
+            // Returns array of file names from given "" (blank) path in assets
             files = assetManager.list("");
+
+            // Get random number between 0 and the length of the array to get a random fun fact in that array location
             Random random = new Random();
             String fileName = files[random.nextInt(files.length)];
+
+            // Get contents of that file
             String contents = this.getFileContent(fileName);
+
+            // Return file to calling function
             return contents;
         } catch (IOException e) {
             e.printStackTrace();
