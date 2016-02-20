@@ -1,6 +1,7 @@
 package com.example.aidan.mathfunfacts;
 
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +9,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import java.io.*;
+
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.io.*;
 
 public class MainActivity extends AppCompatActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +42,39 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        try {
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open("10001.1")));
+            StringBuilder total = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                total.append(line);
+            }
+            String message=total.toString();
+            WebView wv = (WebView) findViewById(R.id.webView);
+            //message  = "Title: Multiplication by 11\n" +
+            wv.loadData(total.toString(), "text/html", "UTF-8");
+            System.out.print("Alis string" + total.toString());
+
+
+
+            //funFactTextView.setText(message);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            System.out.println("printed stack");
+
+            e.printStackTrace();
+        }
+        System.out.println("printed stack");
+
+
+
+        //"10001.1");
+
+        //wv.loadUrl("file:///android_asset/test.html");
     }
 
     @Override
