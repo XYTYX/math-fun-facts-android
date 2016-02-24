@@ -1,0 +1,86 @@
+Title: Face Derivatives and Computer Vision
+Keywords: calculus, linear algebra
+Subject: 3
+Level: 2
+FF Description: One challenge in robotics is the problem of
+<i>computer vision</i>: how do you program a computer
+to interpret and "understand" the data it receives from
+some visual sensor?  For example, one aspect of this
+problem is object <i>recognition</i>, and another is
+object <i>tracking</i>.
+
+<P>
+While recognition is a very hard problem
+(that won't concern us here), if you know what an
+object looks like, it can be tracked using some
+interesting mathematical ideas.
+
+<P>
+Suppose you are trying to track the face in Figure 1
+as it moves in a sequence of frames.
+The visual data in each frame is
+an array of numbers (pixel intensities).  Naively,
+you might track the face by searching each frame for
+an pattern of numbers similar to the one in FFig(1).
+But this can be very computationally intensive.
+
+<P>
+Here is a better method used by computer scientists.
+The key idea is <i>linearization</i>---
+while an object's motion may not be linear,
+for small time steps it is approximately FFact(linear).
+So we would expect that the frames alter
+in approximately linear ways.
+
+<P>And they do!
+In the first row of FFig(2), we see a face moving
+left in a sequence of frames (look at them right-to-left).
+We can approximate the motion by looking at the frame in
+the first row labeled "+1 pix" and "subtracting"
+the original frame.  This difference is shown in FFig(3).
+(If you like, you can think of it as a "derivative"
+representing the face's motion!)
+If we assume that the face's true motion is just the motion in FFig(3)
+repeated over and over, we get the approximation in
+the second row of FFig(2)!  As you can see,
+it remains a pretty good
+FFact(approximation) for small numbers of steps.  So we can
+"track" the face using this idea, as described below.
+
+
+
+
+
+
+
+Presentation suggestions: 
+Behind the fact: In practice,
+the array of pixel intensities is encoded as a
+(very long) vector of numbers.  The space of all possible
+pictures forms a vector space, and the vector associated
+with FFig(2) forms a vector V.  Tracking an object then
+correponds to
+finding the component of a given vector (picture)
+in the direction of V, and the multiple of V tells us
+the amount of the translation!
+Other motions can also be treated in this way,
+such as shifts up/down, rotation, scalings, etc.
+These correspond to vector components in other directions.
+(Thanks to Zach Dodds for providing the pictures,
+and Ran Libeskind-Hadas for providing his face!)
+
+<p>
+You can study linearity and vector spaces in a FFact(linear algebra) course.
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Zach Dodds
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,53 @@
+Title: Proofs without Words
+Keywords: 
+Subject: 1, 4, 8
+Level: 1
+FF Description: There are many facts which can be proved just by looking
+at a picture!  For instance:
+<CENTER>
+x<sup>2</sup> - y<sup>2</sup> = (x+y) (x-y)
+</CENTER>
+<BR>
+is illustrated in FFig(1).
+At left is a large square (of side length x) with a small square (of side length y) cut out of the corner.  (Thus its total area is x<sup>2</sup> - y<sup>2</sup>).
+
+<p>
+This figure can be cut into blue and green rectangles, and by rearranging them,
+we can form a rectangle of side lengths (x-y) and (x+y), on the right side of FFig(1)!
+
+
+
+Presentation suggestions: Write down the identity and then draw the picture, asking
+students to see if they can figure out how the picture
+explains the identity.  Or, draw the picture and ask if
+they can figure out what it should prove!
+
+<P>You might challenge students to take any algebraic FFact(identity)
+that they know and develop a proof without words.
+
+
+
+Behind the fact: Almost any "Proof without Words" from Mathematics Magazine
+or Nelsen's recent book (see reference) will serve as
+a short, snappy Fun Fact!
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Lesley Ward
+email: 
+phone: 
+Commenters: 
+Reference: R. Nelsen, ISBN(0883857006,Proofs without Words).
+
+
+
+
+
+
+
+
+
+

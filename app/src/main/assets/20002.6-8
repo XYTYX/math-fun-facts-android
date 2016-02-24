@@ -1,0 +1,52 @@
+Title: Deal or No Deal
+Keywords: game theory, deal or no deal, probabilities
+Subject: 6, 8
+Level: 2
+FF Description: On the TV show "Deal or No Deal", a contestant is faced with a number of briefcases (26 in the US version) in which various amounts of money have been placed.  The contestant is asked to select one to keep, unopened.  Then the player plays a number of rounds.
+
+<P>In each round, the contestant is asked to select some of the other briefcases to open (usually several in the early rounds, decreasing in number to the later rounds).  After seeing what is in the open briefcases, the contestant has a better idea what possible amounts of money could be in his briefcase.
+
+<P>
+A banker, who has also seen what has been opened, then offers the contestant a sum of money--- usually this offer is smaller than the average of the remaining prizes (significantly so at first, but closer to the average in later rounds).
+The contestant can either take it, or reject the offer and continue to play another round.  The excitement of the game centers around the decision that the contestant faces: "Deal or No Deal?"
+
+<P>
+What should the contestant do?
+
+
+
+
+Presentation suggestions: 
+Behind the fact: The answer depends on what the contestant's view of risk is.  In the language of <i>game theory</i>, whether the contestant accepts depends on how <i>risk-averse</i> the contestant is.
+
+<P>
+We can understand this concept mathematically in the following way: if I gave you the choice between a sure $50 or a 50-50 chance of getting $100 or nothing, which would you take?  You are <i>risk-neutral</i> if you are indifferent between the options, because they have the same expected value.  You are <i>risk-averse</i> if you would take the sure $50, and <i>risk-loving</i> if you prefer to take the gamble.
+Thus, on "Deal or No Deal", the banker usually assumes that players are risk-averse, so he lowers the offer so that players will be more likely to take the gamble and continue to play.
+
+<P>
+Modern <i>utility theory</i>, developed by Von-Neumann and Morganstern, sheds more light on what risk-aversion is.
+We could ask a different question: given an amount $x, at what probability level p would you be indifferent between a sure $x or a lottery in which you had probability p of getting $100 and probability (1-p) of getting nothing?
+
+<p>
+Your <i>Von-Neumann Morganstern utility</i> for $x is based on the answer to this question.  If $x=$0, then certainly your choice for p will be 0.  If $x=$100, then your choice for p will be 1.  If you are risk-neutral and $x=$50, then your choice for p will be .5 but if you are risk-averse, then you will probably want p to be higher than .5 before the lottery becomes just as desirable as the sure $50.  So then, if you are risk-averse, the graph of
+p(x) versus x will be concave down.  (Similarly, if you are risk-neutral this graph will be linear, and if you are risk-loving, then p(x) will be concave up.)
+
+<P>
+Understanding human behavior in terms of utilities and preferences is the subject of <i>FFact(game theory)</i>, which forms much of the modern language of mathematical economics.
+See also FFact(St.+Petersburg+Paradox).
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: An excellent readable text on game theory is Straffin's ISBN(0883856379,Game Theory and Strategy).
+

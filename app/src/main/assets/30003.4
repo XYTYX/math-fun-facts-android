@@ -1,0 +1,88 @@
+Title: Van der Waerden Theorem
+Keywords: combinatorics
+Subject: 4
+Level: 3
+FF Description: Can you color the integers red and blue such that
+there are no monochromatic arithmetic progressions (AP's)
+extending infintely in both directions?  Sure -- just color
+zero and all the positive integers red, and all the
+negative integers blue.
+<P>
+Now try coloring just the positive integers with red and
+blue such that there are no one-sided infinite monochromatic
+AP's.  This is almost as easy -- color
+the first one red, the next two blue, the next three red,
+the next four blue, and so on.  If an AP
+has step size d, then eventually it will hit a blue integer
+and eventually hit a red integer, as soon as the
+monochromatic blocks reach size d.
+<P>
+What about <i>finite</i> AP's?  Given any
+coloring of the positive integers,
+can you find a monochromatic finite AP
+of arbitrarily long length?
+<P>
+Surprisingly, yes!
+<P>
+The Van der Waerden theorem says that given any
+number of colors and specifications for lengths,
+there's an M large enough so that no matter
+how you color the first M integers with those colors,
+you can always find a monochromatic AP of at least
+one of the given lengths and colors!
+
+
+
+Presentation suggestions: You may ask students to think about
+the first two questions
+(perhaps a bonus problem on a HW)
+before doing this Fun Fact.
+
+
+
+Behind the fact: The Van der Waerden theorem follows from the diagonal Van
+der Waerden theorem in which all the
+specified lengths are equal.  This in
+turn can be proven with a very clever
+application of the FFact(pigeonhole principle)
+and double induction.  The key observation is
+that one may treat a block of m integers
+colored with k colors as a single integer colored
+with k<sup>m</sup> colors.
+
+The Van der Waerden theorem also follows as a consequence of
+the much more difficult Hales-Jewett Theorem, which involves
+monochromatic combinatorial lines in colored
+high-dimensional lattices.
+<!--
+Szemeredi's theorem another deep theorem that
+implies the Van der Waerden theorem.  It states that every
+subset S of the integers of positive upper density (i.e.
+lim sup_n \frac{|S \cap \{1,2,...,n\}|}{n} geq 0) contains
+AP's of arbitrary length.
+-->
+All of these results are part of a branch of mathematics
+called FFact(Ramsey+Theory).
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Aaron Archer
+email: aarcher@orie.cornell.edu
+phone: (607) 277-7238
+Commenters: 
+Reference: Graham, Grotschel, and Lovasz,
+<i>Handbook of Combinatorics</i>.
+<BR>Graham, Rothschild, Spencer,
+<i>Ramsey Theory</i>.
+
+
+
+
+
+
+
+
+

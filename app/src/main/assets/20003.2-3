@@ -1,0 +1,57 @@
+Title: Volume of a Cone in N Dimensions
+Keywords: 
+Subject: 2, 3
+Level: 2
+FF Description: One of the first geometric formulas we learn in plane FFact(geometry) is that the area of a triangle is:
+<center>
+Area of a Triangle = (1/2) * Base Width * Height.
+</center>
+<br>
+So it is natural to wonder how this might generalize to pyramids in n-dimensional geometry.  For instance, in 3-dimensions, the volume of a pyramid is: 
+<center>
+<br>
+Volume of Pyramid = (1/3) * Base Area * Height.
+</center>
+<br>
+The same formula actually holds for a cone in 3-dimensions as well.  Traditionally, one thinks of a cone as an object whose base B is circular, but in fact when the base is any shape, mathematicians still call the object a <i>cone over B</i>, and the formula above still holds for a 3-dimensional cone over any shape B.
+
+In general, the <i>cone</i> over any n-dimensional object B
+is the (n+1)-dimensional object formed by taking a point P outside the n-dimensional hyperplane spanned by B and taking the union of all the line segments from P to points in B.
+And the volume of such a cone is:
+<center>
+<br>
+Volume of a Cone over B = (1/n+1) * Volume of B * Height.
+</center>
+<br>
+Here, the "Height" is the distance from P from the hyperplane spanned by B.
+
+
+
+
+
+Presentation suggestions: Although, the concept of volume in FFact(n-dimensional) space is something that students sometimes find difficult to comprehend, one may motivate the idea by explaining that the notion of volume is basically a way to quantify the "size" of a set in n-dimensional space in a way that is translation-invariant.
+
+
+
+
+Behind the fact: The factor of (1/n+1) is probably the most interesting part about this formula.  One way to see where this comes from is to use FFact(calculus).
+Consider a thin slice of the Cone over B, cut by planes parallel to the base B.  This slice has cross-sectional volume that is a similar figure to B, except that in each dimension it has been scaled by (x/H).  So, if the thickness of the slice is represented by dx, the volume of this slice is represented by:
+<br>
+<center>
+(Volume of B)*(x/H)<sup>n</sup> dx,
+</center>
+<br>
+and integrating this from x=0 to x=H yields the formula above.  Moreover, we can see that the factor (1/n+1) emerges from integrating the x<sup>n</sup> in the expression above!
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,53 @@
+Title: One Equals Zero: Integral Form
+Keywords: calculus, false proof, paradox
+Subject: 3, 8
+Level: 1
+FF Description: Consider the following FFact(integral):
+<CENTER>
+<BR>
+INTEGRAL (1/x) dx
+</CENTER>
+<BR>
+Perform integration by parts: let
+<CENTER>
+<BR>
+u = 1/x ,        dv = dx
+<BR>
+du = -1/x<sup>2</sup> dx ,      v = x
+</CENTER>
+<BR>
+Then obtain:
+<CENTER>
+<BR>
+INTEGRAL (1/x) dx = (1/x)*x - INTEGRAL x (-1/x<sup>2</sup>) dx
+<BR> = 1 + INTEGRAL (1/x) dx
+</CENTER>
+<BR>
+which implies that 0 = 1.
+
+<P> What's wrong with this calculation?
+
+
+
+
+
+
+
+Presentation suggestions: 
+Behind the fact: This is common mistake using integration by parts in FFact(calculus).
+Students often forget about the constant of integration
+for indefinite integrals.  In this case, the constants
+on both sides will differ by 1.
+
+
+Submitted by: 
+Date submitted: 
+name: James Baglama
+email: jbaglama@math.bsu.edu
+phone: 765-285-1721
+Commenters: 
+Reference: R. Vakil, ISBN(1895997046,A Mathematical Mosaic), 1996. p. 199.
+
+
+
+

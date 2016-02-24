@@ -1,0 +1,160 @@
+Title: Volume of a Ball in N Dimensions
+Keywords: 
+Subject: 2, 3
+Level: 3
+FF Description: The unit ball in R<sup>n</sup> is defined as
+the set of points
+(x<sub>1</sub>,...,x<sub>n</sub>)
+such that
+<center>
+x<sub>1</sub><sup>2</sup> +  ... + x<sub>n</sub><sup>2</sup>
+<= 1.
+</center>
+<br>
+What is the volume of the unit ball in various dimensions?
+<p>
+Let's investigate!  The 1-dimensional volume (i.e., length) of the 1-dimensional ball (the interval [-1,1]) is
+<font color="red">2</font>.
+<br>
+The 2-dimensional volume (i.e., area) of the
+unit disc in the plane is <font color="red">Pi</font>.
+<br>
+The 3-dimensional volume of the unit ball in R<sup>3</sup>
+is <font color="red">4/3 Pi</font>.
+<br>
+The "volume" of the unit ball in R<sup>4</sup> is <font color="red">(Pi/2) * Pi</font>.
+<br>
+So apparently, as the dimension increases,
+so does the volume of the unit ball.
+What does this volume tend to as the dimension
+tends to infinity?
+
+<p>
+Intuitively, one may think that
+in higher and higher dimensions there's more and more "room"
+in the unit ball, allowing its volume to become larger and larger.
+Does the volume become infinite, or does it
+approach a sufficiently large constant as the
+dimension increases?
+
+<p>
+The answer is surprising and shows how our intuition
+is often misleading.
+Using multivariable calculus one can calculate the
+volume of the unit ball in R<sup>n</sup> to be
+<center>
+V(n) = Pi<sup>n/2</sup> / Gamma(n/2 + 1),
+</center>
+<br>
+where Gamma is the FFact(Gamma+function)
+that generalizes the factorial function
+(i.e., Gamma(z+1) = z!).  For n even, say n=2k,
+the volume of the unit ball is thus given by
+<center>
+<font color="red">V(n) = Pi<sup>k</sup>/k!</font>.
+</center>
+<br>
+Since k! tends to infinity faster than Pi<sup>k</sup>,
+it follows that </font color="red">V(n) tends to 0</font> as n tends to infinity!
+
+<p>
+In FFact(higher dimensions) you can fit less and less stuff
+into the unit ball.  Of course, by stuff we mean n-dimensional stuff,
+since the unit ball in R<sup>n</sup> always contains all the lower
+dimensional unit balls!
+
+
+
+
+
+Presentation suggestions: Try computing the volume of the unit ball in R<sup>3</sup> and R<sup>4</sup> using
+multivariable calculus.  Then using a computer algebra package plot
+V(n) using the formula above.  What dimension seems to have the maximal volume?
+Now plot V(n)<sup>1/n</sup>.  Explain.
+Explore these same ideas with the surface area.
+See also FFact(Surface+Area+of+a+Sphere)
+and FFact(High+Dimensional+Spheres+in+Cubes).
+
+
+
+
+
+
+
+Behind the fact: <!--
+One way to think about why V(n) goes to zero is
+to think about the constraint that
+x<sub>1</sub><sup>2</sup> +  ... + x<sub>n</sub><sup>2</sup><= 1.
+For instance, given a point in R<sup>3</sup>,
+if 2 of the coordinates magnitudes are
+strictly larger than the square root of 1/2, then
+the point lies outside the unit ball (why?).
+Similarly, in R<sup>4</sup>,
+if 3 of the coordinate magnitudes are
+strictly larger than the square root of 1/3,
+then the point lies outside the unit ball.
+More generally, it follows that the unit ball in
+R<sup>n</sup> must have (n-1) of its n coordinates
+less than or equal to the square root of 1/(n-1).
+Therefore, as n tends to infinity the
+"coordinate threshold" Sqrt(1/(n-1))
+effectively squashes the unit
+ball into thinner and thinner spikes around
+each of the coordinate axes,
+forcing its  n-dimensional volume to 0.
+-->
+
+One may work with the formula for V(n)
+by applying Stirling's Formula,
+which approximates Gamma(x+1) by
+x<sup>x</sup> e<sup>-x</sup> (2 Pi x)<sup>1/2</sup> for
+large x, to see why the surprising fact above is true.
+
+<p>
+Another heuristic is the following probabilistic argument.
+Pick n points independently and identically distributed
+(i.i.d.) from a uniform distribution in [-1,1],
+and form an n-tuple out of these numbers.  The
+resulting vector represents a point picked randomly out
+of the unit box B=[-1,1]<sup>n</sup>, so the probability that such a point is in the unit n-ball is the ratio R(n) of the volume V(n) to the volume of the unit box, which is 2<sup>n</sup>.
+
+<P>
+Notice that if there are just two coordinates of
+this point that are greater than 1/Sqrt[2], then
+the point cannot be in the unit n-ball.  As n grows,
+we choose more and more coordinates i.i.d. from the uniform distribution, and the smaller the probability is that just zero or one of those n coordinates are bigger than 1/Sqrt[2].
+A little thought reveals that for large n, this probability decreases by about 1/Sqrt[2] for each new coordinate that is chosen.  This shows that the ratio R(n) tends to 0
+as n goes to infinity.
+
+<P>
+However,
+we hope to show that V(n)=2<sup>n</sup>R(n) tends to 0 as
+n goes to infinity.  A refinement of the above argument
+will do the trick:  if there are just five coordinates of
+this point that are greater than 1/Sqrt[5], then the
+point cannot be in the unit n-ball.
+For large n, as each new coordinate chosen, the
+FFact(probability) than less than five coordinates are
+bigger than 1/Sqrt[5] drops by about 1/Sqrt[5].
+So V(n) changes by about a factor 1/Sqrt[5]
+as n is incremented, for large n.
+On the other hand, the factor 2<sup>n</sup> changes by
+a factor of 2 as n is incremented, for large n.
+Hence 2<sup>n</sup> changes by a factor of 2/Sqrt[5] for
+large enough n, so whatever this quantity is,
+it eventually gets smaller and smaller.
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Jon Jacobsen
+email: jacobsen@math.hmc.edu
+phone: 909-607-7690
+Commenters: Daniel Asimov
+Reference: 

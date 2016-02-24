@@ -1,0 +1,91 @@
+Title: Descartes' Rule of Signs
+Keywords: 
+Subject: 1
+Level: 2
+FF Description: Given a FFact(polynomial) such as:
+<center>
+<br>
+x<sup>4</sup>
++ 7x<sup>3</sup>
+- 4x<sup>2</sup> - x - 7
+</center>
+<br>
+it is possible to say anything about how many positive
+real roots it has, just by looking at it?
+
+<P>
+Here's a striking theorem due to Descartes in 1637,
+often known as "Descartes' rule of signs":
+<I>The number of positive real roots of a polynomial
+is bounded by the number of changes of sign in its
+coefficients.</I>  Gauss later showed that the number
+of positive real roots, counted with multiplicity,
+is of the same parity as the number of changes of sign.
+
+<P>
+Thus for the polynomial above, there is at most one positive
+root, and therefore exactly one.
+
+<P>
+In fact, an easy corollary of Descartes' rule
+is that the number of <i>negative</i>
+real roots of a polynomial f(x) is determined by the
+number of changes of sign in the coefficients of f(-x).
+So in the example above, the number of negative real
+roots must be either 1 or 3.
+
+
+
+
+Presentation suggestions: Challenge students to prove this fact for
+quadratic polynomials.
+
+
+
+
+
+Behind the fact: A proof of Descartes' Rule for polynomials of
+arbitrary degree can be carried out by FFact(induction).
+The base case for degree 1 polynomials is easy to verify!
+So assume the p(x) is a polynomial with positive leading
+coefficient.  The final coefficient of p(x) is given
+by p(0).
+
+<P>
+If p(0)>0, then the number of sign changes must be even,
+since the first and last coefficient of p(x) are both
+positive. Moreover, the number of FFact(roots)
+(counted with multiplicity) must also be even,
+since p(x) is also positive for very large x, so the
+graph of p(x) can only cross the x-axis an even number
+of times.  Similar arguments show that
+if p(0)<0, then the number of sign changes is odd and
+the number of positive roots is odd.  Thus the number
+of sign changes and number of roots have the same parity.
+
+<P>
+If p(x) had more roots than sign changes then it must
+have at least 2 more roots.  But p'(x) is a polynomial
+with zeroes between each of the roots of p(x) [why?],
+so p'(x) has at least 1 more root than sign changes of p(x).
+This yields a FFact(contradiction)
+because p'(x) has no more sign changes than p(x) does,
+and the inductive hypothesis then implies that p'(x)
+has no more roots than sign changes of p(x).
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: any text on the theory of equations
+
+
+
+

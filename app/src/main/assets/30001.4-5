@@ -1,0 +1,131 @@
+Title: Odd Numbers in Pascal's Triangle
+Keywords: 
+Subject: 4, 5
+Level: 3
+FF Description: FFact(Pascal's+Triangle) has many surprising patterns and
+properties.  For instance, we can ask:
+"how many odd numbers are in row N of Pascal's Triangle?"
+For rows 0, 1, ..., 20, we count:
+<P>
+row N: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+<BR>
+odd #s: 1 2 2 4 2 4 4 8 2 4 04 08 04 08 08 16 02 04 04 08 04
+
+<P>
+It appears the answer is always a power of 2.
+In fact, the following is true:
+<UL>
+THEOREM: The number of odd entries in row N of Pascal's
+Triangle is 2 raised to the number of 1's in the binary
+expansion of N.
+</UL>
+Example: Since 83 = 64 + 16 + 2 + 1 has binary expansion
+(1010011), then row 83 has 2<sup>4</sup> = 16 odd numbers.
+
+
+
+
+
+
+
+Presentation suggestions: Prior to the class, have the students try to discover
+the pattern for themselves, either in HW or in group
+investigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Behind the fact: Our proof makes use of the binomial theorem and
+modular arithmetic.  The binomial theorem says that
+<center>
+(1+x)<sup>N</sup> = SUM<sub>k=0 to N</sub>
+(N CHOOSE k) x<sup>k</sup>.
+</center>
+If we reduce the coefficients mod 2, then it's easy to
+show by induction on N that for N >= 0,
+<center>
+(1+x)<sup>2^N</sup> = (1+x<sup>2^N</sup>)   [mod 2].
+</center>
+<!--
+[The induction step looks like:
+(1+x)^{2^{N+1}}= (1+x)^{2^N}(1+x)^{2^N} = (1+x^{2^N})(1+x^{2^N})
+= 1 + 2x^{2^N} + x^{2^{N+1}} = 1 + x^{2^{N+1}}  (Mod 2).]
+-->
+
+Thus:
+<center>
+(1+x)<sup>10</sup>
+= (1+x)<sup>8</sup> (1+x)<sup>2</sup>
+= (1+x<sup>8</sup>)(1+x<sup>2</sup>)
+= 1 + x<sup>2</sup> + x<sup>8</sup> + x<sup>10</sup>  [mod 2].
+</center>
+Since the coefficients
+of these polynomials are equal [mod 2], using the
+binomial theorem we see that
+(10 CHOOSE k) is odd for
+k = 0, 2, 8, and 10; and it is even for all other k.
+Similarly, the product
+<center>
+(1+x)<sup>11</sup>
+= (1+x<sup>8</sup>)(1+x<sup>2</sup>)(1+x<sup>1</sup>)
+[mod 2]
+</center>
+is a polynomial containing 8=2<sup>3</sup> terms, being
+the product of 3 factors with 2 choices in each.
+<!--
+It contains an x<sup>k</sup> term for only those k
+that can be created using
+at most one 1, 2, and 8. There 2<sup>3</sup> = 8 of these, namely
+0, 1, 2, 8, 1+2, 1+8, 2+8, and 1+2+8.
+-->
+
+<P>
+In general, if N can be expressed as the sum of
+p distinct powers of 2, then (N CHOOSE k) will be odd
+for 2<sup>p</sup> values of k.
+But p is just the number of 1's in the binary
+expansion of N, and (N CHOOSE k) are the numbers in
+the N-th row of Pascal's triangle. QED.
+
+<P>
+For an alternative proof that does not use the FFact(binomial theorem)
+or modular arithmetic, see the reference.
+For a more general result, see
+FFact(Lucas'+Theorem).
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: benjamin@math.hmc.edu
+phone: 909-621-8688
+Commenters: 
+Reference: George Polya, Robert E. Tarjan and Donald R. Woods,
+<BR><i>Notes on Introductory Combinatorics</i>,
+Birkhauser, Boston, 1983.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

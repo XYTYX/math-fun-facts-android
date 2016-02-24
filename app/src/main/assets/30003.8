@@ -1,0 +1,124 @@
+Title: Ordinal Numbers
+Keywords: Axiom of Choice
+Subject: 8
+Level: 3
+FF Description: One of the most useful properties of the whole numbers
+is that every non-empty subset has a least element;
+this allows us to begin a process of "counting"
+by successively choosing least elements:
+0, 1, 2, 3, 4, ...
+Any (totally) ordered set which has this property is
+said to be <i>well-ordered</i>.  Using a well-ordering,
+we can define a notion of "counting" for
+sets of arbitrary size, not just ones with
+finitely many objects!
+
+<P>
+Let % denote the empty set.
+Consider the following sequence of sets:
+<CENTER>
+<BR>
+%, <font color="red">{%}</font>,
+<font color="green">{%, {%}}</font>,
+<font color="purple">{%, {%}, {%,{%}}}</font>, ...
+</CENTER>
+<BR>
+You can verify that these have 0, 1, 2, 3,... elements in them, respectively, and that each member of the sequence is the SET of all the sets that came before it.
+
+<P>Formally an <i>ordinal number</i> is any set which
+is (i) transitive (every member is a subset) and
+(ii) strictly well-ordered by the membership relation.
+For example, consider {%,{%},{%,{%}}}.
+The member {%,{%}} is in fact a subset consisting of the
+two elements % and {%}.  The set is also well-ordered
+because % is a member of {%}, and % and {%} are both
+members of {%,{%}}.
+
+<P>The sets defined above are ordinals.
+One can show that every ordinal S
+has a successor which is S union {S}.
+Moreover, every element of an ordinal is an ordinal,
+and the union of any set of ordinals is an ordinal.
+
+<P>If we call the set % as "0", the
+next set as "1", etc., then consider the union all the
+sets {0,1,2,...}.
+This is another ordinal called "omega" and it is the
+first non-finite ordinal.  It has a successor:
+omega union with {omega}, often called "omega + 1".
+More ordinals can be obtained by continuing this
+succession, and taking the union of all these
+ordinals yields an ordinal we call "omega times 2".
+Continuing this succession yields an ordering
+something like:
+<CENTER>
+<BR>
+0, 1, 2, ..., omega, omega+1, omega+2, ...,
+(omega)(2), (omega)(2)+1,...
+</CENTER>
+<BR>
+Somewhere beyond this there is the
+first uncountable ordinal.
+And there are many more ordinals than these!
+
+<P>
+Two well-ordered sets have the same <i>order type</i> if there
+is a 1-1 correspondence between them that preserves order.
+A surprising fact is that any well-ordered set has
+the same order type as one of the ordinals!
+Moreover, a famous theorem known as the
+Well-Ordering Theorem says that every set
+can be well-ordered, so ordinals give us a way of
+"counting" any set, even if it is not finite!
+
+
+
+
+
+Presentation suggestions: Motivate this subject by having students think about
+what "counting" means and how one might systematically
+count a set of objects which is FFact(uncountable).
+
+
+
+
+
+Behind the fact: Ordinal numbers even have an interesting arithmetic:
+we can add two ordinals by concatenating their
+order types, and considering the ordinal that represents
+the new order type.  This addition is not commutative!
+For instance, 1 + omega = omega, but
+this is not the same as omega + 1.
+
+<P>Multiplication of two ordinals A and B
+can be defined as the ordinal representing
+the order type of B many copies of A,
+concatenated.  Thus ordinal multiplication is not
+necessarily commutative, either, because (2)(omega) is
+(omega) which is not the same order time as (omega)(2).
+
+<P>
+You can learn more about ordinal numbers in a
+course on set theory.
+Ordinal numbers form the basis of
+<i>transfinite induction</i> which is a generalization
+of the principle of FFact(induction).
+The Well-Ordering Theorem (on which the
+principle of transfinite induction is based) is
+equivalent to the FFact(Axiom+of+Choice).
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Patrick Suppes, ISBN(0486616304,Axiomatic Set Theory).
+
+
+
+

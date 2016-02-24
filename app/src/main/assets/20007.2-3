@@ -1,0 +1,77 @@
+Title: Rolling Polygons
+Keywords: geometry, analysis
+Subject: 2, 3
+Level: 2
+FF Description: <!--needs picture-->
+Perhaps you've learned from a FFact(calculus) class that
+as you roll a circular disk along a straight line,
+that the area under the cycloid swept out by
+following a point on the edge of the disk between
+two successive points of tangency is exactly 3 times
+the area of the disk.
+
+<P>
+But did you know that a very similar
+fact is true for polygons?
+
+<P>
+For instance, take a square on a flat line, and mark
+one corner on the line
+with a red dot.  Now "roll" it along the
+line by pivoting the square around the corner
+that touches the line.  Each time it comes to a rest,
+mark the position of the red dot.  When the red dot
+again touches the line, stop.
+
+<P>
+Connect the red dots with <i>straight lines</i>.
+(These are dotted lines in the Figure.)  The area
+under this polygonal region will be 3 times the area of
+the square.  You can verify this in FFig(1).
+
+<P>
+The same holds for pentagons, hexagons, and any regular
+n-gon!
+
+
+
+
+
+
+
+Presentation suggestions: Draw examples on the board!  Challenge students to
+show this fact true for a triangle or
+a pentagon (harder).
+
+
+
+
+
+
+
+Behind the fact: Regular n-gons with a large number of sides are
+approximately circular, and the polygonal path obtained
+by connecting the dots will approximately FFact(converge) to
+the path taken by a point on the edge of the disk!
+This recovers the result for the cycloid.
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: pointed out to me by Duane deTemple
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+Title: Reuleaux Wheel
+Keywords: 
+Subject: 2, 3
+Level: 2
+FF Description: A <i>Reuleaux Triangle</i> is a plump triangle with
+rounded edges, formed in the following way: take the
+three points at the corners of an equilateral triangle,
+and connect each pair of points by a circular arc
+centered at the remaining point.
+
+<P>
+This triangle has some amazing properties.
+It is <i>constant-width</i>, meaning that it will
+hug parallel lines as it rolls.  By rotating the
+centroid of the Reuleaux triangle appropriately,
+the figure can be made to trace out a square,
+perfect except for slightly rounded corners!
+
+<P>
+This idea has formed the basis of a drill that will
+carve out squares!
+
+<P>
+And, what do you think the
+ratio of its circumference to its width is?
+
+<P>
+Amazing fact:  it is PI!
+
+
+
+
+
+
+Presentation suggestions: Have students think about why this figure is constant
+width.
+
+
+
+
+Behind the fact: There are many other FFact(convex), constant-width figures, such
+as the circle and various Reuleaux FFact(polygons), and they
+all satisfy the same ratio of FFact(circumference) to width!
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Michael Moody
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,79 @@
+Title: Two Envelopes Paradox
+Keywords: game theory
+Subject: 6, 8
+Level: 2
+FF Description: I have two envelopes, and inside each I have put
+some money.  In fact, one envelope contains
+twice as much money as the other.
+
+<P>I'll let you select one envelope, which you can
+have after the game is over.
+But as soon as you select one, I offer you the option
+to switch envelopes.  Should you switch?
+
+<P>You reason as follows:  My envelope has $x,
+and with probability 1/2 the other envelope has
+either $x/2 or $2x dollars.
+Thus the expected value of the other envelope is
+(1/2)($x/2) + (1/2)($2x) which is $1.25x.  This is
+greater than the $x in my current envelope.
+Therefore I should switch envelopes...
+
+<P>But if you do switch, a similar argument
+would instruct you to switch back... and therefore keep switching!  What's going on here?  Is there a flaw in the reasoning?
+
+
+
+
+Presentation suggestions: You can make this paradox concrete by bringing two envelopes to class and put some (unknown amount of) money in them, one twice as much as the other.
+
+
+Behind the fact: The expected value calculation is flawed because
+the conditioning on the relative value $x is incorrect.
+You need to have some idea of what the prior distribution of money in the envelope is before you can do the calculation.  For instance, if you knew that the two amounts were $5 and $10, then if you took the $5 envelope
+(i.e., if x=5), there is NO chance that the amount in the other envelope is $x/2; it must be $2x=$10.  Similarly,
+if you took the $10 envelope, the other envelope must be $5.
+So conditioning on whether you took the $5 or $10 envelope,
+the expected value of the other envelope is actually
+(1/2)(10)+(1/2)(5)=7.5.
+However, if you <i>observe</i> what's in your envelope, then you can condition on what you see;  the expected value of the other envelope is $10 if you see $5 in yours, or vice versa.  If you see $5 you should switch, and if you see $10 you should not.  So there is no paradox in this case.
+
+<P>
+However, surprisingly, there are some prior probability distributions of money in the envelopes for which it <i>always</i> makes sense to switch (whether or not you look at what's inside your envelope)!
+
+<P>For instance, suppose that amount
+of money in the two envelopes is($2<sup>k</sup>,$2<sup>k+1</sup>) with probability
+(2/3)<sup>k</sup>/3, for each integer k>=0.  It is a
+fun exercise to check that no matter what you have
+in your envelope,
+the other envelope has higher expected value, and
+you should switch!
+
+<P>How to resolve this FFact(paradox) is a perplexing philosophical question.  (Some of you may object that the
+prior distribution has infinite mean, but this does not fully resolve the paradox, since in theory if such a distribution exists, one would still have to
+wrestle with the paradox of continually switching envelopes!)
+
+<P>
+The study of mathematical models for decision-making is called FFact(game theory), 
+and FFact(probability) theory helps us understand expected values.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: JEngelke@edmunds.com
+phone: 
+Commenters: John Engelke
+Reference: P. Fishburn, and S.J. Brams, "The Box Problem: to switch or not to switch",
+<BR><i>Math. Mag.</i> 68(1995), 27-34.
+
+
+
+
+
+
+
+
+

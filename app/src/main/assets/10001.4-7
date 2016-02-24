@@ -1,0 +1,61 @@
+Title: Euler Characteristic
+Keywords: combinatorial topology, Euler number
+Subject: 4, 7
+Level: 1
+FF Description: Take out a sheet of paper.  Pop quiz! (just kidding).
+
+<P> Draw any number of dots on your page.
+Now connect the dots with lines, subject to the following
+rules:  lines may not cross each other as they move
+from dot to dot, and every dot on your page must be
+connected to every other dot through a sequence of
+lines.
+
+<P> Now count the number dots (D), lines (L), and
+regions separated by lines (R).  (Don't forget to count
+the outside as a region too.)
+Compute D-L+R.  What do you get?
+
+<P> No matter how you started, the
+number you will always get is 2!
+
+<P> In FFig(1), D=9, L=12, R=5, and indeed, D-L+R=2.
+
+<P> If the lines represent fences, and the dots fenceposts,
+then the regions separated by the fenceposts are
+the pastures.  So, if you are a farmer who wants to
+fence off 4 pastures together with 55 sections of fence,
+you can calculate exactly how many fenceposts you need,
+<i>no matter how you arrange the fences</I>!
+<BR>
+(L=55, R=5=4+outside, so D=2+L-R=2+55-5=52 fenceposts.)
+
+
+
+
+
+Presentation suggestions: You may wish to have everyone shout out their answer
+at the same time... students will be surprised they all get
+the same answer.
+
+Behind the fact: The number D-L+R is called the <I>Euler characteristic</I>
+of a FFact(surface).
+It is an <I>invariant</I> of a surface,
+meaning that while it looks like it may depend on
+the system of fences you draw, it really does not
+(as long as every pasture, including
+the outside, is topologically a disk with no holes).
+Thus the number only
+depends on the FFact(topology) of the surface that you are on!
+For planes and spheres, this number is always 2.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

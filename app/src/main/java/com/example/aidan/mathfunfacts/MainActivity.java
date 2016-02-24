@@ -1,5 +1,6 @@
 package com.example.aidan.mathfunfacts;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.TextView;
+
 import java.io.*;
 
 
@@ -21,6 +24,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.io.*;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,9 +49,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         try {
-
+            AssetManager am = getApplicationContext().getAssets();
+            String[] files = am.list("");
+            int length = files.length;
+            String l = " " + length;
+            Random rand = new Random();
+            int index = rand.nextInt(length);
+            String fileName = files[index];
+            TextView tv = (TextView) findViewById(R.id.textView);
+            tv.setText(fileName + index);
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("10001.1")));
+                    new InputStreamReader(getAssets().open(fileName)));
             StringBuilder total = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {

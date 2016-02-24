@@ -1,0 +1,33 @@
+Title: Powers of Ten in Base Two and Five
+Keywords: 
+Subject: 5, 8
+Level: 1
+FF Description: Make two lists; one consists of all powers of 10
+in base 2, and the other all powers of 10 in base 5.
+(Powers of 10 are 10, 100, 1000, etc.)
+
+<P>
+Fun Fact: for any integer N > 1, there is exactly one
+number in exactly one of the lists that is exactly
+N FFact(digits) long!
+
+
+Presentation suggestions: Show students the first terms in each list: they are
+<BR>(base 2) 1010, 1100100, 1111101000, ...
+<BR>(base 5) 20, 400, 13000, 310000, ...
+
+
+Behind the fact: This fact is quite startling when you first see it.
+Proving it makes a great exercise for a Putnam
+problem-solving seminar...
+
+
+Submitted by: 
+Date submitted: 
+name: Ravi Vakil
+email: 
+phone: 
+Commenters: 
+Reference: R. Vakil, ISBN(1895997046,A Mathematical Mosaic), 1996. p.131.
+
+

@@ -1,0 +1,91 @@
+Title: Wallis' Formula
+Keywords: pi formula
+Subject: 3, 5
+Level: 1
+FF Description: Here's a fun FFact(formula for Pi) involving an infinite product,
+known as Wallis' Formula:
+<center>
+<br>
+<table align=center>
+<tr>
+<td>
+(Pi/2) =
+</td>
+<td>(2*2)<hr noshade>(1*3)</td>
+<td>(4*4)<hr noshade>(3*5)</td>
+<td>(6*6)<hr noshade>(5*7)</td>
+<td> ... </td>
+</tr>
+</table>
+</center>
+<br>
+It is somewhat surprising that when you pull out
+every other pair of terms, you get a completely different
+kind of number!
+<center>
+<br>
+<table align=center>
+<tr>
+<td>
+Sqrt[2] =
+</td>
+<td>(2*2)<hr noshade>(1*3)</td>
+<td>(6*6)<hr noshade>(5*7)</td>
+<td>(10*10)<hr noshade>(9*11)</td>
+<td> ... </td>
+</tr>
+</table>
+</center>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+Presentation suggestions: You can also start with the infinite product, and ask
+if student can guess what it converges to, before you
+tell them the answer.
+
+
+
+
+
+
+Behind the fact: There is an infinite product formula for the sine function
+which yields Wallis' formula as a consequence.
+Infinite products are defined as the FFact(limit) of the
+partial products, which are finite.  This is similar
+to the way we define FFact(infinite sums)!
+
+<!--
+<P>
+<i>An anonymous contributor points out:</i>
+The history behind this formula is particularly
+fascinating. Wallis derived it by doing some fancy and
+unjustified interpolating.
+Newton was fascinated by this and used the same
+technique to derive the (generalized) binomial formula,
+a result that he regarded as one of his major achievements.
+-->
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Sam Vandervelde
+email: 
+phone: 
+Commenters: 
+Reference: S. Vandervelde, <i>Mathematics and Informatics Quarterly</i>,
+9 (1999), pp. 64-69.
+
+
+
