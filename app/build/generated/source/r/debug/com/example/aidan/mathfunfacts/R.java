@@ -2279,6 +2279,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
         public static final int radio=0x7f0c0054;
+        public static final int random=0x7f0c006b;
         public static final int right=0x7f0c0023;
         public static final int screen=0x7f0c0027;
         public static final int scroll=0x7f0c0018;
@@ -2316,7 +2317,6 @@ containing a value of this type.
         public static final int text=0x7f0c007e;
         public static final int text2=0x7f0c007c;
         public static final int textSpacerNoButtons=0x7f0c004d;
-        public static final int textView=0x7f0c006b;
         public static final int time=0x7f0c007a;
         public static final int title=0x7f0c0043;
         public static final int title_template=0x7f0c0048;
@@ -2420,6 +2420,7 @@ containing a value of this type.
         public static final int app_name=0x7f060015;
         public static final int appbar_scrolling_view_behavior=0x7f060016;
         public static final int character_counter_pattern=0x7f060017;
+        public static final int next=0x7f060018;
         public static final int status_bar_notification_info_overflow=0x7f060013;
     }
     public static final class style {

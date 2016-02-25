@@ -49,15 +49,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         try {
+            // Get Assets
             AssetManager am = getApplicationContext().getAssets();
+
+            // Get List of files in assets
             String[] files = am.list("");
+
+            // Get number of files
             int length = files.length;
             String l = " " + length;
+
+            // Get random number to get a random file
             Random rand = new Random();
-            int index = rand.nextInt(length);
+            int index = rand.nextInt(length-9);
             String fileName = files[index];
-            TextView tv = (TextView) findViewById(R.id.textView);
-            tv.setText(fileName + index);
+
+            // Create the string for the WebView
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(getAssets().open(fileName)));
             StringBuilder total = new StringBuilder();
@@ -66,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 total.append(line);
             }
             String message=total.toString();
+
+            // Set the WebView content to the file contents
             WebView wv = (WebView) findViewById(R.id.webView);
             //message  = "Title: Multiplication by 11\n" +
             wv.loadData(total.toString(), "text/html", "UTF-8");
@@ -109,5 +118,47 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getRandom(View v) {
+        try {
+
+            // Get Android Assets
+            AssetManager am = getApplicationContext().getAssets();
+
+            // Get list of files
+            String[] files = am.list("");
+
+            // Get number of files
+            int length = files.length;
+
+            // Get Random file
+            Random rand = new Random();
+            int index = rand.nextInt(length-9);
+            String fileName = files[index];
+
+            // Read from file and set it to a string to send to the WebView
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open(fileName)));
+            StringBuilder total = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                total.append(line);
+            }
+            String message=total.toString();
+            WebView wv = (WebView) findViewById(R.id.webView);
+            //message  = "Title: Multiplication by 11\n" +
+            wv.loadData(total.toString(), "text/html", "UTF-8");
+            System.out.print("Alis string" + total.toString());
+
+
+
+            //funFactTextView.setText(message);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            System.out.println("printed stack");
+
+            e.printStackTrace();
+        }
     }
 }
