@@ -34,3 +34,5 @@ captures/
 
 # Intellij
 *.iml
+*.sublime-workspace
+Soft Class.sublime-project
