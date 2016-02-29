@@ -68,10 +68,13 @@ public class ParserMathFunFact {
             String RawParsedData = total.toString();
 
             /*parser for the different meta data*/
+            
+            /*parsing title*/
             Scanner parser = new Scanner(RawParsedData).useDelimiter("\\s*Keywords:\\s*");
             Title = parser.next();
             Log.d("Title",Title);
 
+            /*parsing the keywords*/
             RawParsedData = RawParsedData.replace(Title, "");
             Log.d("RawParsedData" , RawParsedData);
             parser = new Scanner(RawParsedData).useDelimiter("Subject:\\s*");
@@ -89,6 +92,7 @@ public class ParserMathFunFact {
                 Log.d("Keyword",keyword);
             }
 
+            /*parsing the subects*/
             RawParsedData = RawParsedData.replace(KeywordsString,"");
             RawParsedData = RawParsedData.replace("Keywords:","");
             Log.d("Subject & Rest", RawParsedData);
@@ -108,6 +112,7 @@ public class ParserMathFunFact {
             }
 
 
+            /*parsing the level*/
             Level = Integer.parseInt(Filename.substring(0,1));
             Log.d("Level",Integer.toString(Level));
 
