@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,45 +49,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        try {
-            AssetManager am = getApplicationContext().getAssets();
-            String[] files = am.list("");
-            int length = files.length;
-            String l = " " + length;
-            Random rand = new Random();
-            int index = rand.nextInt(length);
-            String fileName = files[index];
-            TextView tv = (TextView) findViewById(R.id.textView);
-            tv.setText(fileName + index);
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open(fileName)));
-            StringBuilder total = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                total.append(line);
-            }
-            String message=total.toString();
-            WebView wv = (WebView) findViewById(R.id.webView);
-            //message  = "Title: Multiplication by 11\n" +
-            wv.loadData(total.toString(), "text/html", "UTF-8");
-            System.out.print("Alis string" + total.toString());
+        ParserMathFunFact MathFunFact = new ParserMathFunFact("10001.1-4",getApplicationContext());
 
-
-
-            //funFactTextView.setText(message);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            System.out.println("printed stack");
-
-            e.printStackTrace();
-        }
-        System.out.println("printed stack");
-
-
-
-        //"10001.1");
-
-        //wv.loadUrl("file:///android_asset/test.html");
     }
 
     @Override
