@@ -1,5 +1,6 @@
 package com.example.aidan.mathfunfacts;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -120,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void getRandom(View v) {
+    public void getRandom(View view) {
         try {
 
             // Get Android Assets
@@ -160,5 +161,10 @@ public class MainActivity extends AppCompatActivity {
 
             e.printStackTrace();
         }
+    }
+
+    public void GoToDifficultySelector(View view) {
+        Intent i = new Intent(getApplicationContext(), Difficulty.class);
+        startActivity(i);
     }
 }
