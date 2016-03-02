@@ -13,13 +13,15 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import static com.example.aidan.mathfunfacts.Subject.*;
+
 /**
  * Created by Ali ELABRIDI.
  */
 public class ParserMathFunFact {
     private String Title;
     ArrayList<String> Keywords;
-    ArrayList<Integer> Subjects;
+    ArrayList<Subject> Subjects;
     private int Level;
     Context context;
     private String Description;
@@ -94,21 +96,24 @@ public class ParserMathFunFact {
 
             /*parsing the subects*/
             RawParsedData = RawParsedData.replace(KeywordsString,"");
-            RawParsedData = RawParsedData.replace("Keywords:","");
+            RawParsedData = RawParsedData.replace("Keywords:", "");
             Log.d("Subject & Rest", RawParsedData);
             parser = new Scanner(RawParsedData).useDelimiter("Level:");
             String SubjectsString = parser.next();
             Log.d("SubjectsString", SubjectsString);
             SubjectsString = SubjectsString.replace("Subject:","");
             Scanner SingleSubjectParser = new Scanner(SubjectsString).useDelimiter(",|\n");
+            int SubjectParsed;
             while(SingleSubjectParser.hasNext()){
-                Subjects.add(Integer.parseInt(SingleSubjectParser.next().trim()));
+                /*to be completed later on with the list of subject */
+                SubjectParsed = Integer.parseInt(SingleSubjectParser.next().trim());
+                Subjects.add(IntegerToEnumSubject(SubjectParsed));
             }
             Log.d("Size_array of Subjects", Integer.toString(Subjects.size()));
 
 
-            for(Integer subject : Subjects){
-                Log.d("Subject",Integer.toString(subject));
+            for(Subject subject : Subjects){
+                Log.d("Subject",subject.name().toLowerCase());
             }
 
 
@@ -139,7 +144,7 @@ public class ParserMathFunFact {
         return Keywords;
     }
 
-    public ArrayList<Integer> getSubjects() {
+    public ArrayList<Subject> getSubjects() {
         return Subjects;
     }
 
@@ -157,5 +162,12 @@ public class ParserMathFunFact {
 
     public String getHTML_content() {
         return HTML_content;
+    }
+    public Subject IntegerToEnumSubject(int IntegerSubject){
+        if (IntegerSubject == 1)
+            return SUBJECT1;
+        else if(IntegerSubject == 2)
+            return SUBJECT2;
+        return NONE;
     }
 }
