@@ -5,11 +5,15 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Difficulty extends AppCompatActivity {
 
@@ -29,7 +33,6 @@ public class Difficulty extends AppCompatActivity {
             }
         });
 
-        WebView webview = (WebView) findViewById(R.id.difficultyWebView);
         try {
             String fileName = "10001.1";
 
@@ -51,6 +54,22 @@ public class Difficulty extends AppCompatActivity {
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void getFunFactByDifficulty(View view) {
+        RadioGroup difficultySelector = (RadioGroup) findViewById(R.id.difficultySelector);
+        String difficulty = ((RadioButton) findViewById(difficultySelector.getCheckedRadioButtonId())).getText().toString();
+        Log.d("Selected ID", difficulty);
+
+        int level;
+        if(difficulty.equals("Easy"))
+            level = 1;
+        else if (difficulty.equals("Medium"))
+            level = 2;
+        else level = 3;
+
+        MathFunFactCollection collection = new MathFunFactCollection(this.getApplicationContext());
+        ArrayList<MathFunFactMetadata> files = collection.findMFFWithDifficulty(level);
     }
 
 }

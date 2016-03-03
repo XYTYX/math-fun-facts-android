@@ -40,9 +40,9 @@
 
     </RadioGroup>
 
-    <WebView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/difficultyWebView">
-    </WebView>
+        android:text="@string/go"
+        android:onClick="getFunFactByDifficulty"/>
 </RelativeLayout>
