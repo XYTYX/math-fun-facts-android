@@ -69,9 +69,6 @@ public class ParserMathFunFact {
             Log.d("tag", "Alis string" + total.toString());
             String RawParsedData = total.toString();
 
-            /*parser for the different meta data*/
-            
-            /*parsing title*/
             Scanner parser = new Scanner(RawParsedData).useDelimiter("\\s*Keywords:\\s*");
             Title = parser.next();
             Log.d("Title",Title);
@@ -94,7 +91,6 @@ public class ParserMathFunFact {
                 Log.d("Keyword",keyword);
             }
 
-            /*parsing the subects*/
             RawParsedData = RawParsedData.replace(KeywordsString,"");
             RawParsedData = RawParsedData.replace("Keywords:", "");
             Log.d("Subject & Rest", RawParsedData);
@@ -105,7 +101,6 @@ public class ParserMathFunFact {
             Scanner SingleSubjectParser = new Scanner(SubjectsString).useDelimiter(",|\n");
             int SubjectParsed;
             while(SingleSubjectParser.hasNext()){
-                /*to be completed later on with the list of subject */
                 SubjectParsed = Integer.parseInt(SingleSubjectParser.next().trim());
                 Subjects.add(IntegerToEnumSubject(SubjectParsed));
             }
@@ -117,7 +112,6 @@ public class ParserMathFunFact {
             }
 
 
-            /*parsing the level*/
             Level = Integer.parseInt(Filename.substring(0,1));
             Log.d("Level",Integer.toString(Level));
 
