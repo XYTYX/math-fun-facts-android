@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
@@ -39,12 +40,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final View view = this.findViewById(android.R.id.content);
+        FloatingActionButton fab = (FloatingActionButton)  view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                getRandom(v);
             }
         });
 
@@ -77,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
             // Set the WebView content to the file contents
             WebView wv = (WebView) findViewById(R.id.webView);
+            WebSettings settings = wv.getSettings();
+
+
+            settings.setDefaultFontSize(24);
             //message  = "Title: Multiplication by 11\n" +
             wv.loadData(total.toString(), "text/html", "UTF-8");
             System.out.print("Alis string" + total.toString());

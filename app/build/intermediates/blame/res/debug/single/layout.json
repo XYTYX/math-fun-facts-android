@@ -68,8 +68,16 @@
         "source": "/Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/layout/activity_filtered_fun_fact.xml",
+        "source": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/src/main/res/layout/activity_filtered_fun_fact.xml"
+    },
+    {
         "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
         "source": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/layout/content_filtered_fun_fact.xml",
+        "source": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/src/main/res/layout/content_filtered_fun_fact.xml"
     },
     {
         "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",

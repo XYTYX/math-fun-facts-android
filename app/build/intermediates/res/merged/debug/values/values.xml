@@ -281,6 +281,8 @@
     <string name="next">Next</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_difficulty">Difficulty</string>
+    <string name="title_activity_display_fun_fact">DisplayFunFact</string>
+    <string name="title_activity_filtered_fun_fact">FilteredFunFact</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
