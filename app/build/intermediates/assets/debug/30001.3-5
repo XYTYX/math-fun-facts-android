@@ -1,0 +1,57 @@
+Title: Euler's Product Formula
+Keywords: infinite series, number theory, Riemann zeta function, distribution of primes
+Subject: 3, 5
+Level: 3
+FF Description: Here is an amazing formula due to FFact(Euler):
+<CENTER>
+<BR>
+SUM<sub>n=1 to infinity</sub> n<sup>-s</sup>
+= PROD<sub>p prime</sub> (1 - p<sup>-s</sup>)<sup>-1</sup> .
+</CENTER>
+<BR>
+What's interesting about this formula is that it
+relates an expression involving all the positive integers
+to one involving just primes!
+
+<P>
+And you can use it to prove there must be FFact(infinitely many primes).
+For, if there were only finitely many primes, then the right side of the expression is a finite product, and in particular for s=1.  But for s=1, the left side of the equation is the
+FFact(harmonic series) which we know must diverge!
+This is a FFact(contradiction), so there must be infinitely many primes.
+
+
+
+
+
+
+
+
+
+Presentation suggestions: Interested students may wish to take a few terms on the
+right hand side, use a power expansion, and
+multiply them out... to get an idea of why the equality
+holds.
+
+
+
+
+
+Behind the fact: The left hand side, when s is viewed as a complex variable,
+is also known as the FFact(Riemann+zeta+function).
+Because of the above relationship, the study of
+zeta functions is closely related to the study
+of the FFact(distribution+of+primes)!
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Lesley Ward
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,82 @@
+Title: Area of a Circle or Regular Polygon
+Keywords: area of a circle, area of a regular polygon, area of circles
+Subject: 2, 3
+Level: 2
+FF Description: There's a nice way to see why the formula for the area of a circle of radius R is:
+<CENTER><BR>
+Pi * R<sup>2</sup>.
+</CENTER><BR>
+It has an interesting relationship with the formula for the circumference of a circle, which is 2 * Pi * R (and that
+is a consequence of the definition of FFact(Pi),
+which is defined to be the ratio of the circumference of a circle to its diameter.)
+<P>
+So consider a <i>regular polygon</i>, which is an N-sided figure with equal side lengths S and equal angles at each corner.
+There is an <i>inscribed circle</i> to the polygon that has center C and just barely touches the midpoint of every side.
+A line from C to the midpoint of a side is called the <i>apothem</i>,
+and suppose this apothem has length R.
+<P>
+If you cut the FFact(polygon) along lines from each corner of the polygon to the center C, you will get a bunch of triangles,
+each with area (1/2)*(base)*(height).
+Note that each (base) has length S and the (height) is the length R of the apothem, and there are N such triangles.  Thus the total area of the polygon is N*(1/2)*S*R,
+which to say it another way is:
+<CENTER><BR>
+(1/2) (Circumference of the Polygon) * R
+</CENTER><P>
+Now notice that if you let N, the number of sides of the polygon, get larger and larger, the polygon's area approaches the area of a circle of radius R.
+On the other hand, the circumference approaches the circumference of a circle, so that as N goes to infinity,
+the above formula approaches:
+<BR><CENTER>
+(1/2) (2 * Pi * R) * R
+</CENTER><P>
+which is just Pi*R<sup>2</sup>, the area of a circle!
+
+
+
+
+
+
+
+
+
+Presentation suggestions: Draw a circle and cut it into thin pie wedges.
+Then help students see that each pie wedge is approximated by a very thin triangle, and as we cut the pie into more and more wedges, this approximation gets better and better and
+FFact(in the limit) the
+FFact(approximation) becomes equality.
+
+
+
+
+
+
+
+
+
+Behind the fact: The process of approximating the area of the circle
+by slicing it into thin wedges is analogous to the
+process of integration (in calculus) to find an area.
+In the limit this approximation gets better and better.
+To see the relationship between circumference and area in reverse, where derivatives play a role,
+see FFact(Surface+Area+of+a+Sphere).
+See FFact(Rolling+Polygons) for more connections between polygons and circles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

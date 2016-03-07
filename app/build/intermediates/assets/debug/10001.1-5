@@ -1,0 +1,87 @@
+Title: Magic Squares, indeed!
+Keywords: matrix
+Subject: 1, 5
+Level: 1
+FF Description: Perhaps you've seen the magic square
+<CENTER>
+8 1 6
+<BR> 3 5 7
+<BR> 4 9 2
+</CENTER>
+which has the property that all rows, columns and diagonals
+sum to 15.
+Well, it has another "magic" and "square" property!
+If you read the rows as NUMBERS, forwards and backwards,
+and square them, then
+<CENTER>
+<BR>
+816<sup>2</sup> + 357<sup>2</sup> + 492<sup>2</sup> =
+618<sup>2</sup> + 753<sup>2</sup> + 294<sup>2</sup>.
+</CENTER>
+<P>
+Magic?
+
+
+
+
+Presentation suggestions: If they like this fun fact, ask them to take a minute
+to see what happens with the columns 
+when you read them forwards and backwards and take their
+sums of squares.  
+Then try the "diagonals" which wrap around the square...
+they also share a similar property!
+
+
+
+Behind the fact: This holds for ANY 3x3 FFact(magic+square)
+(though if the entries contain more than one digit,
+you will have to carry the extra places)
+using techniques of linear algebra. For instance,
+for this magic square:
+<CENTER>
+13 6 11
+<BR> 8 10 12
+<BR> 9 14 7
+</CENTER>
+you can check that:
+<CENTER>
+<BR>
+(1300+60+11)<sup>2</sup>
++(800+100+12)<sup>2</sup>
++(900+140+7)<sup>2</sup> =
+(1100+60+13)<sup>2</sup>
++(1200+100+8)<sup>2</sup>
++ (700+140+9)<sup>2</sup>.
+</CENTER>
+<BR>
+The Gardner references makes this observation for this specific 3x3 magic square, and the Benjamin-Yasuda reference proves the generalization for all 3x3 magic squares.
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: 
+phone: 
+Commenters: Carlos Rivera / crivera@primepuzzles.net
+Reference: A. Benjamin and K. Yasuda, "Magic Squares Indeed!",
+Amer. Math. Monthly, Feb. 1999.
+<P>
+Martin Gardner, ISBN(0883855216, Penrose Tiles to Trapdoor Ciphers).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

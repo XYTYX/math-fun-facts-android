@@ -1,0 +1,81 @@
+Title: Greedy to Avoid Progressions
+Keywords: 
+Subject: 5
+Level: 3
+FF Description: An <i>FFact(arithmetic progression)</i> is a sequence of
+3 or more integers whose terms differ by a constant, e.g.,
+20, 23, 26, 29 is an arithmetic progression.
+Question:
+does every increasing sequence of integers
+have to contain an arithmetic progression in it?
+For instance, the sequence
+of primes 2, 3, 5, 7, 11, 13,...
+contains an arithmetic progression: 3,7,11.
+
+<P>
+Somewhat surprisingly, there are sequences with
+no progressions!  We'll construct an example:
+
+<P>Start with 0.  Then for the next term in the
+sequence, be <i>greedy</i>:
+take the <i>smallest possible integer</i>
+that does not cause an arithmetic progression to form
+in the sequence constructed so far.  (There must
+be such an integer because there are infinitely
+many integers beyond the last term, and only finitely
+many possible progressions the new term could complete.)
+This gives:
+<BR>
+<CENTER>0, 1, 3, 4, 9, 10, 12, 13, 27, 28,...
+</CENTER>
+
+<P>Clearly this sequence has the required property.
+
+Now that we have a solution, is there a better way
+to understand what this sequence is,
+without having to rely on recursion?
+
+<P>Yes.  The above sequence can also be obtained by
+writing all the positive integers in base 2, then
+interpreting them in base 3!  The base 2 integers are:
+
+<BR>
+<CENTER>0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001,...
+</CENTER>
+and if you think of these as base 3 numbers, you get
+the above integers!
+
+
+
+
+
+Presentation suggestions: Encourage students to think about why the FFact(binary) trick
+works.
+
+
+Behind the fact: There are two important mathematical ideas here.
+
+<P>
+The trick used to construct the above sequence is
+an example of a <i>greedy algorithm</i>.
+Greedy algorithms arise as solutions to
+many problems in computer science
+and mathematics.
+
+<P>
+The second lesson is that often when a solution
+is developed, we can find a simpler one by insight:
+it is a nice exercise to show that
+the binary trick work because in base 3,
+if any two terms contain just 0's and 1's, then
+a third term that completes an arithmetic progression
+must contain a 2!
+
+
+Submitted by: 
+Date submitted: 
+name: Jorge Aarao
+email: 
+phone: 
+Commenters: 
+Reference: 

@@ -1,0 +1,67 @@
+Title: Divisibility by Seven
+Keywords: 
+Subject: 5
+Level: 1
+FF Description: Everyone learns in grade school some simple tests for
+divisibility by small numbers such as 2, 3, 5, and 9.
+But far less well-known are some simple divisibility tests
+for the number 7. Here are a couple:
+
+<P>
+Test #1. Take the digits of the number in reverse order,
+from right to left, multiplying them successively by the
+digits 1, 3, 2, 6, 4, 5, repeating with this sequence of
+multipliers as long as necessary.  Add the products.
+This sum has the same remainder mod 7 as the original
+number!
+Example: Is 1603 divisible by seven?
+Well, 3(1)+0(3)+6(2)+1(6)=21 is divisible by 7, so 1603 is.
+
+<P>
+Test #2. Remove the last digit, double it, subtract it from the truncated original number and continue doing this until only one digit remains.  If this is 0 or 7, then the
+original number is divisible by 7.
+Example:  1603 -> 160-2(3)=154 -> 15-2(4)=7,
+so 1603 is divisible by 7.
+
+<P>See the reference for more tests and more references.
+
+
+Presentation suggestions: Do examples as you go!  Perhaps remind students of the
+divisibility test for 9 before presenting these.  If
+you are teaching a FFact(number theory) course, you may wish
+to assign their proofs as an exercise!
+
+
+Behind the fact: Here's a hint on how to prove them.
+For the first test, note that (mod 7),
+1==1, 10==3, 100==2, 1000==6, etc.
+For the second test, note that (mod7),
+10A+B==10*(A-2B).
+
+<P>
+The second trick mentioned here can be modified
+to check for divisibility by other primes.
+For example, to check divisibility by 13,
+take the last digit, multiply by 4 and
+add to the truncated portion.
+To check divisibility by 19,
+double the last digit and add.
+In fact, for any prime p,
+there exists some integer k such that divisibility by p
+can be ascertained by multiplying the unit's digit by k
+and adding (or subtracting)
+from the truncated portion of the numeral.
+See also FFact(Divisibility+by+Eleven).
+
+
+Submitted by: 
+Date submitted: 
+name: Timothy Chow
+email: 
+phone: 
+Commenters: 
+Reference: Martin Gardner, <I>Unexpected Hanging</I>.
+
+
+
+

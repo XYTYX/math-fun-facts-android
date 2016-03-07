@@ -1,0 +1,66 @@
+Title: Surface Area of a Sphere
+Keywords: calculus
+Subject: 2, 3
+Level: 2
+FF Description: The area of a disk enclosed by a circle of radius R is Pi*R<sup>2</sup>.
+<BR>
+The formula for the circumference of a circle of radius R is 2*Pi*R.
+<BR>
+A simple FFact(calculus) check reveals that
+the latter is the derivative of the former with respect
+to R.
+
+<P>
+Similarly, the volume of a ball enclosed by a sphere of radius R is (4/3)*Pi*R<sup>3</sup>.
+<BR>
+And the formula for the surface area of a sphere of radius R is 4*Pi*R<sup>2</sup>.
+<BR>
+And, you can check that the latter is the derivative
+of the former with respect to R.
+
+<P>
+Coincidence, or is there a reason?
+
+
+
+Presentation suggestions: Let your students tell you those FFact(geometry) formulas if they
+remember them.
+
+
+
+
+
+
+
+
+
+
+
+
+Behind the fact: Well, no, it is not a coincidence.  For the ball,
+a small change in radius produces a
+change in volume of the ball which is equal to the volume
+of a spherical shell of radius R and thickness (delta R).
+The spherical shell's volume is thus approximately
+(surface area of the sphere)*(delta R).
+But the derivative is approximately the
+change in ball volume divided by (delta R), which is
+thus just (surface area of the sphere).
+
+<P>
+So, if I tell you the 4-dimensional "volume" of the
+4-dimensional ball is (1/2)*Pi<sup>2</sup>*R<sup>4</sup>,
+what is 3-dimensional volume of its boundary?
+
+<P>
+See also FFact(Volume+of+a+Ball+in+N+Dimensions).
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

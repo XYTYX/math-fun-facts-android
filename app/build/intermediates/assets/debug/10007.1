@@ -1,0 +1,70 @@
+Title: Multiplying Complementary Pairs
+Keywords: 
+Subject: 1
+Level: 1
+FF Description: Quick!  What's 23 x 27?
+<P>
+<CENTER>
+621
+</CENTER>
+<P>
+There's a trick to doing this quickly.
+Can you see a pattern in these multiplications?
+<P>
+<CENTER>
+42 x 48 = 2016<BR>
+43 x 47 = 2021<BR>
+44 x 46 = 2024<BR>
+54 x 56 = 3024<BR>
+64 x 66 = 4224<BR>
+61 x 69 = 4209<BR>
+111 x 119 = 13209<BR>
+</CENTER>
+<P>
+In each pair above, the numbers being multiplied
+are <i>complementary</i>: they are the same number except
+for the rightmost digit, and the rightmost digits
+add to 10.
+<P>The trick to multiplying complementary pairs is
+to take the rightmost digits and multiply them;
+the result forms the two rightmost digits of the answer.
+(So in the last example 1 x 9 = 09.)
+Then take the first number without its rightmost digit,
+and multiply it by the next higher whole number;
+the result forms the initial digits of the answer.
+(So in the last example: 11 x 12 = 132.  Voila!
+The answer is 13209.)
+
+
+
+
+
+Presentation suggestions: 
+Behind the fact: This trick works because you are multiplying pairs of numbers
+of the form 10*N+A and 10*(N+1)-A, where N is a whole number and A is a digit between 1 and 9.
+A little algebra shows their product is:
+<P>
+<CENTER>
+100*N*(N+1) + A*(10-A).
+</CENTER>
+<P>
+The first term in the sum is a multiple of 100
+and it does not interact with the last two digits of sum,
+which is never more than two digits long.
+<P>
+This trick is related to some of the other FFact(lightning+arithmetic) Fun Facts.
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: A. Benjamin and M. Shermer,
+ISBN(0307338401,Secrets of Mental Math),
+Three Rivers Press, 2006.
+
