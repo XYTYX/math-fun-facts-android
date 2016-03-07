@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/mai
 		INJECTED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:5:5-25:19
+ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:5:5-29:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.1] /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
@@ -51,13 +51,21 @@ ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/mai
 	android:name
 		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:18:27-74
 activity#com.example.aidan.mathfunfacts.Difficulty
-ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:21:9-24:68
+ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:21:9-24:59
 	android:label
 		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:23:13-62
 	android:theme
 		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:24:13-56
 	android:name
 		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:22:13-39
+activity#com.example.aidan.mathfunfacts.FilteredFunFact
+ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:25:9-28:68
+	android:label
+		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:27:13-69
+	android:theme
+		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:28:13-56
+	android:name
+		ADDED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml:26:13-44
 uses-sdk
 INJECTED from /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
