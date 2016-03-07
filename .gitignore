@@ -8,3 +8,5 @@
 /captures
 .idea/gradle.xml
 .idea/gradle.xml
+/build/intermediate/dex-cache
+./gradle/2.8/taskArtifacts
