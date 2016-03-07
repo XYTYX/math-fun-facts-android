@@ -1,0 +1,49 @@
+Title: Are Coins Fair?
+Keywords: 
+Subject: 6, 8
+Level: 1
+FF Description: When you flip a FFact(coin), 
+what are the chances that it comes up heads?  If the coin is "fair" then we expect to see heads 50 percent of the time.  But is this really the case?
+
+<p>
+In an interesting 2007 paper, Diaconis, Holmes, and Montgomery show that coins are not fair--- in fact, they tend to come up the way they started about 51 percent of the time!
+
+
+
+Presentation suggestions: 
+Behind the fact: Their work takes into account the fact that coins wobble, or <i>precess</i> when they are flipped: the axis of rotation of the coin changes as it moves through space.
+Previous work by Keller showed that a coin spun about an axis through its plane---with a vigorous throw (large spin and velocity) and caught in the hand without bouncing---actually does come up the way it started 50 percent of the time.  But this coin does not precess.
+
+<p>
+On the other hand, most people flip coins with a wobble.
+
+<p>
+What Diaconis et al. showed with a theoretical model is that even with a vigorous throw, wobbling coins caught in the hand are biased in favor of the side that was up at start.  The amount of biased just depends on one thing: the angle A between the perpendicular FFact(vector) to the coin 
+and the angular momentum vector (which does not change throughout the coin toss).
+
+<p>
+Then they proceed to empirically determine the FFact(distribution) of angle A 
+by observing lots of real people tossing coins and measuring A with the help a high-speed camera.  
+This was enough to show that the bias in coin tossing was at least 1 percent.
+
+<p>
+You might be asking yourself: why bother with a theoretical model of coin flipping?  Why not just ask lots of people to flip coins, look what proportion X end in the same state, and use X to estimate a "true" proportion P?  The problem is that to distinguish with any confidence between 51 percent and 50 percent would take about 250,000 trials.
+
+
+<!--
+Suppose you start a coin in the heads position and flip a coin lots of times.  If X is the proportion of the time it comes up heads, obviously X is only an estimate for the "true" proportion P for that coin, right?  So there is some uncertainty as to whether X is close to P.
+
+Note that X is also a <i>random variable</i> that depends on the outcome of the coin tosses.  What we know from FFact(probability) theory is that
+the likely values of X will tighten themselves around P
+as the number of coin flips grows.  The radius of that interval of likely values is called the <i>standard error</i>.
+-->
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Persi Diaconis, Susan Holmes, Richard Montgomery, "Dynamical Bias in the Coin Toss", SIAM Review, vol 49, pp. 211-235.
+
+

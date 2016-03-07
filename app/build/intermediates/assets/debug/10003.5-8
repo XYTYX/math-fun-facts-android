@@ -1,0 +1,35 @@
+Title: Binary Card Trick
+Keywords: binary arithmetic, mathematical magic trick
+Subject: 5, 8
+Level: 1
+FF Description: You put a FFact(deck of cards) in your pocket, and invite anyone in the audience to call out a number between 1 and 15.
+Then you reach into your pocket, you take out a set of cards whose sum is the number that was called!
+<P>
+How can you perform this magic trick?
+
+
+
+
+Presentation suggestions: 
+Behind the fact: This FFact(mathematical magic) trick can be found in the reference 
+and is based on the properties of binary numbers.  Every number between 1 and 15 has a unique representation as a sum of some collection of the numbers 1, 2, 4, and 8. (To see which collection, just take the given number and successively subtract the largest number of 1, 2, 4, and 8 that is less than the given number.  That number is part of your collection.  The subtraction yields a new number; now repeat the process with this number, over and over, until you get 0.)  The collection of numbers you obtain reveals the <i>binary decomposition</i> of the given number into sums of powers of two (in contrast to the usual representation of a number into sums of powers of ten).
+<P>
+Now before the trick starts, pick an Ace, 2, 4, and 8 and put them on top of the deck, and then put the deck in your pocket.
+<P>
+Then when a number between 1 and 15 is called out, take the FFact(binary) decomposition of the number, and use that to determine which of the first four cards you will pull out.  No one needs to know that you never need to use the other cards!
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Martin Gardner, ISBN(0883855518, aha!: aha! Insight and aha! Gotcha).
+
+
+
+

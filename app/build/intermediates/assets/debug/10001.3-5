@@ -1,0 +1,65 @@
+Title: Sums of Reciprocal Powers
+Keywords: number theory, infinite series, Riemann zeta function
+Subject: 3, 5
+Level: 1
+FF Description: You have seen that the FFact(harmonic+series) diverges.
+What about the sum of reciprocal squares?  In fact,
+they converge, and to something very interesting:
+<center>
+<P>
+SUM<sub>k=1 to infinity</sub> ( 1/k<sup>2</sup> )
+= ( Pi<sup>2</sup>/6 )
+</P>
+</center>
+Where did that Pi come from, anyway?
+
+<P>
+If you liked that one, here are more:
+<center>
+<P>
+SUM<sub>k=1 to infinity</sub> ( 1/k<sup>4</sup> )
+= ( Pi<sup>4</sup>/90 )
+<br>
+SUM<sub>k=1 to infinity</sub> ( 1/k<sup>6</sup> )
+= ( Pi<sup>6</sup>/945 )
+<br>
+SUM<sub>k=1 to infinity</sub> ( 1/k<sup>8</sup> )
+= ( Pi<sup>8</sup>/9450 )
+<br>
+SUM<sub>k=1 to infinity</sub> ( 1/k<sup>10</sup> )
+= ( Pi<sup>10</sup>/93,555 )
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+Presentation suggestions: This Fun Fact is short
+and fun for the class to ponder.
+
+
+Behind the fact: Little is known about sums of odd powers.  It was recently
+shown (Apery) that the sum of the cubed reciprocals is
+irrational.  The sums of reciprocal powers as you
+vary the power is a function known as the 
+FFact(Riemann+zeta+function).
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Lesley Ward
+email: 
+phone: 
+Reference: Math. Intelligencer article by van der Poorten, 78/79
+MR 80i:10054
+
+

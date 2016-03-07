@@ -1,0 +1,44 @@
+Title: Chords of a Unit Circle
+Keywords: complex numbers, chords, unit circle
+Subject: 1, 2, 3
+Level: 2
+FF Description: <P>
+Take N equidistant points on the unit circle. Pick one of
+those points, then draw chords from it to all other points
+on the circle, as in FFig(1).
+What is the product of lengths of those chords?
+
+</P>Surprise: for N points, the product is just N.
+Pretty cool, huh?
+
+
+
+
+Presentation suggestions: Do simple cases first and draw pictures: for N=2, there is just one chord (the diameter of the circle, length 2).  For N=3, there are two chords (both of length Sqrt[3], product=3).  For N=4, there are 3 chords (one diameter of length 2, two of length Sqrt[2], product=4).  Have people conjecture the answer for themselves!
+
+
+
+Behind the fact: If you know about FFact(complex numbers), you can prove this by
+letting the points of the circle be given by roots of
+unity, and letting z be any point (not necessarily the
+unit disc) and looking at the product of lengths of the chords from z to all N points on the circle.
+Divide this expression by (z-1), and take the limit as z goes to 1, and voila!, you will get N.
+<P>
+If you liked this Fun Fact, now see what happens with
+FFact(Chords+of+an+Ellipse).
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 
+
+

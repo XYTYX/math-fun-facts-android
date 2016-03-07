@@ -1,0 +1,61 @@
+Title: One Equals Zero!
+Keywords: algebra false proof, paradox
+Subject: 1, 8
+Level: 1
+FF Description: The following is a "proof" that one equals zero.
+
+<P>
+Consider two non-zero numbers x and y such that
+<CENTER>
+x = y.
+<BR>
+Then x<sup>2</sup> = xy.
+<BR>
+Subtract the same thing from both sides:
+<BR>
+x<sup>2</sup> - y<sup>2</sup> = xy - y<sup>2</sup>.
+<BR>
+Dividing by (x-y), obtain
+<BR>
+x + y = y.
+<BR>
+Since x = y, we see that
+<BR>
+2 y = y.
+<BR>
+Thus 2 = 1, since we started with y nonzero.
+<BR>
+Subtracting 1 from both sides,
+<BR>
+1 = 0.
+</CENTER>
+
+<P>
+What's wrong with this "proof"?
+
+
+
+Presentation suggestions: This Fun Fact is a reminder for students to always
+check when they are dividing by unknown variables
+for cases where the denominator might be zero.
+
+
+
+Behind the fact: The problem with this "proof"
+is that if x=y, then x-y=0.  Notice that halfway
+through our "proof" we divided by (x-y).
+
+<P>
+For a more subtle "proof" of this kind,
+see FFact(One+Equals+Zero:+Integral+Form).
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Joshua Sabloff
+email: 
+phone: 
+Commenters: 
+Reference: 

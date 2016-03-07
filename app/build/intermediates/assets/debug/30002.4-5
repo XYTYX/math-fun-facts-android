@@ -1,0 +1,151 @@
+Title: Lucas' Theorem
+Keywords: 
+Subject: 4, 5
+Level: 3
+FF Description: Lucas' Theorem: If p is a prime number, and
+N has base p representation
+(a<sub>j</sub>,...,a<sub>1</sub>,a<sub>0</sub>) and
+k has base p representation
+(b<sub>j</sub>,...,b<sub>1</sub>,b<sub>0</sub>),
+then (N CHOOSE k) is congruent [mod p] to
+<center>
+<BR>
+(a<sub>j</sub> CHOOSE b<sub>j</sub>)...(a<sub>1</sub> CHOOSE b<sub>1</sub>)(a<sub>0</sub> CHOOSE b<sub>0</sub>).
+</center>
+
+<P>
+Example: Let N = 588, k = 277, p = 5.
+<BR>
+N = 588 has base 5 representation (4323).
+<BR>
+k = 277 has base 5 representation (2102).
+<BR>
+Thus by Lucas' Theorem,
+(588 CHOOSE 277) is congruent [mod 5] to
+<center>
+(4 CHOOSE 2) (3 CHOOSE 1) (2 CHOOSE 0) (3 CHOOSE 2)
+</center>
+which is 54 = 4 [mod 5].
+
+<P>
+Fun Corollary: If p is prime and N has base p representation
+(a<sub>j</sub>,...,a<sub>1</sub>,a<sub>0</sub>),
+then there are exactly
+(1+a<sub>j</sub>)...(1+a<sub>1</sub>)(1+a<sub>0</sub>)
+values of k for which (N CHOOSE k) is NOT a multiple of p.
+This is the number of non-multiples of p in the
+N-th row of FFact(Pascal's+Triangle).
+
+<P>
+Example: Since 588 = (4323) in base 5, then
+(588 CHOOSE k) is a non-multiple of 5 for exactly
+5*4*3*4 = 240 values of k. The 588th row of
+Pascal's Triangle will have 589 - 240 = 349
+multiples of 5.
+
+<P>
+A special case of this
+is FFact(Odd+Numbers+in+Pascal's+Triangle).
+
+
+
+
+
+
+
+
+
+Presentation suggestions: 
+Behind the fact: The proof of Lucas' Theorem is based on this observation:
+for p prime and r > 0, (p<sup>r</sup> CHOOSE k)
+is a multiple of p for all 0 < k < p<sup>r</sup>.
+
+To show this, note for 0 < k < N that
+(N CHOOSE k) = (N/k)(N-1 CHOOSE k-1). So when
+N = p<sup>r</sup>, we have
+<center>
+k*(p<sup>r</sup> CHOOSE k)
+= p<sup>r</sup> (p<sup>r</sup>-1 CHOOSE k-1).
+</center>
+At least r powers of p divide the right side
+of the equation above,
+whereas at most r-1 powers of p divide k. Thus p must
+divide (p<sup>r</sup> CHOOSE k).
+(Note this argument only works when p is prime.)
+
+<P>
+When k = 0 or p<sup>r</sup>, then
+(p<sup>r</sup> CHOOSE k)=1.
+Otherwise (p<sup>r</sup> CHOOSE k)=0 [mod p].
+Then the binomial theorem shows that when p is prime,
+<center>
+(1+x)<sup>p^r</sup> = 1 + x<sup>p^r</sup> [mod p].
+</center>
+(This is sometimes called the "Freshman Binomial Theorem".)
+
+<P>
+Now we show that (588 CHOOSE 277) is congruent to 54 [mod 5].
+The general case is similar.
+In the polynomial (1+x)<sup>588</sup>,
+the coefficient of x<sup>277</sup>
+will be (588 CHOOSE 277) [mod 5].
+But
+<center>
+(1+x)<sup>588</sup>
+= (1+x)<sup>4(125)</sup> (1+x)<sup>3(25)</sup>
+(1+x)<sup>2(5)</sup> (1+x)<sup>3</sup>
+</center>
+and our observation above shows that
+this is congruent [mod 5] to
+<center>
+(1+x<sup>125</sup>)<sup>4</sup>
+(1+x<sup>25</sup>)<sup>3</sup>
+(1+x<sup>5</sup>)<sup>2</sup>
+(1+x)<sup>3</sup>.
+</center>
+Now how can we create an x<sup>277</sup> term?
+Only by using exactly
+two x<sup>125</sup> terms,
+one x<sup>25</sup>,
+no  x<sup>5</sup> terms, and
+two x<sup>1</sup> terms. How many
+ways can we do that? Exactly
+(4 CHOOSE 2)(3 CHOOSE 1)(2 CHOOSE 0)(3 CHOOSE 2)
+ways, as predicted!
+
+<!--
+Proof of Fun Corollary: Notice that for 0 <= b <= a < p,
+(a \choose b) is not a multiple of p. Thus the only way to
+obtain a multiple of p to have b_i > a_i in one of the of
+(a_i choose b_i) terms. Hence given that N and k have base p
+representations (a_j,...,a_1,a_0) and (b_j,...b_1,b_0),
+(where we allow b_j to be 0), then in order
+to obtain a non-multiple of p for (N \choose k)
+it is necessary and sufficient for 0 <= b_i <= a_i for all
+i = 0..j. Thus there are (1+a_j) * ... * (1+a_1) * (1+a_0)
+values of $k$ that create a non-multiple of p.
+-->
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: Benjamin@math.hmc.edu
+phone: 909-621-8688
+Commenters: 
+Reference: R. P. Stanley, ISBN(0521663512,Enumerative Combinatorics),
+Wadsworth & Brooks/Cole, 1986.
+
+
+
+
+
+
+
+
+

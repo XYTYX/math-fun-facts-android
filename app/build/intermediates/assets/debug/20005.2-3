@@ -1,0 +1,63 @@
+Title: Kakeya Needle Problem
+Keywords: measure theory, real analysis
+Subject: 2, 3
+Level: 2
+FF Description: <P>
+What is the smallest-area convex set in the plane
+inside which
+a needle (unit straight line segment) can be reversed
+(spun around 180 degrees)?
+
+<P>
+Answer: an equilateral triangle of unit height.
+
+<P>
+OK, now what if you allow non-convex sets?  What is the
+smallest area set in which you can reverse a needle?
+
+<P>
+For instance, try a smaller 3-cusped hypercycloid.
+See FFig(1).
+In fact, you can try a similar idea with n-cusps.
+Suprisingly, there exists sets of <I>arbitrarily small
+area</I> in which a needle can be reversed!
+
+
+
+Presentation suggestions: Draw pictures.  Have people think about the second question
+for a minute.
+
+Behind the fact: This Fun Fact is easy to present but involves
+some deep mathematics.  The construction of
+arbitrarily "small" sets (sets of small measure)
+containing a needle in all directions is
+a detailed analytical construction, and
+the general study of Kakeya sets is currently
+an active area of research in analysis.  
+You can learn
+more about <i>FFact(measure theory)</i>
+after taking a course in FFact(real analysis).
+
+
+
+Submitted by: 
+Date submitted: 
+name: Lesley Ward
+email: 
+phone: 
+Commenters: 
+Reference: E. Stein, <i>Harmonic Analysis</i>.
+<BR>MAA film;  Falconer, p. 95.
+
+
+
+
+
+
+
+
+
+
+
+
+

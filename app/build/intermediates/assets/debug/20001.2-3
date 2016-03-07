@@ -1,0 +1,58 @@
+Title: Polyhedral Face Vectors
+Keywords: multivariable calculus
+Subject: 2, 3
+Level: 2
+FF Description: A <i>FFact(polyhedron)</i> is any closed region of 3-space
+cut out by a finite set of planes.
+
+<P>
+Take any polyhedron and do the following:
+on each face, place a FFact(vector) perpendicular to that face
+with length proportional to the area of that face.
+
+<P>
+No matter what polyhedron you started with,
+the sum of all those face vectors will be zero!
+
+
+
+Presentation suggestions: First draw several polyhedra, and make sure some of them
+are very irregular.  They do not even have to be convex...
+this fact is most surprising for the irregular polygons.
+Draw the face vectors so that students can see what you
+mean.
+
+
+
+Behind the fact: This Fun Fact can be proved by first showing that is
+is true for any tetrahedron.  Use vector geometry to
+do this; express the face vectors in terms of the
+cross product of co-incident sides... when you sum
+them, everything will cancel.  Since any polyhedron
+can be built up by tetrahedra, and since the sums
+of the face vectors of two co-incident faces cancel,
+the theorem can be proved for arbitrary polyhedra!
+
+<P>A more sophisticated proof uses the divergence theorem from
+FFact(multivariable calculus):
+the component of each vector in the i direction is the
+flux of the constant vector field i across the closed surface,
+which by the divergence theorem is zero.  The same is true
+in the j and k directions as well.
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Michael Moody
+email: 
+phone: 
+Commenters: 
+Reference: S.J. Colley, ISBN(0131858742,Vector Calculus), Section 1.8.
+
+
+
+
+

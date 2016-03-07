@@ -1,0 +1,91 @@
+Title: Rising Sequences in Card Shuffling
+Keywords: probability
+Subject: 4, 6
+Level: 2
+FF Description: In FFact(Seven+Shuffles) we saw that
+it takes about
+7 random riffle shuffles to randomize a deck of 52 cards.
+This means that after 7 shuffles, every configuration
+is nearly equally likely.
+
+<P>
+An amazing fact is that five random riffle shuffles are not enough to
+randomize a deck of cards, because not only is
+every configuration not nearly equally likely, there are
+in fact some configurations which are <i>not reachable</i>
+in 5 shuffles!
+
+<P>
+To see this, suppose (before shuffling) the cards
+in a deck are arranged in order from 1 to 52, top to bottom.
+After doing one shuffle, what kind of sequences are possible?
+A moment's reflection reveals that only configurations with
+2 or fewer <i>rising sequences</i> are possible.
+A rising sequence is a maximal
+increasing sequential ordering of cards that
+appear in the deck
+(with other cards possibly interspersed) as
+you run through the cards from top to bottom.
+For instance, in an 8 card deck, 12345678 is the
+ordered deck and it has 1 rising sequence.
+After one shuffle,
+<center>
+1<font color="red">6</font>23<font color="red">78</font>45
+</center>
+<br>
+is a possible configuration; note that it has
+2 rising sequences (the black numerals form one,
+the red numerals form the other).  Clearly the rising
+sequences are formed when the deck is cut before
+they are interleaved in the shuffle.
+
+<P>
+So, after doing 2 shuffles, how many rising sequences can we
+expect?  At most 4, since each of the 2 rising sequences
+from the first shuffle have a chance of being cut in
+the second shuffle.  So the number of rising sequences can
+at most double during each shuffle.
+After doing 5 shuffles, there at most 32 rising sequences.
+
+<P>
+But the <i>reversed</i> deck, numbered 52 down to 1, has
+52 rising sequences!  Therefore the reversed deck cannot
+be obtained in 5 random riffle shuffles!
+
+
+
+Presentation suggestions: You can illustrate examples of rising sequences on
+the blackboard.
+
+
+
+
+
+Behind the fact: The analysis of shuffling involves both FFact(combinatorics),
+FFact(probability), 
+and even some FFact(group theory).  
+Though we've been
+discussing "random" riffle shuffles in this Fun Fact, 
+you can also study the
+mathematics of FFact(Perfect+Shuffles), which have no randomness.
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Brad Mann,
+"How many times should you shuffle a deck of cards?"
+<BR><i>UMAP J.</i> 15 (1994), no. 4, 303--332.
+<P>
+Dave Bayer and Persi Diaconis,
+"Trailing the Dovetail Shuffle to its Lair",
+<BR><i>Ann. Appl. Probab.</i> 2(1992), 294-313.
+<P>
+B. Morris, ISBN(0883855275,Magic Tricks Card Shuffling and Dynamic Computer Memories).
+
+
+
+

@@ -1,0 +1,51 @@
+Title: Sierpinski-Mazurkiewicz Paradox
+Keywords: real analysis, complex analysis
+Subject: 1, 2, 8
+Level: 3
+FF Description: If you've seen the FFact(Banach-Tarski+paradox), you know that it is possible to cut a solid 3-dimensional ball into 5 pieces and reassemble the pieces using only rigid motions to form two solid balls each the same size as the original.
+The construction depends on the FFact(Axiom of Choice).  But it is possible to construct paradoxical decompositions that do not involve Choice.
+
+<P>
+For instance, did you know there is a subset of the plane, call it S, such that it can be partitioned into two sets A and B such that if you translate A by 1 unit, it becomes the entire S, and if you rotate B by 1 radian, it is also the entire set S?  In other words, the set S
+is FFact(equidecomposable) to two copies of itself!
+
+
+Presentation suggestions: 
+Behind the fact: It seems strange that such a set S exists, but we can explicitly name the set S.  Consider the complex number
+x=e<sup>i</sup>.  It is known to be transcendental, i.e., not the root of any non-zero polynomial with integer coefficients.
+So let S be the set of all polynomials in x with whole number (non-negative) coefficients.  Note that S is a set of points in the complex plane, and because of the transcendental nature of x=e<sup>i</sup> each polynomial in S corresponds to a unique point in the plane.  For instance, one element of S is
+<div align=center>
+<br>
+3 x<sup>3</sup> +
+4 x<sup>2</sup> +
+7.
+</div>
+<br>
+Let A be the subset of S obtained from the polynomials of S that have no constant term.  Let B be the subset of S obtained from polynomials that have a non-zero constant term.  Thus the union of the points in A and B is S.
+<P>
+Moreover, that if you take A and you rotate all the points in A by 1 radian clockwise (this is the same as multiplying all the points in A by x<sup>-1</sup>=e<sup>-i</sup>),
+you will obtain the entire set S!  Why?  It's because the polynomials of S with no constant term are multiples of x, so multiplying by the inverse of x yields all polynomials in S.
+<P>
+Similarly, if you take B and translate all the points of B to the left by 1 unit (this is the same as subtracting 1 from every point in B), you will obtain the entire set S,
+because the polynomials of S with non-zero constant term must have a constant term that is a positive integer, and subtracting 1 produces all polynomials in S, including ones with constant term 0.
+<P>
+This set is FFact(countable), though it is unbounded.  It is unknown whether there is any <i>bounded</i> subset of the plane that is paradoxical, though it is known that there is no bounded subset that is paradoxical using only two pieces.
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: Stan Wagon, ISBN(0521457041, The Banach-Tarski Paradox).
+<BR>Or see a <a href="http://www.math.hmc.edu/~su/papers.dir/banachtarski.pdf">shorter expository article</a> by F. Su.
+
+
+

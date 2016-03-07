@@ -1,0 +1,64 @@
+Title: Taylor-made Pi
+Keywords: geometric series, Taylor series, pi formula
+Subject: 1, 3
+Level: 3
+FF Description: After learning about the FFact(Taylor series)
+for 1/(1+x)
+in calculus,
+you can find an interesting expression
+for Pi very easily.
+<P>
+Start with
+<CENTER>
+1/(1+w) = 1 - w + w<sup>2</sup> - w<sup>3</sup> + ...
+</CENTER>
+Now subsitute x<sup>2</sup> for w:
+<CENTER>
+1/(1+x<sup>2</sup>)
+= 1 - x<sup>2</sup> + x<sup>4</sup> - x<sup>6</sup> + ...
+</CENTER>
+
+<P>
+Then integrate both sides (from x=0 to x=y):
+<CENTER>
+arctan y = y - y<sup>3</sup>/3
++ y<sup>5</sup>/5 - y<sup>7</sup>/7 +...
+</CENTER>
+and plug in y=1, to get
+<CENTER>
+Pi/4 = 1 - 1/3 + 1/5 - 1/7 + ...
+</CENTER>
+Voila!
+
+<P>
+There are other FFact(pi formula)s that converge faster.
+
+
+
+
+Presentation suggestions: An alternate way to present this is to start with the
+well-known formula for Pi, and then present this as a
+"justification".
+
+
+
+
+Behind the fact: Well, we glossed over the issue of why you
+can integrate the infinite series term by term,
+so if you wish to learn about this and more about Taylor
+series, this material is often covered in a fun course called
+FFact(real analysis).
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: 
+phone: 
+Commenters: 
+Reference: 

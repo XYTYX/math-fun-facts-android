@@ -1,0 +1,101 @@
+Title: Eccentricity of Conics
+Keywords: projective geometry
+Subject: 2
+Level: 2
+FF Description: To each FFact(conic+section)
+(ellipse, parabola, hyperbola) there
+is a number called the <i>eccentricity</i> that uniquely
+characterizes the shape of the curve.
+A circle has eccentricity 0, an ellipse between 0 and 1,
+a parabola 1, and hyperbolae have eccentricity greater than 1.
+
+<P> Although you might think that y=2x<sup>2</sup>
+and y=x<sup>2</sup> have different "shapes" because
+the former is skinnier, they really have the same "shape"
+(and thus same eccentricity) because the first curve is
+just the second curve viewed twice as far away
+(i.e., x and y are both increased by a factor of 2).
+
+<P>
+One way to define a conic section is to specify a line in
+the plane, called the <i>directrix</i>,
+and a point in the plane off of the line,
+called the <i>focus</i>.
+The conic section is then the set of all points whose
+distance to the focus is a constant times the distance
+to the directrix.  This constant is the eccentricity.
+
+<P>
+It is easy to see that as the eccentricity of an ellipse
+grows, the ellipse becomes skinnier.  The formula for
+the FFact(ellipse) also shows that every ellipse can be
+obtained by taking a circle in a plane, lifting it up
+and out, tilting it, and projecting it back into the plane.
+
+<P>
+Surprise: the eccentricity is equal to the sine of the
+angle of this tilt!
+
+
+
+
+
+
+Presentation suggestions: If students are puzzled why the circle has eccentricity
+zero, you might explain that its directrix is the line
+"at infinity" in the FFact(projective+plane).
+
+
+
+
+
+
+
+Behind the fact: <!--
+If one reflects the focus and directrix of an ellipse across
+its minor axis, it is clear that we obtain another
+focus/directrix pair defining the same ellipse.  So we can
+think of the ellipse as having two foci.
+
+One formula for the eccentricity of an ellipse is c/a, where
+c is the distance between the center of the ellipse and the
+focus, and a is half the length of the major axis.  Recall
+that
+an ellipse is also the locus of all points for which the sum
+of the distances to its two foci is a constant.  It is clear
+from a picture that this constant is 2a.  Hence, if we draw
+a right triangle with corners at the center, one focus, and
+one end of the minor axis, we find that c^2=a^2-b^2.
+
+This same ellipse can be obtained by starting with a circle
+of radius a, and looking at it at an angle \theta from the
+normal to the plane of the circle, where cos \theta = b/a.
+Therefore, (c/a)^2 = 1- cos^2 \theta, so the eccentricity
+is sin \theta.
+-->
+Conic sections take their name from the fact that one can
+also obtain them by slicing a cone by a plane at various
+angles.  Yet another way to obtain a conic section is by
+starting with a circle and performing a geometric
+transformation called reciprocation.  The focus, directrix
+and eccentricity fall out as obvious parameters of this
+reciprocation operation.  This approach to conic sections
+comes from the field of <i>projective geometry</i>.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Aaron Archer
+email: aarcher@orie.cornell.edu
+phone: (607) 277-7238
+Commenters: 
+Reference: H.S.M. Coxeter and S.L. Greitzer, <i>Geometry Revisited</i>.
+<BR>(for the material on projective geometry).
+
+
+
+
+
+
+

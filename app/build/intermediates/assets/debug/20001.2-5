@@ -1,0 +1,70 @@
+Title: Sums of Two Squares Ways
+Keywords: Pick's Theorem, number theory, geometry, pi formulas
+Subject: 2, 5
+Level: 2
+FF Description: In the Fun Fact FFact(Sums+of+Two+Squares), we've seen which numbers
+can be written as the sum of two squares.  For instance, 11 cannot, but 13 can
+(as 3<sup>2</sup>+2<sup>2</sup>).  A related question, with a surprising answer, is: on average, how many ways can a number can be written as the sum of two squares?
+
+<p>
+We should clarify what we mean by <i>average</i>.
+Let W(N) is the number of ways to write N as the sum of two squares.
+Thus W(11)=0, and W(13)=8 (as sums of squares of all possible combinations of +/-3 and +/-2 , in either order).
+
+<p>
+So if A(N) is the average of the numbers W(1), W(2), ..., W(N),
+then A(N) is the average number of ways <i>the first N numbers</i>
+can be written as the sum of two squares.
+Then it makes sense to take the FFact(limit)
+of A(N) as N goes to infinity
+to get the "average" number of ways to write a number as the sum of two squares, over <i>all</i> positive whole numbers.
+
+<P>
+A surprising fact is that this limit exists, and it is Pi!
+
+
+
+
+
+
+
+
+Presentation suggestions: This might be presented after a discussion of lattice points in  FFact(Pick's+Theorem).
+
+
+
+
+
+
+
+
+
+Behind the fact: The proof is as neat as the result!
+Every solution (x,y) to x<sup>2</sup>+y<sup>2</sup>=N
+can be thought of as a FFact(lattice point) in the plane, i.e.,
+a point with integer coordinates.
+Such a lattice point lies on a circle of radius
+Sqrt(N).
+
+<p>
+Therefore, the sum of W(1) through W(N) counts
+the number of lattice points in the plane <i>inside</i>
+or on a circle of radius Sqrt(N) (except for the origin), and
+the average A(N) is this number of lattice points divided by N.
+But as N goes to infinity, the number of lattice points inside this circle
+is approximately the area of the circle, hence Pi times the radius squared: Pi*Sqrt(N)<sup>2</sup> or Pi*N.  Therefore A(N) is approximately Pi,
+and this approximation gets better and better as N goes to infinity!
+
+<p>
+Counting the the number of lattice points inside a circle is known as <i>Gauss' circle problem</i>.
+Also, see several other Fun Facts about FFact(sums of two squares) or
+formulas FFact(for pi).
+
+
+Submitted by: 
+Date submitted: 
+name: Darryl Yong
+email: 
+phone: 
+Commenters: 
+Reference: 

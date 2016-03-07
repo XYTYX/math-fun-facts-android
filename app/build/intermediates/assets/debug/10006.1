@@ -1,0 +1,76 @@
+Title: Visual Multiplication with Lines
+Keywords: 
+Subject: 1
+Level: 1
+FF Description: Here's a way to multiply numbers visually!
+<P>
+Suppose you want to multiply 22 by 13.
+Draw 2 lines slanted upward to the right,
+and then move downward to the right a short distance
+and draw another 2 lines upward to the right
+(see the magenta lines in FFig(1)).
+Then draw 1 line slanted downward to the right,
+and then move upward to the right a short distance
+and draw another 3 lines slanted downward to the right
+(the cyan lines in FFig(1)).
+<P>
+Now count up the number of intersection points in
+each corner of the figure.
+The number of intersection points at left
+(green-shaded region) will be the
+first digit of the answer.
+Sum the number of intersection
+points at the top and bottom of the square
+(in the blue-shaded region); this will be
+the middle digit of the answer.
+The number of intersection points at right
+(in the yellow-shaded region) will
+be the last digit of the answer.
+<P>
+This will work to multiply any two two-digit numbers,
+but if any of the green, blue, gold sums have 10 or more
+points in them, be sure to carry the tens digit to
+the left, just as you would if you were adding.
+
+
+
+
+Presentation suggestions: First do simple examples like the one above;
+then try a problem that involves a carry,
+such as 21 x 34.
+
+
+
+Behind the fact: The method works because the number of lines are like placeholders (at powers of 10: 1, 10, 100, etc.), and the number of dots at each intersection is a product of the number of lines.  You are then summing up all the
+products that are coefficients of the same power of 10.
+Thus the in the example
+<P>
+<CENTER>
+22 x 13 = ( 2*10 + 2 ) * ( 1*10 + 3 )
+= 2*1*100 + 2*3*10 + 2*1*10 + 2*3
+= 286.
+</CENTER>
+<P>
+The diagram displays this FFact(multiplication) visually.
+In the green-shaded region there are 2*1=2 dots.
+In the blue-shaded region there are 2*3+2*1=8 dots.
+In the gold-shaded region there are 2*3=6 dots.
+This method does exactly what you would do if you wrote
+out the multiplication the long way and added the columns!
+<P>
+The method can be generalized to products of three-digit numbers (or more) using more sets of lines (and summing the dot groupings vertically and remembering to carry when needed).  It can also be generalized to products of three-numbers using cubes of lines rather than squares!
+(Of course, it gets pretty unwieldy to use the method at that point.)
+<P>
+By the way, for the specific problem 22 x 13 there is
+actually another way to do it using
+FFact(lightning+arithmetic); can you figure out how?
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 
