@@ -8,4 +8,6 @@
     <string name="difficult">Difficult</string>
     <string name="ChangeDifficulty">Choose Difficulty</string>
     <string name="go">Go!</string>
+    <string name="title_activity_display_fun_fact">DisplayFunFact</string>
+    <string name="title_activity_filtered_fun_fact">FilteredFunFact</string>
 </resources>

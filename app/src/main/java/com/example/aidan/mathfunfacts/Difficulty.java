@@ -1,5 +1,6 @@
 package com.example.aidan.mathfunfacts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,7 +14,6 @@ import android.widget.RadioGroup;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class Difficulty extends AppCompatActivity {
 
@@ -32,28 +32,6 @@ public class Difficulty extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        try {
-            String fileName = "10001.1";
-
-            // Read from file and set it to a string to send to the WebView
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open(fileName)));
-            StringBuilder total = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                total.append(line);
-            }
-            String message=total.toString();
-            WebView wv = (WebView) findViewById(R.id.webView);
-            //message  = "Title: Multiplication by 11\n" +
-            wv.loadData(total.toString(), "text/html", "UTF-8");
-            System.out.print("Alis string" + total.toString());
-
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void getFunFactByDifficulty(View view) {
@@ -68,8 +46,11 @@ public class Difficulty extends AppCompatActivity {
             level = 2;
         else level = 3;
 
-        MathFunFactCollection collection = new MathFunFactCollection(this.getApplicationContext());
-        ArrayList<MathFunFactMetadata> files = collection.findMFFWithDifficulty(level);
+//        MathFunFactCollection collection = new MathFunFactCollection(this.getApplicationContext());
+//        ArrayList<MathFunFactMetadata> files = collection.findMFFWithDifficulty(level);
+        Intent intent = new Intent(getApplicationContext(),FilteredFunFact.class);
+        intent.putExtra("difficulty", level);
+        startActivity(intent);
     }
 
 }
