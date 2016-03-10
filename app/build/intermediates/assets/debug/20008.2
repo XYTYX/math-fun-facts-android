@@ -1,0 +1,60 @@
+Title: Chords of an Ellipse
+Keywords: Fibonacci, golden mean
+Subject: 2
+Level: 2
+FF Description: Consider N equally spaced on points on the unit circle, with the point P=(1,0) as one of these equally spaced points, and draw (N-1) chords from P to every other point.  In FFact(Chords+of+a+Unit+Circle), we saw that the product of the lengths of these chords was just N.  But what happens if we stretch this circle so that it is an ellipse?
+
+<P>
+For instance, suppose we consider the unit circle (with chords drawn from P to N-1 equally spaced points on the circle), and now scale the vertical direction by Sqrt[5], so that the circle becomes an ellipse, elongated vertically (and the points where chords meet the ellipse are no longer equally spaced along the ellipse).  Note that the chords  lengthen under this scaling.  What is the product of the lengths of the chords?
+
+<P>
+Surprisingly, it is just N times the N-th FFact(Fibonacci) number!
+
+
+
+
+
+Presentation suggestions: Recall that the N-th Fibonacci number F<sub>N</sub> is defined by F<sub>1</sub>=F<sub>2</sub>=1, and each
+F<sub>N</sub>=F<sub>N-1</sub>+F<sub>N-2</sub>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Behind the fact: The reference proves that for an ellipse of semi-major axis A+B and semi-minor axis A-B, the product of the lengths of the chords described above is just N times the quantity (A<sup>N</sup> - B<sup>N</sup>)/(A-B).  But this latter expression becomes FFact(Binet's formula) 
+for Fibonacci numbers if A is the FFact(golden+mean)
+(1+Sqrt[5])/2 and B is the complementary golden number
+(1-Sqrt[5])/2.  In that case A+B=1, and A-B=Sqrt[5], giving the dimensions of the ellipse needed to make the Fact true!
+
+
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Tom Price
+email: 
+phone: 
+Commenters: 
+Reference: Thomas Price, "Products of Chord Lengths of an Ellipse",
+Mathematics Magazine, 74(2002), 300-307.
+
+
+
+
+
+
+

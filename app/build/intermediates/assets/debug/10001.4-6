@@ -1,0 +1,42 @@
+Title: Matching Problem
+Keywords: probability, combinatorics
+Subject: 4, 6
+Level: 1
+FF Description: Suppose I return N homeworks randomly to my N students.
+What is the chance that no student gets back her
+own homework?  In a class of 30?  Would it be more or
+less if I had more students?
+
+<P>
+Surprising answer:  the chance that no one gets back
+her own homework is approximately (1/<i>e</i>), which is
+approximately 36.8 percent of the time!
+
+<P>
+And the answer is about the same, no matter how many
+students you have!  (It gets closer and closer to 1/<i>e</i>
+the larger N gets, and is already a very good
+approximation for 5 students.)
+
+<P>Gee, where did the number <i>e</i> come from?
+
+
+Presentation suggestions: Poll the class about the probabilities
+before you tell them the answer, just to
+see how good their intuition is.
+
+
+Behind the fact: This interesting fact is usually proved in classes in
+discrete mathematics or FFact(probability), 
+using something called the inclusion-exclusion principle.  The answer
+turns out to be the partial sum of an FFact(infinite series)
+for 1/<i>e</i>.
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

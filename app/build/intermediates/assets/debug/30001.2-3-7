@@ -1,0 +1,56 @@
+Title: Sphere Eversions
+Keywords: analysis, differentiability, topology
+Subject: 2, 3, 7
+Level: 3
+FF Description: If you take a loop of string in the plane and
+place an arrow along it pointing clockwise, is it possible
+to deform the string, keeping it in the plane, so that
+the arrow points counterclockwise, without causing any
+kinks in the string?
+
+<P>A moment's reflection seems to indicate that this is
+impossible.  Is it?  Can you prove it?
+
+<P>What about a FFact(sphere) in 3-space?  Is it possible to
+turn the sphere "inside out", allowing self-intersections
+but not allowing any sharp kinks, creases, or tearing
+of the surface?
+
+<P>Surprisingly, in 1957, Steve Smale proved that this
+is in fact possible!  Such an operation is called a
+<i>sphere eversion</i>.  And later on, several people
+constructed explicit methods for doing so, among
+them William Thurston.
+
+<P>
+The reference contains a video that shows the
+Thurston eversion of a sphere!
+
+
+
+Presentation suggestions: 
+Behind the fact: Requiring that loops in the plane have no kinks is
+equivalent to giving them unit speed parametrizations
+and requiring that the parametrizations are
+continuously FFact(differentiable),
+i.e., their rates of change vary FFact(continuously).
+The study of differentiable structures on geometric objects
+is called <i>differential geometry</i> and the study
+of smooth deformations of such objects is often called
+<i>differential topology</i>.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: The Geometry Center video: <i>Outside In</i>,
+available <a href="http://video.google.com/videoplay?docid=-6626464599825291409#">here</a>.
+
+
+
+
+

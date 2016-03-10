@@ -1,0 +1,71 @@
+Title: Rational Irrational Power
+Keywords: non-constructive proof, number theory, real analysis
+Subject: 3, 5
+Level: 3
+FF Description: If you raise an FFact(irrational number) to a rational power,
+it is possible to get something rational.  For instance,
+raise Sqrt[2] to the power 2 and you'll get 2.
+
+<P>
+But what happens if you raise an irrational number
+to an irrational power?  Can this ever be rational?
+
+<P>
+The answer is yes, and we'll prove it <i>without
+having to find specific numbers that do the trick</i>!
+<UL>
+Theorem.  There exist irrational numbers A and B
+so that A<sup>B</sup> is rational.
+</UL>
+Proof.  We know that Sqrt[2] is irrational.  So, if
+A=Sqrt[2] and B=Sqrt[2] satisfy the conclusion of the
+theorem, then we are done.  If they do not, then
+Sqrt[2]<sup>Sqrt[2]</sup> is irrational, so let A be
+this number.  Then, letting B=Sqrt[2], it is easy to
+verify that A<sup>B</sup>=2 which is rational and
+hence would satisfy the conclusion of the theorem.
+QED.
+<P>
+
+This proof is <i>FFact(non-constructive)</i> because it
+(amazingly) doesn't
+actually tell us whether Sqrt[2]<sup>Sqrt[2]</sup> is
+rational or irrational!
+
+
+
+Presentation suggestions: 
+Behind the fact: Actually, Sqrt[2]<sup>Sqrt[2]</sup> can be shown to
+be irrational, using something called the
+Gelfond-Schneider Theorem (1934), which says that if A and B
+are roots of polynomials, and A is not 0 or 1 and B is
+irrational, then A<sup>B</sup> must be irrational
+(in fact, transcendental).
+
+<P>
+But you don't need Gelfond-Schneider to construct
+an explicit example, assuming you know FFact(transcendental) numbers exist
+(numbers that are not roots of non-zero polynomials with
+integer coefficients).
+Let x be any transcendental and q be any positive rational.
+Then x<sup>log_x(q)</sup>=q
+so all we have to show is that log_x(q) is irrational.
+If log_x(q)=a/b then q=x<sup>a/b</sup>,
+implying that x<sup>a</sup>-q<sup>b</sup>=0,
+contradicting the transcendentality of x.
+
+Submitted by: 
+Date submitted: 
+name: Ravi Vakil
+email: 
+phone: 
+Commenters: 
+Reference: R. Vakil, ISBN(1895997046,A Mathematical Mosaic), 1996.
+
+
+
+
+
+
+
+

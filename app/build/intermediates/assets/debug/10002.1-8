@@ -1,0 +1,43 @@
+Title: Magic 1089
+Keywords: math tricks
+Subject: 1, 8
+Level: 1
+FF Description: Here's a cool mathematical magic trick.
+
+Write down a three-digit number whose digits are decreasing.
+Then reverse the digits to create a new number, and subtract this number from the original number.
+
+With the resulting number, add it to the reverse of itself.
+The number you will get is 1089!
+
+<P>
+For example, if you start with 532 (three digits, decreasing order), then the reverse is 235.  Subtract 532-235 to get 297.
+Now add 297 and its reverse 792, and you will get 1089!
+
+
+
+Presentation suggestions: You might ask your students to see if they can explain this magic trick using a little algebra.
+
+
+
+Behind the fact: If we let a, b, c denote the three digits of the original number, then the three-digit number is 100a+10b+c.  The reverse is 100c+10b+a.  Subtract: (100a+10b+c)-(100c+10b+a) to get 99(a-c).  Since the digits were decreasing, (a-c) is at least 2 and no greater than 9, so the result must be one of 198, 297, 396, 495, 594, 693, 792, or 891.  When you add any one of those numbers to the reverse of itself, you get 1089!
+
+<P>
+See the reference for more FFact(mathematical magic) tricks.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: A. Benjamin and M. Shermer,
+ISBN(0307338401,Secrets of Mental Math),
+Three Rivers Press, 2006.
+
+
+
+

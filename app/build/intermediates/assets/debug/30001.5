@@ -1,0 +1,116 @@
+Title: Sum of Cubes and Beyond
+Keywords: patterns, number theory
+Subject: 5
+Level: 3
+FF Description: We saw this wonderful FFact(identity) in 
+FFact(Sum+of+Cubes):
+<CENTER>
+<B>1</B><sup>3</sup> + <B>2</B><sup>3</sup>
++ ... + <B>n</B><sup>3</sup> =
+(<B>1</B> + <B>2</B> + ... + <B>n</B>)<sup>2</sup>.
+</CENTER>
+
+<P>
+Hence the set of numbers {1,2,...,n} has the property that
+the sum of its cubes is the square of its sum.
+Are there any other collections of numbers with this
+property? Yes, and the following method is guaranteed to
+generate such a set.
+
+<P>
+Pick a number, any number.
+Did I hear you say 63? Fine.
+<BR>
+List the divisors of 63, and for each divisor of 63,
+count the number of divisors it has:
+<BR>
+63    has <B>6</B>  divisors (63, 21, 9, 7, 3, 1)
+<BR>
+21    has <B>4</B> divisors  (21, 7, 3, 1)
+<BR>
+9     has <B>3</B> divisors  (9, 3, 1)
+<BR>
+7     has <B>2</B> divisors  (7, 1)
+<BR>
+3     has <B>2</B> divisors  (3, 1)
+<BR>
+1     has <B>1</B> divisor  (1).
+
+<P>
+The resulting collection of numbers has the same cool
+property. Namely
+<CENTER>
+<B>6</B><sup>3</sup> + <B>4</B><sup>3</sup> + <B>3</B><sup>3</sup> +
+<B>2</B><sup>3</sup> + <B>2</B><sup>3</sup> + <B>1</B><sup>3</sup>
+= 324 = (<B>6</B>+<B>4</B>+<B>3</B>+<B>2</B>+<B>2</B>+<B>1</B>)<sup>2</sup>.
+</CENTER>
+Neat, huh?
+
+
+
+Presentation suggestions: If you are short on time, you can just present the sum
+of cubes fact.
+
+Behind the fact: From FFact(number theory), <i>multiplicative functions</i>
+are functions f defined over the positive integers that
+satisfy f(xy)=f(x)f(y) whenever integers x,y have no common factors.
+
+<P>
+Observation.
+Once you know the value of f for all prime powers you can
+determine f(N) for all integers N.
+
+<P>
+Easy examples of multiplicative functions are
+f(x)=x<sup>n</sup> for any fixed n.  Note also that
+if f(x) is multiplicative, so is [f(x)]<sup>2</sup> and
+[f(x)]<sup>2</sup>, etc.
+It is harder to prove (reference NZM) that
+<ul>
+Theorem (*).  If f is multiplicative, so is F(n) defined by
+F(n)=SUM<sub>m|n</sub>f(m), where the sum is over all
+divisors of n.
+</ul>
+Using (*) we see that
+d(n)=SUM<sub>m|n</sub>1 must be multiplicative since f(x)=1
+is.  But then [d]<sup>3</sup> is multiplicative, and
+(*) shows that SUM<sub>m|n</sub>d<sup>3</sup>(m) is.
+Also, from (*) and squaring,
+[SUM<sub>m|n</sub>d(m)]<sup>2</sup> is
+multiplicative.  We wish to show that
+<center>
+SUM<sub>m|n</sub>d<sup>3</sup>(m) =
+[SUM<sub>m|n</sub>d(m)]<sup>2</sup>.
+</center>
+By the Observation, it is enough to show this equality holds
+for n any prime power.  But this reduces to the
+simpler sum of cubes Fun Fact, which is easy to verify!
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: benjamin@hmc.edu
+phone: 909-621-8688
+Commenters: 
+Reference: Edward J. Barbeau, <i>Power Play</i>, MAA.
+<BR>
+Niven, Zuckerman, and Montgomery,
+<i>An Introduction to the Theory of Numbers</i>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

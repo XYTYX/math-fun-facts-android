@@ -1,0 +1,39 @@
+Title: Reflecting on the Hyperbola
+Keywords: 
+Subject: 2, 3
+Level: 1
+FF Description: Most calculus students have learned of the "reflecting properties" of the FFact(parabola) 
+and the FFact(ellipse). 
+If a "beam of light" emanates from the focus of a parabola in any direction, and is "reflected" from the parabola, it subsequently travels in a line parallel to the axis of the parabola. For the ellipse, a beam emanating from a focus is reflected by the curve through the other focus.
+
+<P>
+Less known is a reflecting property of hyperbolae.
+A beam of light is directed at one of the foci (with the the curve "between" the source and the focus) then it will be reflected by the curve through the other focus!
+
+<P>
+This property of the FFact(hyperbola) has applications!
+It is used in radio direction finding (since the difference in signals from two towers is constant along hyperbolae), and in the construction of mirrors inside telescopes (to reflect light coming from the parabolic mirror to the eyepiece).
+
+
+
+Presentation suggestions: <!-- needs picture -->
+Draw a few pictures to illustrate.
+
+
+
+Behind the fact: If F1 and F2 are the foci of a hyperbola, and P is a point on one of its branches, elementary geometry reveals that the tangent to the curve at P bisects the angle F1-P-F2.
+The reflecting property then follows from this fact.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Michael Moody
+email: moody@hmc.edu
+phone: 
+Commenters: 
+Reference: Salas and Hille, "Calculus".
+
+
+
+

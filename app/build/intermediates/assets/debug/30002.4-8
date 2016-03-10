@@ -1,0 +1,70 @@
+Title: Continuum Hypothesis
+Keywords: logic, uncountable sets
+Subject: 4, 8
+Level: 3
+FF Description: We have seen in the Fun Fact FFact(Cantor+Diagonalization)
+that the real numbers (the "continuum") cannot be placed in
+1-1 correspondence with the FFact(rational numbers).  So
+they form an infinite set of a different "size"
+than the rationals, which are countable.  It is not
+hard to show that the set of all subsets
+(called the <i>power set</i>) of the rationals has
+the same "size" as the reals.
+
+<P>
+But is there a "size" of infinity <i>between</i>
+the rationals and the reals?  Cantor conjectured that
+the answer is no.  This came to be known as the
+<i>Continuum Hypothesis</i>.
+
+<P>
+Many people tried to answer this question in the early
+part of this century.  But the question turns out to
+be PROVABLY <i>undecidable</i>!  In other words, the
+statement is indepedent of the usual axioms of set theory!
+It is possible to prove that adding the
+Continuum Hypothesis or its negation would not cause
+a contradiction.
+
+<P>
+So, you can take either the Continuum Hypothesis
+or its negation to be true, and it would not affect
+the truth of other statements in mathematics!
+
+
+
+
+
+
+
+
+Presentation suggestions: Students will find it amazing that statements that
+seem to have an answer may in fact be taken to be either
+true or false, depending on the model of the real numbers
+that you use!
+
+
+
+
+Behind the fact: This is deep set theory.
+K. Godel and later, P. Cohen showed the independence of
+the Continuum Hypothesis from the Zermelo-Fraenkel Axioms
+of Set Theory.
+
+The "size" of a set is called its FFact(cardinality).
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Brad Mann
+email: 
+phone: 
+Commenters: 
+Reference: any modern text on logic
+
+
+
+
+
