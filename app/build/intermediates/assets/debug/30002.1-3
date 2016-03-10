@@ -1,0 +1,83 @@
+Title: Multidimensional Newton's Method
+Keywords: linear algebra, calculus, roots of a polynomial
+Subject: 1, 3
+Level: 3
+FF Description: You've probably heard of Newton's Method from your
+FFact(calculus) course. It can be used to locate zeros of
+real-valued functions.  But did you know that it is
+possible to define a
+multi-dimensional version of Newton's Method for
+functions from R<sup>n</sup> to R<sup>n</sup>?
+
+<P>Here's how it goes.  The derivative Df(x) of
+the function f is the linear transformation that
+best approximates f near the point x.
+It can be represented by a matrix A whose entries are
+the partial derivatives of the components of f
+with respect to all the coordinates.
+
+<P>The best linear approximation to f is given by
+the matrix equation:
+<CENTER>
+<BR>
+y-y<sub>0</sub> = A (x-x<sub>0</sub>)
+</CENTER>
+<BR>
+So, if x<sub>0</sub> is a good "guess" for the zero of f,
+then solving for the zero of this linear approximation will
+give a "better guess" for the zero of f.
+Thus let y=0, and since y<sub>0</sub>=f(x<sub>0</sub>)
+one can solve the above equation for x.  This leads to
+the Newton's method formula:
+<CENTER>
+<BR>
+x<sub>n+1</sub> = x<sub>n</sub> - A<sup>-1</sup> f(x<sub>n</sub>)
+</CENTER>
+<BR>
+where x<sub>n+1</sub> denotes the (n+1)-st guess,
+obtained from the n-th guess x<sub>n</sub> in the
+fashion described above.
+
+<P>Iterating this will give better and better
+approximations if you have a "good enough" initial guess.
+
+
+
+
+
+Presentation suggestions: Point out how this generalizes the
+usual Newton's method formula that they have learned.
+(The inverse of A is analogous to dividing by f'.)
+
+
+
+
+
+Behind the fact: The set of all initial guesses (called <i>seeds</i>) that
+converge to a given root is called the
+<i>basin of attraction</i> for that root.  This set can
+often be FFact(fractal), and this idea is often the basis for many
+of the pictures found in popular books on fractals.
+<P>
+You can learn about the multi-dimensional Newton's method
+in a numerical analysis course, or
+an advanced analysis course (since it may be used as a basis
+for a proof of the Inverse Function Theorem), or
+an operations research course called non-linear programming.
+The basics of linear transformations are covered in a course on
+FFact(linear algebra).
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: Andrew Ross / amr5@lehigh.edu
+Reference: A classic text on real analysis is Walter Rudin's ISBN(007054235X, Principles of Mathematical Analysis).
+
+

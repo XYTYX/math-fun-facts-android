@@ -1,0 +1,55 @@
+Title: Memorizing Pi
+Keywords: pi mnemonics, pi day
+Subject: 2, 8
+Level: 1
+FF Description: The digits of Pi are fascinating.
+As the ratio of the circumference of a circle to its diameter,
+Pi has such a fundamental definition, and yet
+this ratio is irrational and so its decimal expansion never repeats.  It is easy to be mesmerized by the digits of the decimal expansion:
+<CENTER>
+3.14159 26535 89793 23846 26433 83279 50288 41971 69399 37510...
+</CENTER>
+<BR>
+and many people have tried to memorize digits of pi for fun.
+<P>
+One fun way to memorize the first few digits is to use
+sentence mnemonics for pi--- phrases in which
+the number of letters of each successive word
+corresponds to a digit of pi.
+Here are some well-known pi mnemonics:
+<CENTER>
+<P>
+<I>
+"Wow! I made a great discovery!"  (3.14159...)
+<P>
+"Can I have a small container of coffee?"  (3.1415926...)
+<P>
+"How I want a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."  (3.14159265358979...)
+</I>
+</CENTER>
+
+
+
+
+
+Presentation suggestions: For more fun on Pi, see also FFact(Pi+Approximations) and
+FFact(Finding+the+N-th+digit+of+Pi).
+
+
+
+
+
+Behind the fact: It is fun to try writing your own story or poem as a pi mnemonic.
+One decision you'll have to make is how to deal with 0's
+in the decimal expansion of pi (such as in the 32nd decimal place).  Some choose to use a 10-letter word to represent a zero.  Others choose to use  non-period punctuation.
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 

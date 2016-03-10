@@ -1,0 +1,54 @@
+Title: Pigeonhole Principle
+Keywords: combinatorics
+Subject: 4
+Level: 1
+FF Description: Here's a challenging problem with a surprisingly easy answer:  can you show that for any 5 points placed on a FFact(sphere), some hemisphere must contain 4 of the points?
+<!--needs picture-->
+
+<p>
+How about an easier question:  can you show that if you place 5 points in a square of sidelength 1, some pair of them must be within distance 3/4 of each other?
+
+<p>
+If you play with this problem for a while, you'll realize quickly that the extreme case occurs when 4 points are at the corners of the square with a 5th point at the center.  In this case adjacent points are exactly distance Sqrt[2]/2 ~ 0.707 apart.  But what may be harder to show is that this is really the extreme case; why can't any other configuration be more extreme?
+
+<p>
+The <i>FFact(pigeonhole principle)</i> is one of the simplest
+but most useful ideas in mathematics, and can rescue us here.  A basic version says that <i>if (N+1) pigeons occupy N holes, then some hole must have at least 2 pigeons.</i>  Thus if 5 pigeons occupy 4 holes, then there must be some hole with at least 2 pigeons.  It is easy to see why: otherwise, each hole as at most 1 pigeon and the total number of pigeons couldn't be more than 4.  (This proof shows that it does not even matter if the holes overlap so that a single pigeon occupies 2 holes.)
+
+<p>
+So, if I divide up the square into 4 smaller squares by cutting through center,
+then by the pigeonhole principle, for any configuration of 5 points,
+one of these smaller squares must contain two points.
+But the diameter of the smaller square is Sqrt[2]/2, so these two points must be closer than 3/4, as claimed.
+The pigeonhole principle made what seemed like a slippery argument airtight.
+
+Presentation suggestions: 
+Behind the fact: The pigeonhole principle has many generalizations.  For instance:
+<p>
+If you have N pigeons in K holes, and (N/K) is not an integer, then then some hole must have strictly more than (N/K) pigeons.  So 16 pigeons occupying 5 holes means some hole has at least 4 pigeons.
+<p>
+If you have FFact(infinitely many) pigeons in finitely many holes,
+then some hole must have infinitely many pigeons!
+<p>
+If you have an FFact(uncountable) number of pigeons in a countable number of holes, then some hole has an uncountable number of pigeons!
+
+<P>
+Did you think about the challenge problem?  Here is the answer:
+for any configuration of 5 points on a sphere, any two of them
+determine a great circle on the sphere (a circle whose center is the center of the sphere), and that great circle divides the sphere into 2 hemispheres.  Considering the remaining 3 points, the pigeonhole principle says that one of the hemispheres must contain at least 2 of those 3 points.  Together with the 2 points on the great circle, that hemisphere contains at least 4 points.
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: The sphere problem comes from a recent Putnam examination.
+
+
+
+
+
+
+
+

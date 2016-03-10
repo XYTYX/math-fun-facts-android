@@ -1,0 +1,63 @@
+Title: Sum of Cubes
+Keywords: proofs without words, number theory
+Subject: 2, 5
+Level: 1
+FF Description: The sum of cubes is just the square of the triangular numbers!
+<CENTER>
+<B>1</B><sup>3</sup> + <B>2</B><sup>3</sup>
++ ... + <B>n</B><sup>3</sup> =
+(<B>1</B> + <B>2</B> + ... + <B>n</B>)<sup>2</sup>.
+</CENTER>
+<BR>
+And there is a nice proof by picture, too.  Can you figure out how this
+diagram illustrates the identity?
+
+<font face="courier">
+<center>
+<br>
+<font color="red">A</font><font color="green">BB</font><font color="blue">CCC</font><br>
+<font color="green">BAA</font><font color="blue">BBB</font><br>
+<font color="green">BAA</font><font color="blue">BBB</font><br>
+<font color="blue">BCCAAA</font><br>
+<font color="blue">BCCAAA</font><br>
+<font color="blue">BCCAAA</font><br>
+</center>
+<br>
+</font>
+
+
+
+
+Presentation suggestions: Draw this picture and see if your students can figure out why the diagram is
+a "FFact(proof without words)"!
+
+
+Behind the fact: The diagram illustrates the identity for <b>n</b>=3.
+Note that the square has
+(1+2+3)<sup>2</sup> letters in it.
+But now I also claim that there is 1<sup>3</sup> red letter,
+2<sup>3</sup> green letters,
+and 3<sup>3</sup> blue letters.
+
+<P>
+This can be seen by arranging the letters in "layers" of a cube!
+The  red cube has one layer (A).
+The green cube has two layers (A and B) with 4 letters in each.
+The blue cube has three layers (A, B, and C) with 9 letters in each.
+
+<P>
+This construction easily generalizes for arbitrary <b>n</b>.
+You can follow this with the Fun Fact
+FFact(Sum+of+Cubes+and+Beyond).
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: John H. Conway and Richard K. Guy, ISBN(038797993X, The Book of Numbers),  pp.58.
+
+

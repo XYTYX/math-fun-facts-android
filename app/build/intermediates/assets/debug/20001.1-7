@@ -1,0 +1,81 @@
+Title: Fundamental Group
+Keywords: topology, group theory
+Subject: 1, 7
+Level: 2
+FF Description: You are abducted by space aliens and dumped, blindfolded,
+on a strange asteroid!  Removing your blindfold, you
+decide to play "Columbus" by walking
+in one direction forever to see if you can
+determine whether your asteroid is flat or curved.
+But you leave a trail of bread crumbs as you go,
+just in case you get lost.
+
+<P>
+After a few hours, you return to where you started,
+and rejoin the trail of bread crumbs.
+
+<P>
+You think to yourself, OK, this asteroid is curved
+and probably not planar.  But then a crazy thought
+enters your mind--- maybe the asteroid is shaped like
+a doughnut instead of a sphere?  What
+experiment could you perform to tell the difference?
+
+<P>
+You decide to walk off in a transverse direction,
+leaving a trail of cheese crumbs
+this time.  Suppose that after a long time you return to
+your original starting point, and your cheese crumbs never
+crossed the trail of bread crumbs except when you
+returned.  What could you infer now?
+
+
+
+
+
+Presentation suggestions: Pause and see if students can figure out what experiment
+to perform to tell the difference between a doughnut
+and a sphere.
+Draw a few plausible pictures of a sphere or a doughnut,
+and how our abducted explorer could have traveled.
+
+
+
+
+Behind the fact: Since any two "loops" (trails of crumbs)
+on a sphere which start and end at the same point must
+cross somewhere in between, you cannot be living on
+a sphere.  It could be a doughnut(torus) or some other
+surface with more "holes".
+<P>
+Mathematicians often study FFact(surfaces) by their
+<i>intrinsic</i> properties.  One way to study a
+surface is to study the set of all loops in the surface;
+this is called the <i>FFact(fundamental group)</i> and
+it has an algebraic structure!  You can add loops
+by concatenation, and two loops are "equal" if
+one can be deformed to the other.  It turns out the
+the fundamental group is "topologically invariant":
+it does not change if you deform the surface.  So you
+can tell two surfaces are not topologically equivalent
+if they do not have the same fundamental group!
+
+<p>
+This is a fundamental idea in the field of FFact(topology).
+See also FFact(Mug+Trick).
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: any text on algebraic topology
+
+
+
+

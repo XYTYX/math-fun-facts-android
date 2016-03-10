@@ -1,0 +1,88 @@
+Title: Does Order of Addition Matter?
+Keywords: absolute convergence, conditional convergence
+Subject: 3
+Level: 3
+FF Description: From your earliest days of math you learned that
+the order in which you add two numbers doesn't matter:
+3+5 and 5+3 give the same result.  The same is true
+for the addition of any finite set of numbers.
+But what if you are adding an infinite set of numbers?
+
+<P>For instance, in calculus
+you encounter <i>series</i>, which are infinite sums.
+Does the order of addition matter?
+
+<P>
+Surprisingly, yes, but only for some series.
+A series is said to converge <i>absolutely</i> if the sum
+of the absolute values of the terms converges.  It is
+a fact that a series which converges absolutely
+must converge, and no matter how you rearrange the terms
+the sum will be the same.
+
+<P>
+Series that do not converge absolutely are wilder;
+they may or may not converge (so they are called
+<i>conditionally convergent</i>).  But, if such
+a sequence does converge, it is even stranger still---
+by rearranging the terms in the sequence, you can get
+the series to converge to any value you want!
+
+
+
+
+
+Presentation suggestions: Do an example with the <i>alternating harmonic series</i>:
+<BR>
+<CENTER>
+1 - (1/2) + (1/3) - (1/4) + ...
+<BR>
+</CENTER>
+This series is conditionally convergent
+(because the
+FFact(harmonic+series)
+diverges).
+But by the alternating series test,
+it converges---in fact, to ln(2).
+As a demonstration, show students how to rearrange it to
+FFact(converge) 
+to any value (see Math Behind the Fact).
+
+
+
+Behind the fact: This fact is due to Riemann, and the basic idea is simple.
+To obtain a rearrangement that sums to X, just add enough
+positive terms from the series (in their original order)
+until the partial sums first exceed X, then
+add enough negative terms from the series
+(in their original order) until the partial sums first
+dip below X,
+then repeat and continue with the successive positive terms,
+then the successive negative terms, etc.
+This will yield a rearrangement of the original series
+that sums to X.
+
+<P>This fact shows how careful one has
+to be when switching the order of addition in a
+conditionally convergent series.
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: Jef Raskin /jefraskin@aol.com
+Reference: Walter Rudin, ISBN(007054235X,Principles of Mathematical Analysis),
+Chapter 3.
+
+
+
+
+
+
+
+
+
+

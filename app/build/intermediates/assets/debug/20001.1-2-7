@@ -1,0 +1,110 @@
+Title: Mug Trick
+Keywords: fundamental group, topology
+Subject: 1, 2, 7
+Level: 2
+FF Description: Take a mug that has a handle, and fill it with coffee.
+Hold the mug in your hand.  Now, without letting go of
+the mug (or changing the position of your mug relative
+to your hand), and without spilling the coffee, see if you
+can rotate the mug TWO FULL TURNS and return your
+hand, arm, and cup to their original positions.
+
+<P>
+If you can do that, can do it the same
+trick with only ONE full turn?  (No!)
+
+<!-- needs picture
+
+Take off your belt and let it hang vertically from one hand.
+Give the bottom of the belt TWO full twists.
+Now without twisting your hands or letting go of the belt
+(though you may certainly "rigidly" move your hands),
+deform the belt so that it no longer has any twists in it.
+
+Now give the belt only one full twist.
+Can you do the same trick?
+(No!)
+-->
+
+
+
+
+Presentation suggestions: Do it!  Just don't fill the mug with <i>hot</i> coffee!
+You may wish to point the handle north at the beginning
+of the trick, so that students can track how many times
+the mug turns.  Now gradually rotate the cup towards
+your chest, then under your elbow... this will bring
+the cup through one rotation, but your arm will be twisted.
+Keeping the cup upright and rotating in the same direction
+will now force you to rotate the cup over your head.  Then
+bring the cup down and you will have given it two full
+turns and brought your arm back to its starting position.
+<P> Students will enjoy knowing that this trick is
+evidence of some deep mathematics, even if they don't
+understand it, so be sure to tell them about the math.
+Also, even if students only pick up the "buzzwords"
+(like "fundamental group"), it is still useful, because
+it all helps to popularize mathematics.
+(How many of us know what "string theory" really is?
+But hasn't that given physics a lot of glamor?)
+
+
+
+
+Behind the fact: See the Fun Fact on the FFact(Fundamental+Group).
+Continuously rotating a
+mug is equivalent to following a path in "SO(3)",
+the space of rotations in 3-space,
+and if you start and end the mug in the same
+orientation, you have traced a "loop" in SO(3).
+<P>
+The reason this trick works for 2 twists but not 1 twist
+is because the fundamental group of SO(3) is "Z/2",
+the cyclic group of order 2.  In layman's terms,
+this means that of all the ways you can twist a mug
+and return it to its original position, in only half
+of them will you be able to return your whole
+arm to its original position, and these are precisely
+the ones in which the mug rotates an even number of times.
+
+<P>
+You can learn more about the fundamental group in a FFact(topology) course.
+
+<!--
+All loops in SO(3)
+fall into one of two categories,
+those for which the trick works or does not work.
+Every point along the center of your belt
+represents an orthonormal frame in 3-space,
+and moving along the belt describes a path (in fact,
+a loop, since the last frame is identical to the first one)
+in the space of orthonormal frames in 3-space, which is the same as
+the space of rigid motions of 3-space that fix the origin.
+Though one twist gives a path that cannot be deformed
+back to the constant path
+(i.e. one in which all the frames are the same),
+going around that path TWICE is deformable to the
+constant path.
+-->
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Joshua Sabloff
+email: sabloff@math.stanford.edu
+phone: (650) 494-7654
+Commenters: 
+Reference: Kauffman's <i>On Knots</i>, or
+<BR>Bredon's <i>Geometry and Topology</i>.
+
+
+
+
+
+
+
+
+
+

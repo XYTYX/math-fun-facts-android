@@ -1,0 +1,32 @@
+<P>
+<CENTER>
+25 x 11 = 275
+<BR>31 x 11 = 341
+<BR>
+57 x 11 = 627 <-- you need to carry the 1!
+</CENTER>
+</P>
+<P>
+What about a 3-digit number?
+Can you figure out what's going on here?
+</P>
+<P>
+<CENTER>253 x 11 = 2783
+<BR>117 x 11 = 1287
+<BR>532 x 11 = 5852
+<BR>267 x 11 = 2937
+</CENTER></P>
+
+
+
+Presentation suggestions: Do examples!  What you notice is that multiplication by 11
+can be done quickly with numbers of any length by starting with the first and last digits (they remain the same,
+unless there is a carry) and then inserting the sums of adjacent pairs of digits sequentially in between.  For example, 253 x 11 begins with a 2 (like 253 does), then the next digit is 2+5=7, the next digit is 5+3=8, and the last digit is 3 (like 253 has).  So the product is 2783.  Remember to carry if necessary.  So 267 x 11 starts with a 2 (like 267 does), the next digit is 2+6=8, the next digit is 6+7=13 (oops! carry the 1 back to the previous digit, leaving a 3 in this place), then the last digit is 7 (just like 267 has).  Thus the product is 2937.
+
+
+Behind the fact: Long multiplication reveals why the trick works... you end
+up adding adjacent digits.  Based on this, can you figure
+out a snappy rule for FFact(Multiplication+by+111)?
+
+The reference has more tricks for doing
+FFact(lightning arithmetic).

@@ -1,0 +1,75 @@
+Title: Farmers and Pesky Birds
+Keywords: combinatorics, probability
+Subject: 4, 6
+Level: 3
+FF Description: Alice and Bob are two farmers
+each wanting to plant a (countably infinite) row of seeds,
+side by side in a field.
+Both of them have pesky birds that hinder their efforts
+in funny ways.
+
+<P>
+As Alice walks along the row, sequentially dropping her
+seeds, her bird picks up every fifth seed that she drops.
+So after Alice "finishes" planting her row of seeds, are
+there any seeds left?  Sure... infinitely many of them.
+
+<P>
+But Bob's bird behaves differently.  Bob walks
+side by side with Alice, planting seeds in his row.
+After every fifth seed that Bob drops, his bird picks up
+the <i>first seed that remains</i> in his row.
+After Bob has "finished" planting his row of seeds,
+are there any seeds left?
+
+<P>
+No!  Each of Bob's seeds gets picked up by Bob's bird,
+eventually!  But that is strange:  Alice and Bob are
+working simultaneously and their birds pick up seeds
+at the same rate... but Alice's row still has seeds left!
+How can this be?
+
+
+Presentation suggestions: Draw a picture of what's happening, as in FFig(1).
+Be prepared for a discussion about FFact(infinity).  
+Students will object that since Alice and Bob can never actually
+"finish" that there is no paradox.  But this is not the
+real issue, because we can just have Alice and Bob plant
+the first seed in 1 sec, the second in 1/2 sec, the third
+in a 1/4 sec, etc.  After 2 seconds they will be done
+planting.
+
+
+Behind the fact: The nature of this FFact(paradox) lies in the counter-intuitive
+nature of infinite sets.  An infinite set can be
+(and is in fact characterized by the fact that it can be)
+put into one-to-one correspondence with a subset of itself.
+So, both pesky birds have picked up sets of the same
+FFact(cardinality); one is just a subset of the other.
+
+<P>
+OK, if you liked that one, here's a question to ponder:
+Suppose Charlie is a third farmer, planting seeds at the
+same rate as Alice and Bob, with a pesky bird that after
+each fifth seed that Charlie drops, picks
+up a <i>random</i> seed of those that remain?  How many
+seeds will Charlie have left?
+An answer is in the reference.  [Hint: what is the
+probability that Charlie's first seed will be picked up?]
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Arthur Benjamin
+email: 
+phone: 
+Commenters: 
+Reference: S. Ross, <i>A First Course in Probability</i>,
+Prentice Hall, 1998.
+
+
+
+
+

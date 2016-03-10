@@ -1,0 +1,91 @@
+Title: Seven Shuffles
+Keywords: card shuffling, probability
+Subject: 4, 6
+Level: 2
+FF Description: How many shuffles does it take to randomize a deck of cards?
+
+<P>
+The answer, of course, depends on what kind of shuffle
+you consider.  Two popular kinds of shuffles are the
+random riffle shuffle and the overhand shuffle.
+The random riffle shuffle is modeled
+by cutting the deck binomially and dropping cards
+one-by-one from either half of the deck with probability
+proportional to the current sizes of the deck halves.
+
+<P>
+In 1992, Bayer and Diaconis showed that after
+seven random riffle shuffles of a deck of 52 cards,
+every configuration is nearly equally likely.
+Shuffling more than this does not significantly
+increase the "randomness"; shuffle less than this
+and the deck is "far" from random.
+
+<P>
+In fact, it is possible to show that five shuffles are
+not enough to bring about the reversal of a deck---see
+FFact(Rising+Sequences+in+Card+Shuffling).  So
+it is somewhat surprising that just two shuffles later,
+every configuration is possible and nearly equally likely.
+
+<P>
+By the way, the overhand shuffle is a really bad way to
+mix cards:  it takes about 2500 overhand shuffles
+to randomize a deck of 52 cards!
+
+
+
+
+Presentation suggestions: Bring a deck of cards in and demonstrate how non-random
+just 2 or 3 shuffles are by ordering the deck and then
+letting someone shuffle.  There will still be discernible
+patterns after a small number of shuffles!
+
+
+
+
+Behind the fact: A well-written account of Bayer and Diaconis' result
+may be found in the Mann reference.  There are many
+ideas in this result.  Analysis of the
+"distance from randomness" requires the choice of
+a metric betwen probabilities.  FFact(Combinatorics) and
+FFact(probability) intertwine in the analysis of
+FFact(rising+sequences) generated after a certain number
+of shuffles, which is an important part of proving this
+result.
+
+<P>There are, of course, non-random shuffles:
+see FFact(Perfect+Shuffles).
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Brad Mann
+email: 
+phone: 
+Commenters: 
+Reference: Brad Mann,
+"How many times should you shuffle a deck of cards?"
+<BR><i>UMAP J.</i> 15 (1994), no. 4, 303--332.
+<BR>
+Dave Bayer and Persi Diaconis,
+"Trailing the dovetail shuffle to its lair",
+<br><i>Ann. Appl. Probab.</i> 2(1992), no. 2, 294--313.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

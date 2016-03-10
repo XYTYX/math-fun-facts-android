@@ -1,0 +1,81 @@
+Title: Perfect Shuffles
+Keywords: probability, abstract algebra, card trick, mathematical magic
+Subject: 1, 6
+Level: 2
+FF Description: We know from the Fun Fact FFact(Seven+Shuffles)
+that 7 random riffle shuffles are
+enough to make almost every configuration equally likely
+in a deck of 52 cards.
+
+<P>
+But what happens if you always use <i>perfect shuffles</i>,
+in which you cut the cards exactly in half and perfectly
+interlace the cards?  Of course, this kind of shuffle
+has no randomness. What happens if you
+do perfect shuffles over and over again?
+
+<P>
+There are 2 kinds of perfect shuffles:
+The <i>out-shuffle</i> is one in which the top card stays on top.
+The <i>in-shuffle</i> is one in which the top card moves
+to the second position of the deck.  FFig(1) shows an
+out-shuffle.
+
+<P>
+Surprise:  8 perfect out-shuffles will restore the deck
+to its original order!
+
+<P>
+And, in fact, there is a nice FFact(magic trick) that uses
+out and in shuffles to move the top card to any position
+you desire!  Say you want the top card (position 0)
+to go to position N.
+Write N in base 2,
+and read the 0's and 1's from left to right.
+Perform an out-shuffle for a 0 and
+and in-shuffle for a 1.  Voila!  You will now have the top
+card at position N.  (See the reference.)
+
+<P>Example.  Since 6 is 110 in binary notation, then the sequence IN-IN-OUT will move the top card (position 0) to position 6 (the seventh card).
+
+
+Presentation suggestions: Have students go home and determine
+how many in-shuffles it takes to restore the deck
+to its original order.  (Answer: 52.)  You can also
+have students investigate decks of smaller sizes.
+As a project,
+you might even tell them part of the binary card trick
+and see if they can figure out the rest: whether 0 or 1
+stands for an in/out shuffle, and whether to read the
+digits from left to right or vice versa.
+
+
+
+Behind the fact: This fact may come as somewhat of a surprise, because there
+are 52! possible deck configurations, and since there is no
+randomness, after 52! out-shuffles, we must hit
+some configuration at least twice (and then cycle from there).
+But 8 is so much smaller than (52!).  See FFact(Making+History+By+Card+Shuffling).
+
+<P>
+FFact(Group theory) concerns itself with understanding sets
+and properties preserved by operations on
+those sets.  For instance, the set of all configurations
+of a deck of 52 cards forms a group, and a
+FFact(shuffle) is an operation on that group.
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: B. Morris, ISBN(0883855275,Magic Tricks Card Shuffling and Dynamic Computer Memories).
+
+
+
+

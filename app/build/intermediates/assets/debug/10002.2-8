@@ -1,0 +1,50 @@
+Title: How GPS Works
+Keywords: 
+Subject: 2, 8
+Level: 1
+FF Description: The intersection of
+two spheres is generally a circle
+(but might also be a point or the empty set).
+That circle will intersect at 3rd sphere in at most two points.
+This geometric fact is the basis for how GPS (Global Positioning System) receivers work, such as the one in your iPhone.
+
+<p>
+Imagine a network of satellites in the sky.
+Each repeatedly sends signals that contain the location of the satellite and the time of transmission.
+Signals travel at the speed of light (a constant), and
+reach a GPS receiver at slightly different times.
+A GPS receiver can tell how far away each satellite is
+by how long it took for the satellite signal to reach it.
+
+<p>
+Therefore, if the receiver is R units away from satellite A, then
+the receiver must lie on a FFact(sphere) of radius R from A's position.
+A second satellite will be enough to determine that the GPS receiver
+lies on some circle, and a third satellite will narrow the location down to at most 2 points.  A fourth satellite (not co-planar with the other 3) is usually enough to fix the receiver's location!
+
+
+
+
+
+
+
+Presentation suggestions: Many people are under the mistaken notion that GPS receivers transmit data to satellites!   In reality, they only receive (which is why they are called <i>receivers</i>) and then mathematics does the rest.
+
+
+
+
+
+Behind the fact: This is the general idea; somewhat more sophisticated mathematics is used to adjust for uncertainties due to miscalibrations in the receiver's clock or errors in  satellite locations.  More GPS satellites can also help.
+
+
+
+
+
+
+Submitted by: 
+Date submitted: 
+name: Francis Su
+email: 
+phone: 
+Commenters: 
+Reference: 
