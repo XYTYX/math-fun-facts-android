@@ -1,10 +1,12 @@
 package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 
 import com.example.aidan.mathfunfacts.Subject;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,45 +25,48 @@ public class MathFunFactsCollection {
 
 
 
-public ArrayList<ParserMathFunFact> findMFFWithLevel(int level) {
-    ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-    ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
-    while (iter.hasNext()) {
-        ParserMathFunFact mathfunfact = iter.next();
-        if (mathfunfact.getLevel() == level) {
-            results.add(mathfunfact);
-        }
-    }
-    return results;
-}
-
-public ArrayList<ParserMathFunFact> findMFFWithSubject(Subject subject_to_find) {
-    ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-    ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
+    public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
+        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
+        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
         while (iter.hasNext()) {
             ParserMathFunFact mathfunfact = iter.next();
-			for(Subject subject_of_MFF_iterated : mathfunfact.getSubjects()){
-				if (subject_to_find.equals(subject_to_find)) {
+            if (mathfunfact.getLevel() == level) {
                 results.add(mathfunfact);
-            	}
-			}
+            }
         }
         return results;
-}
+    }
 
-public ListIterator<ParserMathFunFact> getAllMathFunFacts() {
+    public ArrayList<ParserMathFunFact> findMFFWithSubject(String find) {
+        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
+        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
+            while (iter.hasNext()) {
+                ParserMathFunFact mathfunfact = iter.next();
+    			if(mathfunfact.getSubjects().contains(find)) {
+                    results.add(mathfunfact);
+                }
+            }
+            return results;
+    }
+
+    public ListIterator<ParserMathFunFact> getAllMathFunFacts() {
     return MathFunFacts.listIterator();
 }
 
 
     public void ParseAllMathFunFactFile(Context context){
-    	File[] files = new File(context.getAssets().toString()).listFiles();
+        AssetManager am = context.getAssets();
+        try {
+            String[] files = am.list("");
+            for (int x = 1; x < 200; x++) {
 
-    	for(File file: files){
-    		if(file.isFile()){
-    			MathFunFacts.add(new ParserMathFunFact(file.getName(),context));
-    		}
-    	}
+                MathFunFacts.add(new ParserMathFunFact(files[x],context));
+            }
+
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
 }

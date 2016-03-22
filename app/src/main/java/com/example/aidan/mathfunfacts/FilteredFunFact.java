@@ -41,8 +41,7 @@ public class FilteredFunFact extends AppCompatActivity {
             subject = (int) bundle.get("subject");
         }
 
-        MathFunFactCollection collection = new MathFunFactCollection(this.getApplicationContext());
-        ArrayList<MathFunFactMetadata> files = collection.findMFFWithDifficulty(level);
+        MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
 
 
     }
