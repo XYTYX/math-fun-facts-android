@@ -68,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);
+
+                        Intent i = new Intent(getApplicationContext(), Difficulty.class);
+                        startActivity(i);
+
                         break;
                     case 3:
                         tab.setIcon(R.drawable.subject_fragment_tab_icon_selected);

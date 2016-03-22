@@ -2267,7 +2267,7 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0c0017;
         public static final int expand_activities_button=0x7f0c003e;
         public static final int expanded_menu=0x7f0c0051;
-        public static final int fab=0x7f0c006a;
+        public static final int fab=0x7f0c006b;
         public static final int fill=0x7f0c002d;
         public static final int fill_horizontal=0x7f0c002e;
         public static final int fill_vertical=0x7f0c0021;
@@ -2334,7 +2334,7 @@ containing a value of this type.
         public static final int status_bar_latest_event_content=0x7f0c007d;
         public static final int submit_area=0x7f0c0065;
         public static final int tabMode=0x7f0c000d;
-        public static final int tab_layout=0x7f0c006b;
+        public static final int tab_layout=0x7f0c006a;
         public static final int text=0x7f0c0085;
         public static final int text2=0x7f0c0083;
         public static final int textSpacerNoButtons=0x7f0c004d;

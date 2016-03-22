@@ -3,6 +3,8 @@ package com.example.aidan.mathfunfacts;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
 
 /**
  * Created by Anders on 3/20/16.
@@ -24,6 +26,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
             case 0:
                 Tab1Fragment tab1 = new Tab1Fragment();
+
                 return tab1;
             case 1:
                 Tab1Fragment tab2 = new Tab1Fragment();
@@ -47,5 +50,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return tabCount;
     }
+
+
 
 }
