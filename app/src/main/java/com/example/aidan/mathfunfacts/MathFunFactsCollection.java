@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Random;
 
 public class MathFunFactsCollection {
  
@@ -49,14 +50,26 @@ public class MathFunFactsCollection {
             return results;
     }
 
-    public ListIterator<ParserMathFunFact> getAllMathFunFacts() {
-    return MathFunFacts.listIterator();
-}
+    public List<ParserMathFunFact> getAllMathFunFacts() {
+    return MathFunFacts;
+    }
+
+    public ParserMathFunFact findRandomMFF() {
+        Random rand = new Random();
+        int n = rand.nextInt(199) + 1;
+        return MathFunFacts.get(n);
+    }
 
 
     public void ParseAllMathFunFactFile(Context context){
         AssetManager am = context.getAssets();
         try {
+
+            // I start at 1 and end at 200 because index 0's file is
+            // differently formatted from the rest, and because our files
+            // are in assets, we dip into binary files we don't want to
+            // be messing with
+
             String[] files = am.list("");
             for (int x = 1; x < 200; x++) {
 
