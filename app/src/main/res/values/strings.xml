@@ -10,4 +10,7 @@
     <string name="go">Go!</string>
     <string name="title_activity_display_fun_fact">DisplayFunFact</string>
     <string name="title_activity_filtered_fun_fact">FilteredFunFact</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
