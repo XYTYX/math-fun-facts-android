@@ -1,12 +1,9 @@
 package com.example.aidan.mathfunfacts;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,24 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.TextView;
-
-import org.xml.sax.Parser;
-
-import java.io.*;
-
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.io.*;
 import java.util.List;
-import java.util.ListIterator;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println("printed stack");
 
-
-
-        //"10001.1");
-
-        //wv.loadUrl("file:///android_asset/test.html");
     }
 
     @Override

@@ -31,7 +31,7 @@ public class MathFunFactsCollection {
         ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
         while (iter.hasNext()) {
             ParserMathFunFact mathfunfact = iter.next();
-            if (mathfunfact.getLevel() == level) {
+            if (mathfunfact.getLevel().equals(level)) {
                 results.add(mathfunfact);
             }
         }
@@ -72,7 +72,6 @@ public class MathFunFactsCollection {
 
             String[] files = am.list("");
             for (int x = 1; x < 200; x++) {
-
                 MathFunFacts.add(new ParserMathFunFact(files[x],context));
             }
 
