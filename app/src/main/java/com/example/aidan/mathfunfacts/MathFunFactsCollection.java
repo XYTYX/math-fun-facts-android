@@ -2,7 +2,6 @@ package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import com.example.aidan.mathfunfacts.Subject;
 
 import java.io.File;
 import java.io.IOException;

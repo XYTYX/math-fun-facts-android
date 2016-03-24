@@ -53,16 +53,10 @@ public class FilteredFunFact extends AppCompatActivity {
             subject = (int) bundle.get("subject");
         }
 
-<<<<<<< HEAD
         Random random = new Random();
         int index = random.nextInt(files.size());
         ParserMathFunFact file = files.get(index);
         webView.loadData(level + file.getHTML_content(),"text/html", "UTF-8");
-
-=======
-        MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
->>>>>>> clean-parser
-
 
     }
 

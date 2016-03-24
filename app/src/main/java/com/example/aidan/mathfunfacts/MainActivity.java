@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                WebView wv = (WebView) findViewById(R.id.webView);
-                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+                GoToDifficultySelector(v);
+//                WebView wv = (WebView) findViewById(R.id.webView);
+//                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
             }
         });
 
@@ -88,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void GoToDifficultySelector(View view) {
         Intent i = new Intent(getApplicationContext(), Difficulty.class);
-        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
-        Bundle b = new Bundle();
-        b.putParcelable("mffc", (Parcelable) mffc);
+//        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
+//        Bundle b = new Bundle();
+//        b.putParcelable("mffc", (Parcelable) mffc);
         startActivity(i);
     }
 }
