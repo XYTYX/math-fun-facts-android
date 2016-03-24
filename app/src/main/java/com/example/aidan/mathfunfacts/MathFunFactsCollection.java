@@ -2,11 +2,7 @@ package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-<<<<<<< HEAD
-=======
-
 import com.example.aidan.mathfunfacts.Subject;
->>>>>>> clean-parser
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +28,6 @@ public class MathFunFactsCollection {
     public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
         ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
-<<<<<<< HEAD
         while (iter.hasNext()) {
             ParserMathFunFact mathfunfact = iter.next();
             if (mathfunfact.getLevel().equals(level)) {
@@ -42,27 +37,6 @@ public class MathFunFactsCollection {
         return results;
     }
 
-    public ArrayList<ParserMathFunFact> findMFFWithSubject(String find) {
-        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
-        while (iter.hasNext()) {
-            ParserMathFunFact mathfunfact = iter.next();
-            if(mathfunfact.getSubjects().contains(find)) {
-=======
-        while (iter.hasNext()) {
-            ParserMathFunFact mathfunfact = iter.next();
-            if (mathfunfact.getLevel().equals(level)) {
->>>>>>> clean-parser
-                results.add(mathfunfact);
-            }
-        }
-        return results;
-    }
-
-<<<<<<< HEAD
-    public ListIterator<ParserMathFunFact> getAllMathFunFacts() {
-        return MathFunFacts.listIterator();
-=======
     public ArrayList<ParserMathFunFact> findMFFWithSubject(String find) {
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
         ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
@@ -83,21 +57,12 @@ public class MathFunFactsCollection {
         Random rand = new Random();
         int n = rand.nextInt(199) + 1;
         return MathFunFacts.get(n);
->>>>>>> clean-parser
     }
 
 
     public void ParseAllMathFunFactFile(Context context){
         AssetManager am = context.getAssets();
         try {
-<<<<<<< HEAD
-            String[] files = am.list("");
-            for (int x = 1; x < 200; x++) {
-
-                MathFunFacts.add(new ParserMathFunFact(files[x],context));
-            }
-
-=======
 
             // I start at 1 and end at 200 because index 0's file is
             // differently formatted from the rest, and because our files
@@ -108,8 +73,6 @@ public class MathFunFactsCollection {
             for (int x = 1; x < 200; x++) {
                 MathFunFacts.add(new ParserMathFunFact(files[x],context));
             }
-
->>>>>>> clean-parser
         }
         catch(IOException e){
             e.printStackTrace();
