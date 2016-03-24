@@ -1,12 +1,13 @@
 package com.example.aidan.mathfunfacts;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Parcelable;
+<<<<<<< HEAD
 import android.provider.MediaStore;
+=======
+>>>>>>> clean-parser
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+<<<<<<< HEAD
 import android.widget.TextView;
 
 import java.io.*;
@@ -29,11 +31,18 @@ import java.nio.charset.StandardCharsets;
 import java.io.*;
 import java.util.ListIterator;
 import java.util.Random;
+=======
+import java.util.List;
+>>>>>>> clean-parser
 
 public class MainActivity extends AppCompatActivity {
 
     MathFunFactsCollection collection;
+<<<<<<< HEAD
 
+=======
+    List<ParserMathFunFact> list;
+>>>>>>> clean-parser
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +51,33 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
         collection = new MathFunFactsCollection(this.getApplicationContext());
         final ListIterator<ParserMathFunFact> iter = collection.getAllMathFunFacts();
+=======
+        this.collection = new MathFunFactsCollection(this.getApplicationContext());
+        this.list = collection.getAllMathFunFacts();
+>>>>>>> clean-parser
 
         final View view = this.findViewById(android.R.id.content);
-        FloatingActionButton fab = (FloatingActionButton)  view.findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+<<<<<<< HEAD
                 GoToDifficultySelector(v);
 
 //                WebView wv = (WebView) findViewById(R.id.webView);
 //                WebSettings settings = wv.getSettings();
 //                wv.loadData(iter.next().getHTML_content(), "text/html", "UTF-8");
+=======
+                WebView wv = (WebView) findViewById(R.id.webView);
+                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+>>>>>>> clean-parser
             }
         });
 
 
+<<<<<<< HEAD
 
         String total = iter.next().getHTML_content();
 
@@ -67,14 +87,16 @@ public class MainActivity extends AppCompatActivity {
 
         settings.setDefaultFontSize(24);
         wv.loadData(total, "text/html", "UTF-8");
+=======
+        WebView wv = (WebView) findViewById(R.id.webView);
+        WebSettings settings = wv.getSettings();
+
+        settings.setDefaultFontSize(24);
+        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+>>>>>>> clean-parser
 
         System.out.println("printed stack");
 
-
-
-        //"10001.1");
-
-        //wv.loadUrl("file:///android_asset/test.html");
     }
 
     @Override
@@ -99,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+<<<<<<< HEAD
 //    public void getRandom(View view) {
 //        try {
 //
@@ -144,6 +167,14 @@ public class MainActivity extends AppCompatActivity {
 //        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
 //        Bundle b = new Bundle();
 //        b.putParcelable("mffc", (Parcelable) mffc);
+=======
+
+    public void GoToDifficultySelector(View view) {
+        Intent i = new Intent(getApplicationContext(), Difficulty.class);
+        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
+        Bundle b = new Bundle();
+        b.putParcelable("mffc", (Parcelable) mffc);
+>>>>>>> clean-parser
         startActivity(i);
     }
 }

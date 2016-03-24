@@ -41,6 +41,7 @@ public class ParserMathFunFact {
 
             this.title = reader.readLine().substring(7);
             Log.d("title", title);
+<<<<<<< HEAD
 
             this.keywords = reader.readLine().substring(10);
             Log.d("keywords", keywords);
@@ -48,6 +49,15 @@ public class ParserMathFunFact {
             this.subjects = reader.readLine().substring(9);
             Log.d("subjects", subjects);
 
+=======
+
+            this.keywords = reader.readLine().substring(10);
+            Log.d("keywords", keywords);
+
+            this.subjects = reader.readLine().substring(9);
+            Log.d("subjects", subjects);
+
+>>>>>>> clean-parser
             this.level = reader.readLine().substring(7);
             Log.d("level", level);
 

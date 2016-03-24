@@ -14,6 +14,7 @@ import android.widget.RadioGroup;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Difficulty extends AppCompatActivity {
 
@@ -46,8 +47,13 @@ public class Difficulty extends AppCompatActivity {
             level = 2;
         else level = 3;
 
+<<<<<<< HEAD
 //        MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
 //        ArrayList<MathFunFactsCollection> files = collection.findMFFWithDifficulty(level);
+=======
+        MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
+        //ArrayList<ParserMathFunFact> files = collection.findMFFWithDifficulty(level);
+>>>>>>> clean-parser
         Intent intent = new Intent(getApplicationContext(),FilteredFunFact.class);
         intent.putExtra("difficulty", level);
         startActivity(intent);

@@ -11,4 +11,8 @@
 *.jar
 *.class
 *.dex
+<<<<<<< HEAD
 *.log
+=======
+*.log
+>>>>>>> clean-parser

@@ -12,10 +12,13 @@
         "source": "/Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_in.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
         "source": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
     },
     {
+=======
+>>>>>>> clean-parser
         "merged": "/Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
         "source": "/Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_in.xml"
     },
@@ -24,10 +27,13 @@
         "source": "/Users/Aidan/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_bottom.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
         "source": "/Users/anantjaitha/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_top.xml"
     },
     {
+=======
+>>>>>>> clean-parser
         "merged": "/Users/Anders/Dropbox/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Users/Anders/Dropbox/AndroidStudioProjects/math-fun-facts-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_out.xml"
     },
