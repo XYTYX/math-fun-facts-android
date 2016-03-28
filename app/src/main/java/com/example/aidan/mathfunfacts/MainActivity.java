@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 WebView wv = (WebView) findViewById(R.id.webView);
-//                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
 //                GoToDifficultySelector(v);
             }
         });
