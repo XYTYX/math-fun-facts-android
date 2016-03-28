@@ -32,6 +32,7 @@
             android:name="com.example.aidan.mathfunfacts.FilteredFunFact"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.aidan.mathfunfacts.favorites" />
     </application>
 
 </manifest>
