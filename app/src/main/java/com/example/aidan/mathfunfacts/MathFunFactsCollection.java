@@ -1,20 +1,22 @@
 package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
-
-import com.example.aidan.mathfunfacts.Subject;
+import android.content.res.AssetManager;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Random;
 
 public class MathFunFactsCollection {
- 
+
     List<ParserMathFunFact> MathFunFacts;
     Context context;
 
+    // Parse all fun facts on create
     public MathFunFactsCollection(Context context) {
         this.MathFunFacts = new LinkedList<ParserMathFunFact>();
         this.context = context;
@@ -22,46 +24,59 @@ public class MathFunFactsCollection {
     }
 
 
-
-public ArrayList<ParserMathFunFact> findMFFWithLevel(int level) {
-    ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-    ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
-    while (iter.hasNext()) {
-        ParserMathFunFact mathfunfact = iter.next();
-        if (mathfunfact.getLevel() == level) {
-            results.add(mathfunfact);
-        }
-    }
-    return results;
-}
-
-public ArrayList<ParserMathFunFact> findMFFWithSubject(Subject subject_to_find) {
-    ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-    ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
+    public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
+        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
+        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
         while (iter.hasNext()) {
             ParserMathFunFact mathfunfact = iter.next();
-			for(Subject subject_of_MFF_iterated : mathfunfact.getSubjects()){
-				if (subject_to_find.equals(subject_to_find)) {
+            if (mathfunfact.getLevel().equals(level)) {
                 results.add(mathfunfact);
-            	}
-			}
+            }
         }
         return results;
-}
+    }
 
-public ListIterator<ParserMathFunFact> getAllMathFunFacts() {
-    return MathFunFacts.listIterator();
-}
+    public ArrayList<ParserMathFunFact> findMFFWithSubject(String find) {
+        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
+        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
+            while (iter.hasNext()) {
+                ParserMathFunFact mathfunfact = iter.next();
+    			if(mathfunfact.getSubjects().contains(find)) {
+                    results.add(mathfunfact);
+                }
+            }
+            return results;
+    }
 
+    public List<ParserMathFunFact> getAllMathFunFacts() {
+    return MathFunFacts;
+    }
 
+    public ParserMathFunFact findRandomMFF() {
+        Random rand = new Random();
+        int n = rand.nextInt(199) + 1;
+        return MathFunFacts.get(n);
+    }
+
+    // Method called on creatio
     public void ParseAllMathFunFactFile(Context context){
-    	File[] files = new File(context.getAssets().toString()).listFiles();
+        AssetManager am = context.getAssets();
+        try {
 
-    	for(File file: files){
-    		if(file.isFile()){
-    			MathFunFacts.add(new ParserMathFunFact(file.getName(),context));
-    		}
-    	}
+            // I start at 1 and end at 200 because index 0's file is
+            // differently formatted from the rest, and because our files
+            // are in assets, we dip into binary files we don't want to
+            // be messing with.
+            // TODO we should move the files to res instead of assets
+
+            String[] files = am.list("");
+            for (int x = 1; x < 200; x++) {
+                MathFunFacts.add(new ParserMathFunFact(files[x],context));
+            }
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
 }

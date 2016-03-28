@@ -1,11 +1,10 @@
 package com.example.aidan.mathfunfacts;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -26,13 +25,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.io.*;
+import java.util.ListIterator;
 import java.util.Random;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    MathFunFactsCollection collection;
+    List<ParserMathFunFact> list;
 
-
-
+    // Creates a MathFunFactsCollection, which then parses all of the MFFs
+    // Creates a floating action button that retrieves a random MFF on click
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,67 +43,27 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        this.collection = new MathFunFactsCollection(this.getApplicationContext());
+        this.list = collection.getAllMathFunFacts();
+
         final View view = this.findViewById(android.R.id.content);
-        FloatingActionButton fab = (FloatingActionButton)  view.findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                getRandom(v);
+                WebView wv = (WebView) findViewById(R.id.webView);
+//                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+//                GoToDifficultySelector(v);
             }
         });
 
+        WebView wv = (WebView) findViewById(R.id.webView);
+        WebSettings settings = wv.getSettings();
 
-        try {
-            // Get Assets
-            AssetManager am = getApplicationContext().getAssets();
+        settings.setDefaultFontSize(24);
+        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
 
-            // Get List of files in assets
-            String[] files = am.list("");
-
-            // Get number of files
-            int length = files.length;
-            String l = " " + length;
-
-            // Get random number to get a random file
-            Random rand = new Random();
-            int index = rand.nextInt(length-9);
-            String fileName = files[index];
-
-            // Create the string for the WebView
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open(fileName)));
-            StringBuilder total = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                total.append(line);
-            }
-            String message=total.toString();
-
-            // Set the WebView content to the file contents
-            WebView wv = (WebView) findViewById(R.id.webView);
-            WebSettings settings = wv.getSettings();
-
-
-            settings.setDefaultFontSize(24);
-            //message  = "Title: Multiplication by 11\n" +
-            wv.loadData(total.toString(), "text/html", "UTF-8");
-            System.out.print("Alis string" + total.toString());
-
-
-
-            //funFactTextView.setText(message);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            System.out.println("printed stack");
-
-            e.printStackTrace();
-        }
         System.out.println("printed stack");
 
-
-
-        //"10001.1");
-
-        //wv.loadUrl("file:///android_asset/test.html");
     }
 
     @Override
@@ -125,50 +88,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void getRandom(View view) {
-        try {
-
-            // Get Android Assets
-            AssetManager am = getApplicationContext().getAssets();
-
-            // Get list of files
-            String[] files = am.list("");
-
-            // Get number of files
-            int length = files.length;
-
-            // Get Random file
-            Random rand = new Random();
-            int index = rand.nextInt(length-9);
-            String fileName = files[index];
-
-            // Read from file and set it to a string to send to the WebView
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open(fileName)));
-            StringBuilder total = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                total.append(line);
-            }
-            String message=total.toString();
-            WebView wv = (WebView) findViewById(R.id.webView);
-            //message  = "Title: Multiplication by 11\n" +
-            wv.loadData(total.toString(), "text/html", "UTF-8");
-            System.out.print("Alis string" + total.toString());
-
-
-
-            //funFactTextView.setText(message);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            System.out.println("printed stack");
-
-            e.printStackTrace();
-        }
-    }
 
     public void GoToDifficultySelector(View view) {
         Intent i = new Intent(getApplicationContext(), Difficulty.class);
+//        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
+//        Bundle b = new Bundle();
+//        b.putParcelable("mffc", (Parcelable) mffc);
         startActivity(i);
     }
 }
