@@ -12,3 +12,5 @@
 *.class
 *.dex
 *.log
+/app/build/intermediates/blame/res/debug/multi/*.json
+/app/build/intermediates/blame/res/debug/single/*.json
