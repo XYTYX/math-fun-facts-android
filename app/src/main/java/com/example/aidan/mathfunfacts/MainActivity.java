@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,15 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.TextView;
-
-import java.io.*;
 
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -40,11 +36,104 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         this.collection = new MathFunFactsCollection(this.getApplicationContext());
         this.list = collection.getAllMathFunFacts();
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+
+        //default set random to selected since this is first view to show after app load
+        tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.random_fragment_tab_icon_selected)));
+        tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.favorite_fragment_tab_icon_un_selected)));
+        tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.difficulty_fragment_tab_icon_un_selected)));
+        tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.subject_fragment_tab_icon_un_selected)));
+        tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.search_fragment_tab_icon_un_selected)));
+//        tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
+//        tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
+//        tabLayout.addTab(tabLayout.newTab().setText("Tab 4 Item"));
+//        tabLayout.addTab(tabLayout.newTab().setText("Tab 5 Item"));
+
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+
+        final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(viewPagerAdapter);
+
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+
+                switch (tab.getPosition()) {
+                    case 0:
+                        tab.setIcon(R.drawable.random_fragment_tab_icon_selected);
+                        break;
+                    case 1:
+                        tab.setIcon(R.drawable.favorite_fragment_tab_icon_selected);
+
+
+                        Intent j = new Intent(getApplicationContext(), favorites.class);
+                        startActivity(j);
+                        break;
+                    case 2:
+                        tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);
+
+                        Intent i = new Intent(getApplicationContext(), Difficulty.class);
+                        startActivity(i);
+                        overridePendingTransition(0,0);
+
+
+
+//                        this.startActivity(new Intent(v.getContext(), newactivity.class));
+//                        this.overridePendingTransition(0, 0);
+                        break;
+                    case 3:
+                        tab.setIcon(R.drawable.subject_fragment_tab_icon_selected);
+                        break;
+                    case 4:
+                        tab.setIcon(R.drawable.search_fragment_tab_icon_selected);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                switch (tab.getPosition()) {
+                    case 0:
+                        tab.setIcon(R.drawable.random_fragment_tab_icon_un_selected);
+                        break;
+                    case 1:
+                        tab.setIcon(R.drawable.favorite_fragment_tab_icon_un_selected);
+                        break;
+                    case 2:
+                        tab.setIcon(R.drawable.difficulty_fragment_tab_icon_un_selected);
+                        break;
+                    case 3:
+                        tab.setIcon(R.drawable.subject_fragment_tab_icon_un_selected);
+                        break;
+                    case 4:
+                        tab.setIcon(R.drawable.search_fragment_tab_icon_un_selected);
+                        break;
+                }
+
+
+            }
+
+            @Override
+
+            public void onTabReselected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+        });
+
 
         final View view = this.findViewById(android.R.id.content);
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
