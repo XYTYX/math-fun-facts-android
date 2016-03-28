@@ -31,29 +31,40 @@ public class Difficulty extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.random_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.favorite_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.difficulty_fragment_tab_icon_selected)));
+        //tabLayout.getTabAt(2).
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.subject_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.search_fragment_tab_icon_un_selected)));
 //
-//        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-//
-//
-//        final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-//        viewPager.setAdapter(viewPagerAdapter);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+////
+////
+////        final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+////        viewPager.setAdapter(viewPagerAdapter);
 
 
 //        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-//                viewPager.setCurrentItem(tab.getPosition());
+                viewPager.setCurrentItem(2);
 
                 switch (tab.getPosition()) {
                     case 0:
                         tab.setIcon(R.drawable.random_fragment_tab_icon_selected);
+
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
+                        overridePendingTransition(0,0);
                         break;
                     case 1:
                         tab.setIcon(R.drawable.favorite_fragment_tab_icon_selected);
+
+
+                        Intent j = new Intent(getApplicationContext(), favorites.class);
+                        startActivity(j);
                         break;
                     case 2:
                         tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);

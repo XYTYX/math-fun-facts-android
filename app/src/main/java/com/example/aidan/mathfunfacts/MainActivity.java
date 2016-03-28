@@ -65,13 +65,22 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         tab.setIcon(R.drawable.favorite_fragment_tab_icon_selected);
+
+
+                        Intent j = new Intent(getApplicationContext(), favorites.class);
+                        startActivity(j);
                         break;
                     case 2:
                         tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);
 
                         Intent i = new Intent(getApplicationContext(), Difficulty.class);
                         startActivity(i);
+                        overridePendingTransition(0,0);
 
+
+
+//                        this.startActivity(new Intent(v.getContext(), newactivity.class));
+//                        this.overridePendingTransition(0, 0);
                         break;
                     case 3:
                         tab.setIcon(R.drawable.subject_fragment_tab_icon_selected);
@@ -84,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
                 switch (tab.getPosition()) {
                     case 0:
                         tab.setIcon(R.drawable.random_fragment_tab_icon_un_selected);
@@ -108,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
 
             public void onTabReselected(TabLayout.Tab tab) {
-
+                viewPager.setCurrentItem(tab.getPosition());
             }
         });
 
