@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     MathFunFactsCollection collection;
     List<ParserMathFunFact> list;
 
+    // Creates a MathFunFactsCollection, which then parses all of the MFFs
+    // Creates a floating action button that retrieves a random MFF on click
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                GoToDifficultySelector(v);
-//                WebView wv = (WebView) findViewById(R.id.webView);
+                WebView wv = (WebView) findViewById(R.id.webView);
 //                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+//                GoToDifficultySelector(v);
             }
         });
 

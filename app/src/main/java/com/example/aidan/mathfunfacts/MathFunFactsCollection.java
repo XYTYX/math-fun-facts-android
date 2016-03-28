@@ -16,12 +16,12 @@ public class MathFunFactsCollection {
     List<ParserMathFunFact> MathFunFacts;
     Context context;
 
+    // Parse all fun facts on create
     public MathFunFactsCollection(Context context) {
         this.MathFunFacts = new LinkedList<ParserMathFunFact>();
         this.context = context;
         ParseAllMathFunFactFile(context);
     }
-
 
 
     public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
@@ -58,7 +58,7 @@ public class MathFunFactsCollection {
         return MathFunFacts.get(n);
     }
 
-
+    // Method called on creatio
     public void ParseAllMathFunFactFile(Context context){
         AssetManager am = context.getAssets();
         try {
@@ -66,7 +66,8 @@ public class MathFunFactsCollection {
             // I start at 1 and end at 200 because index 0's file is
             // differently formatted from the rest, and because our files
             // are in assets, we dip into binary files we don't want to
-            // be messing with
+            // be messing with.
+            // TODO we should move the files to res instead of assets
 
             String[] files = am.list("");
             for (int x = 1; x < 200; x++) {

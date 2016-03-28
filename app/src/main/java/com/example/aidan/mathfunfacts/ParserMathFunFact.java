@@ -30,6 +30,7 @@ public class ParserMathFunFact {
         ParseFile(Filename);
     }
 
+    // Parse the file passed in
     public void ParseFile(String Filename){
 
         try {
@@ -69,6 +70,8 @@ public class ParserMathFunFact {
 
 
     }
+
+    // Gettings and setters
 
     public String getTitle() {
         return title;
