@@ -79,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
                         tab.setIcon(R.drawable.favorite_fragment_tab_icon_selected);
 
 
-                        Intent j = new Intent(getApplicationContext(), favorites.class);
-                        startActivity(j);
+//                        Intent j = new Intent(getApplicationContext(), favorites.class);
+//                        startActivity(j);
                         break;
                     case 2:
                         tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);
-
-                        Intent i = new Intent(getApplicationContext(), Difficulty.class);
-                        startActivity(i);
+//
+//                        Intent i = new Intent(getApplicationContext(), Difficulty.class);
+//                        startActivity(i);
                         overridePendingTransition(0,0);
 
 
@@ -145,11 +145,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        WebView wv = (WebView) findViewById(R.id.webView);
-        WebSettings settings = wv.getSettings();
-
-        settings.setDefaultFontSize(24);
-        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+//        WebView wv = (WebView) findViewById(R.id.webView);
+//        WebSettings settings = wv.getSettings();
+//
+//        settings.setDefaultFontSize(24);
+//        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
 
         System.out.println("printed stack");
 

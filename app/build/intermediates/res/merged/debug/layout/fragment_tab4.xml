@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.aidan.mathfunfacts.Tab1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/content_filtered_fun_fact" />
 
     <TextView
         android:layout_width="wrap_content"

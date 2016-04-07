@@ -4,15 +4,42 @@
     android:layout_height="match_parent"
     tools:context="com.example.aidan.mathfunfacts.Tab3Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--<include layout="@layout/activity_difficulty" />-->
 
-    <TextView
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/difficultySelector"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/easy"
+            android:text="Easy" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/medium"
+            android:text="Medium" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/difficult"
+            android:text="Difficult" />
+
+    </RadioGroup>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/go"
 
-        android:text="Tab 3 Fragment"
-        android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/difficultyButton"
+        android:layout_below="@id/difficultySelector"/>
+
+
 </RelativeLayout>
