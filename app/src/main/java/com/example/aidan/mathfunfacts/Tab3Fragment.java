@@ -4,6 +4,7 @@ package com.example.aidan.mathfunfacts;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import android.widget.RadioGroup;
  */
 public class Tab3Fragment extends Fragment {
 
+    String difficulty;
 
     public Tab3Fragment() {
         // Required empty public constructor
@@ -29,33 +31,38 @@ public class Tab3Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        super.onCreate(savedInstanceState);
 
         final View v = inflater.inflate(R.layout.fragment_tab3, container, false);
-        Button button = (Button) v.findViewById(R.id.difficultyButton);
-//        button.setOnContextClickListener(View.OnContextClickListener()) {
-//
-//        }
 
-//        super.onCreate(savedInstanceState);
-//        v.setContentView(R.layout.activity_difficulty);
-//        MathFunFactsCollection collection = new MathFunFactsCollection(this.getContext());
-//        WebView wv = (WebView) v.findViewById(R.id.webView);
-//        WebSettings settings = wv.getSettings();
+        RadioGroup radioGroup = (RadioGroup) v.findViewById(R.id.difficultySelector);
+        radioGroup.clearCheck();
 
-//        settings.setDefaultFontSize(24);
-//        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
-        // Inflate the layout for this fragment
+        //this is to update what difficulty is, depending on which radio button was clicked
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton rb = (RadioButton) group.findViewById(checkedId);
+                if(null != rb && checkedId != -1) {
+                    difficulty = rb.getText().toString();
+                }
+            }
+        });
+
+        //on click, the go button at the bottom calls getFunFactByDifficulty
+        Button go = (Button) v.findViewById(R.id.difficultyButton);
+        go.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getFunFactByDifficulty(view, difficulty);
+            }
+        });
         return  v;
     }
 
 
 
-    public void getFunFactByDifficulty(View view) {
-        RadioGroup difficultySelector = (RadioGroup) view.findViewById(R.id.difficultySelector);
-        view = this.getView();
-        String difficulty = ((RadioButton) view.findViewById(difficultySelector.getCheckedRadioButtonId())).getText().toString();
-        Log.d("Selected ID", difficulty);
+    public void getFunFactByDifficulty(View view, String difficulty) {
 
         int level;
         if(difficulty.equals("Easy"))
@@ -64,7 +71,6 @@ public class Tab3Fragment extends Fragment {
             level = 2;
         else level = 3;
 
-        MathFunFactsCollection collection = new MathFunFactsCollection(this.getContext());
         Intent intent = new Intent(this.getContext(),FilteredFunFact.class);
         intent.putExtra("difficulty", level);
         startActivity(intent);

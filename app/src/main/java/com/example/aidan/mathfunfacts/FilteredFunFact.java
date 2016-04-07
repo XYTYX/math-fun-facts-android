@@ -40,9 +40,9 @@ public class FilteredFunFact extends AppCompatActivity {
         MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
         ArrayList<ParserMathFunFact> files = new ArrayList<>();
 
+        // Get the random file based on difficulty
         if(getIntent().hasExtra("difficulty")) {
             level = (int) bundle.get("difficulty");
-            // Get the random file based on difficulty
 
             files = collection.findMFFWithLevel("" + level);
             Log.d("Level - FilteredFunFact", "_" + level + "_");

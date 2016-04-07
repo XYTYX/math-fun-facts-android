@@ -141,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 WebView wv = (WebView) findViewById(R.id.webView);
                 wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
-//                GoToDifficultySelector(v);
             }
         });
 
