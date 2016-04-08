@@ -52,17 +52,23 @@ public class ParserMathFunFact {
             this.level = reader.readLine().substring(7);
             Log.d("level", level);
 
-//            this.description = reader.readLine().substring(16);
-//            Log.d("description", description);
-
-
             StringBuilder total = new StringBuilder();
+
+//            wrapping the title with h2 tags
+            String headerTitle = "<h2>" + this.title + "</h2>";
+            total.append(headerTitle);
+
+//            getting rid of FFdescription
+            total.append(reader.readLine().substring(16));
+
             String line;
-            while ((line = reader.readLine()) != null) {
+            line = reader.readLine();
+
+            while (line != null && !line.equals("Submitted by: ")) {
                 total.append(line);
+                line = reader.readLine();
             }
             this.HTML_content = total.toString();
-            Log.d("Full String", HTML_content);
 
         } catch (IOException e) {
             e.printStackTrace();

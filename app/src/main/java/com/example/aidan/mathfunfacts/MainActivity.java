@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     MathFunFactsCollection collection;
     List<ParserMathFunFact> list;
+    String currentMFF;
 
     // Creates a MathFunFactsCollection, which then parses all of the MFFs
     // Creates a floating action button that retrieves a random MFF on click
@@ -52,17 +53,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.difficulty_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.subject_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.search_fragment_tab_icon_un_selected)));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 2 Item"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 3 Item"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 4 Item"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 5 Item"));
-
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
 
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
-
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -128,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-
             public void onTabReselected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
@@ -140,16 +134,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 WebView wv = (WebView) findViewById(R.id.webView);
-                wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+                currentMFF = collection.findRandomMFF().getHTML_content();
+                wv.loadData(currentMFF, "text/html", "UTF-8");
             }
         });
-
-//        WebView wv = (WebView) findViewById(R.id.webView);
-//        WebSettings settings = wv.getSettings();
-//
-//        settings.setDefaultFontSize(24);
-//        wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
-
         System.out.println("printed stack");
 
     }
@@ -174,14 +162,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    public void GoToDifficultySelector(View view) {
-        Intent i = new Intent(getApplicationContext(), Difficulty.class);
-//        MathFunFactsCollection mffc = new MathFunFactsCollection(this.getApplicationContext());
-//        Bundle b = new Bundle();
-//        b.putParcelable("mffc", (Parcelable) mffc);
-        startActivity(i);
     }
 }
