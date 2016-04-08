@@ -2,6 +2,7 @@ package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,12 +37,13 @@ public class MathFunFactsCollection {
         return results;
     }
 
-    public ArrayList<ParserMathFunFact> findMFFWithSubject(String find) {
+    public ArrayList<ParserMathFunFact> findMFFWithSubject(String subject) {
+        Log.d("finding subject: ",subject);
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
         ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
             while (iter.hasNext()) {
                 ParserMathFunFact mathfunfact = iter.next();
-    			if(mathfunfact.getSubjects().contains(find)) {
+    			if(mathfunfact.getSubjects().contains(subject)) {
                     results.add(mathfunfact);
                 }
             }

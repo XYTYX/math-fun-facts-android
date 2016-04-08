@@ -64,7 +64,7 @@ public class Tab3Fragment extends Fragment {
 
     public void getFunFactByDifficulty(View view, String difficulty) {
 
-        int level;
+        int level = 1;
         if(difficulty.equals("Easy"))
             level = 1;
         else if (difficulty.equals("Medium"))

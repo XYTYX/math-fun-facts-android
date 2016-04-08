@@ -51,16 +51,15 @@ public class FilteredFunFact extends AppCompatActivity {
 
         if(getIntent().hasExtra("subject")) {
             subject = (int) bundle.get("subject");
-
             files = collection.findMFFWithSubject("" + subject);
 
             Log.d("FilteredFundFact: ", "subject");
         }
 
         Random random = new Random();
-        int index = random.nextInt(files.size());
+        int index = random.nextInt(files.size() + 1);
         ParserMathFunFact file = files.get(index);
-        webView.loadData(level + file.getHTML_content(),"text/html", "UTF-8");
+        webView.loadData(file.getHTML_content(),"text/html", "UTF-8");
 
     }
 

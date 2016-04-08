@@ -42,6 +42,7 @@ public class Tab4Fragment extends Fragment {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if(null != rb && checkedId != -1) {
                     subject = rb.getText().toString();
+                    Log.d("subject button", "onCheckedChanged: " + subject);
                 }
             }
         });
@@ -58,31 +59,31 @@ public class Tab4Fragment extends Fragment {
     }
 
     public void getFunFactBySubject(View view, String subject) {
-        String subjectNum = "0";
+        int subjectNum = 1;
         switch(subject) {
-            case "algebra": subjectNum = "1";
+            case "Algebra": subjectNum = 1;
                 Log.d("subject", "algebra");
                 break;
 
-            case "calculus_analysis": subjectNum = "2";
+            case "Calculus Analysis": subjectNum = 2;
                 break;
 
-            case "combinatorics": subjectNum = "3";
+            case "Combinatorics": subjectNum = 3;
                 break;
 
-            case "geometry": subjectNum = "4";
+            case "Geometry": subjectNum = 4;
                 break;
 
-            case "number_theory": subjectNum = "5";
+            case "Number Theory": subjectNum = 5;
                 break;
 
-            case "probability": subjectNum = "6";
+            case "Probability": subjectNum = 6;
                 break;
 
-            case "topology": subjectNum = "7";
+            case "Topology": subjectNum = 7;
                 break;
 
-            case "other": subjectNum = "8";
+            case "Other": subjectNum = 8;
         }
 
         Intent intent = new Intent(this.getContext(), FilteredFunFact.class);
