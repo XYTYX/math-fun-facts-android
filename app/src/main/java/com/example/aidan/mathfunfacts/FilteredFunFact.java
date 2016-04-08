@@ -34,7 +34,7 @@ public class FilteredFunFact extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         WebView webView = (WebView) findViewById(R.id.display_fun_fact_webview);
-        int level=0,subject=0;
+        int level = 0, subject = 0;
 
 
         MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
@@ -51,6 +51,10 @@ public class FilteredFunFact extends AppCompatActivity {
 
         if(getIntent().hasExtra("subject")) {
             subject = (int) bundle.get("subject");
+
+            files = collection.findMFFWithSubject("" + subject);
+
+            Log.d("FilteredFundFact: ", "subject");
         }
 
         Random random = new Random();
