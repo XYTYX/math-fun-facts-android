@@ -19,7 +19,7 @@ public class MathFunFactsCollection {
 
     // Parse all fun facts on create
     public MathFunFactsCollection(Context context) {
-        this.MathFunFacts = new LinkedList<ParserMathFunFact>();
+        this.MathFunFacts = new ArrayList<ParserMathFunFact>();
         this.context = context;
         ParseAllMathFunFactFile(context);
     }
