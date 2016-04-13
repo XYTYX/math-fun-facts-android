@@ -27,7 +27,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    MathFunFactsCollection collection;
+    public static MathFunFactsCollection collection;
     List<ParserMathFunFact> list;
     String currentMFF;
 
