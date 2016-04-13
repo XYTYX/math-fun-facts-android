@@ -35,15 +35,15 @@ public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
         //set the color depending on the difficulty
         if(level.equals("1")) {
             //easy
-            titleListElement.setBackgroundColor(Color.YELLOW);
+            titleListElement.setBackgroundColor(Color.rgb(255,255,136));
         }
         else if (level.equals("2")) {
             //medium
-            titleListElement.setBackgroundColor(Color.BLUE);
+            titleListElement.setBackgroundColor(Color.rgb(255,116,0));
         }
         else {
             // hard
-            titleListElement.setBackgroundColor(Color.GREEN);
+            titleListElement.setBackgroundColor(Color.rgb(255,26,0));
 
         }
 

@@ -9,5 +9,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/titleMFF"
         android:text="p"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textSize="16dp" />
 </LinearLayout>
