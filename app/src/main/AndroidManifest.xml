@@ -26,6 +26,10 @@
             android:name=".FilteredFunFact"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".listByCriteria"
+            android:label="@string/title_activity_filtered_fun_fact"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".favorites"></activity>
     </application>
 
