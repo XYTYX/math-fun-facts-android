@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 import static com.example.aidan.mathfunfacts.MainActivity.collection;
+
 /**
  * Created by Ali on 4/12/2016.
  */
@@ -25,7 +25,7 @@ public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater ListInflater = LayoutInflater.from(getContext());
-        View customView = ListInflater.inflate(R.layout.custom_row, parent, false);
+            View customView = ListInflater.inflate(R.layout.custom_row, parent, false);
 
         String title = getItem(position).getTitle();
         String level = getItem(position).getLevel().toLowerCase();
@@ -43,7 +43,7 @@ public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
         }
         else {
             // hard
-            titleListElement.setBackgroundColor(Color.BLACK);
+            titleListElement.setBackgroundColor(Color.GREEN);
 
         }
 
