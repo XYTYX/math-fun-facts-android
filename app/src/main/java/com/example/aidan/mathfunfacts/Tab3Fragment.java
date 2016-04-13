@@ -64,14 +64,14 @@ public class Tab3Fragment extends Fragment {
 
     public void getFunFactByDifficulty(View view, String difficulty) {
 
-        int level = 1;
+        String level;
         if(difficulty.equals("Easy"))
-            level = 1;
+            level = "1";
         else if (difficulty.equals("Medium"))
-            level = 2;
-        else level = 3;
+            level = "2";
+        else level = "3";
 
-        Intent intent = new Intent(this.getContext(),FilteredFunFact.class);
+        Intent intent = new Intent(this.getContext(),listByCriteria.class);
         intent.putExtra("difficulty", level);
         startActivity(intent);
     }

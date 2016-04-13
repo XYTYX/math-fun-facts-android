@@ -7,6 +7,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -23,11 +24,14 @@ public class ParserMathFunFact {
     private String level;
     private String description;
     private String HTML_content;
+    private String Filename;
+
     Context context;
 
     public ParserMathFunFact(String Filename, Context context){
         this.context = context;
         ParseFile(Filename);
+        this.Filename = Filename;
     }
 
     // Parse the file passed in
@@ -78,6 +82,9 @@ public class ParserMathFunFact {
     }
 
     // Gettings and setters
+    public String getFilename() {
+        return Filename;
+    }
 
     public String getTitle() {
         return title;

@@ -59,34 +59,35 @@ public class Tab4Fragment extends Fragment {
     }
 
     public void getFunFactBySubject(View view, String subject) {
-        int subjectNum = 1;
+        String subjectNum = "1";
+        //numbers need to be confirmed if matching with the files
         switch(subject) {
-            case "Algebra": subjectNum = 1;
+            case "Algebra": subjectNum = "1";
                 Log.d("subject", "algebra");
                 break;
 
-            case "Calculus Analysis": subjectNum = 2;
+            case "Calculus Analysis": subjectNum = "2";
                 break;
 
-            case "Combinatorics": subjectNum = 3;
+            case "Combinatorics": subjectNum = "3";
                 break;
 
-            case "Geometry": subjectNum = 4;
+            case "Geometry": subjectNum = "4";
                 break;
 
-            case "Number Theory": subjectNum = 5;
+            case "Number Theory": subjectNum = "5";
                 break;
 
-            case "Probability": subjectNum = 6;
+            case "Probability": subjectNum = "6";
                 break;
 
-            case "Topology": subjectNum = 7;
+            case "Topology": subjectNum = "7";
                 break;
 
-            case "Other": subjectNum = 8;
+            case "Other": subjectNum = "8";
         }
 
-        Intent intent = new Intent(this.getContext(), FilteredFunFact.class);
+        Intent intent = new Intent(this.getContext(), listByCriteria.class);
         intent.putExtra("subject", subjectNum);
         startActivity(intent);
     }

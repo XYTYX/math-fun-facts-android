@@ -74,6 +74,7 @@ public class MathFunFactsCollection {
             String[] files = am.list("");
             for (int x = 1; x < 200; x++) {
                 MathFunFacts.add(new ParserMathFunFact(files[x],context));
+               // System.out.println("Level is *"+MathFunFacts.get(x).getLevel()+"*");
             }
         }
         catch(IOException e){

@@ -1,7 +1,11 @@
 package com.example.aidan.mathfunfacts;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -23,7 +27,16 @@ public class listByCriteria  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_by_criteria);
-        ListAdapter difficultyAdapter = new CustomAdapter(this,(ArrayList) collection.getAllMathFunFacts());
+
+        Bundle bundle = getIntent().getExtras();
+        ListAdapter difficultyAdapter;
+        if(getIntent().hasExtra("difficulty")){
+            difficultyAdapter = new CustomAdapter(this,collection.findMFFWithLevel((String)bundle.get("difficulty")));
+
+        }
+        else{
+            difficultyAdapter = new CustomAdapter(this,collection.findMFFWithSubject((String)bundle.get("subject")));
+        }
         ListView difficultyListView = (ListView) findViewById(R.id.listByCriteria);
         difficultyListView.setAdapter(difficultyAdapter);
 
@@ -33,7 +46,12 @@ public class listByCriteria  extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String text = String.valueOf(parent.getItemAtPosition(position));
+                        //String text = String.valueOf(parent.getItemAtPosition(position));
+                        ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
+                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
+                        intent.putExtra("MFFFile", MFF.getFilename());
+                        startActivity(intent);
+
                         //Toast.makeText(MainActivity.this, "id is"+String.valueOf(view.getId()), Toast.LENGTH_SHORT).show();
                     }
                 }
