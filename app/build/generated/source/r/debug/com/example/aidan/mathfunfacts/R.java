@@ -2315,6 +2315,7 @@ containing a value of this type.
         public static final int scrollIndicatorUp=0x7f0c004b;
         public static final int scrollView=0x7f0c004c;
         public static final int scrollable=0x7f0c0038;
+        public static final int search=0x7f0c0095;
         public static final int search_badge=0x7f0c005e;
         public static final int search_bar=0x7f0c005d;
         public static final int search_button=0x7f0c005f;
