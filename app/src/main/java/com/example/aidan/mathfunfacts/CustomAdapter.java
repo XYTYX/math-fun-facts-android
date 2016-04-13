@@ -28,24 +28,24 @@ public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
         View customView = ListInflater.inflate(R.layout.custom_row, parent, false);
 
         String title = getItem(position).getTitle();
-        int level = getItem(position).getLevel();
+        String level = getItem(position).getLevel().toLowerCase();
         TextView titleListElement = (TextView) customView.findViewById(R.id.titleMFF);
         titleListElement.setText(title);
 
         //set the color depending on the difficulty
-        if(level == 1)[
-        //easy
-        titleListElement.setBackgroundColor(Color.YELLOW);
-        ]
-        else if (level == 2)[
-        //medium
-        titleListElement.setBackgroundColor(Color.BLUE);
-        ]
-        else[
-        // hard
-        titleListElement.setBackgroundColor(Color.BLACK);
+        if(level.equals("easy")) {
+            //easy
+            titleListElement.setBackgroundColor(Color.YELLOW);
+        }
+        else if (level.equals("medium")) {
+            //medium
+            titleListElement.setBackgroundColor(Color.BLUE);
+        }
+        else {
+            // hard
+            titleListElement.setBackgroundColor(Color.BLACK);
 
-        ]
+        }
 
         return customView;
     }
