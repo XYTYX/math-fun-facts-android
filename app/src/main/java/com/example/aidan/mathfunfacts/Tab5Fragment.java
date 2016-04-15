@@ -1,4 +1,5 @@
 package com.example.aidan.mathfunfacts;
+import android.app.ActionBar;
 import android.app.ListFragment;
 import android.app.SearchManager;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import android.widget.Toast;
  */
 public class Tab5Fragment extends Fragment {
 
-
+//    ActionBar actionBar = getActivity().getActionBar();
     public Tab5Fragment() {
         // Required empty public constructor
     }
@@ -33,6 +34,9 @@ public class Tab5Fragment extends Fragment {
         final View v = inflater.inflate(R.layout.fragment_tab5, container, false);
 
         setHasOptionsMenu(true);
+
+
+
         // Inflate the layout for this fragment
 
         return v;
@@ -47,6 +51,8 @@ public class Tab5Fragment extends Fragment {
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         SearchView sv = new SearchView(getActivity());
 
+
+
         // modifying the text inside edittext component
         int id = sv.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
         TextView textView = (TextView) sv.findViewById(id);
@@ -58,7 +64,7 @@ public class Tab5Fragment extends Fragment {
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                if (s.length() < 4) {
+                if (s.length() < 3) {
                     Toast.makeText(getActivity(),
                             "Your search query must be at least 3 characters long",
                             Toast.LENGTH_LONG).show();
@@ -75,5 +81,7 @@ public class Tab5Fragment extends Fragment {
             }
         });
         item.setActionView(sv);
+
+//        actionBar.setCustomView(sv);
     }
 }
