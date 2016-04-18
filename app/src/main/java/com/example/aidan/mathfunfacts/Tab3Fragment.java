@@ -43,7 +43,7 @@ public class Tab3Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
-                if(null != rb && checkedId != -1) {
+                if (null != rb && checkedId != -1) {
                     difficulty = rb.getText().toString();
                 }
             }
