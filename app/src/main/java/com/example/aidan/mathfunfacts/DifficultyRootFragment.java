@@ -24,7 +24,6 @@ public class DifficultyRootFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_difficulty_root, container, false);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Bundle args = getArguments();
 
         ft.replace(R.id.difficulty_root, new Tab3Fragment());
 

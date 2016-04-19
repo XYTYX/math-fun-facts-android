@@ -20,10 +20,8 @@ public class displaySingleMFF extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_single_mff);
         Bundle bundle = getIntent().getExtras();
-       ParserMathFunFact MFF = new ParserMathFunFact((String) bundle.get("MFFFile"),getBaseContext());
+        ParserMathFunFact MFF = new ParserMathFunFact((String) bundle.get("MFFFile"),getBaseContext());
         WebView webView = (WebView) findViewById(R.id.singleMFFwebview);
         webView.loadData(MFF.getHTML_content(),"text/html", "UTF-8");
-
-
     }
 }
