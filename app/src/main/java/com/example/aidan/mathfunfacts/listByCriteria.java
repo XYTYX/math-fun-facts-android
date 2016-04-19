@@ -20,8 +20,6 @@ import static com.example.aidan.mathfunfacts.MainActivity.collection;
 public class listByCriteria extends AppCompatActivity {
 
 
-
-
     public void onCreateView(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_by_criteria);

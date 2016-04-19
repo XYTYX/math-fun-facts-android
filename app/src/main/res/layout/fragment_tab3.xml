@@ -19,19 +19,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/easy"
-            android:text="Easy" />
+            android:text="1" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/medium"
-            android:text="Medium" />
+            android:text="2" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/difficult"
-            android:text="Difficult" />
+            android:text="3" />
 
     </RadioGroup>
     <Button

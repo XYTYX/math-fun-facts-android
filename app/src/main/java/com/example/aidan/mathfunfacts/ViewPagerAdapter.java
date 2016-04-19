@@ -19,25 +19,19 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Bundle args = new Bundle();
+
         switch (position) {
             case 0:
-                RootFragment tab1 = new RootFragment();
-                args.putInt("tab",1);
-                tab1.setArguments(args);
+                Tab1Fragment tab1 = new Tab1Fragment();
                 return tab1;
             case 1:
                 Tab2Fragment tab2 = new Tab2Fragment();
                 return tab2;
             case 2:
-                RootFragment tab3 = new RootFragment();
-                args.putInt("tab",3);
-                tab3.setArguments(args);
+                DifficultyRootFragment tab3 = new DifficultyRootFragment();
                 return tab3;
             case 3:
-                RootFragment tab4 = new RootFragment();
-                args.putInt("tab",4);
-                tab4.setArguments(args);
+                Tab4Fragment tab4 = new Tab4Fragment();
                 return tab4;
             case 4:
                 Tab5Fragment tab5 = new Tab5Fragment();

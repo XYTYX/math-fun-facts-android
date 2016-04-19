@@ -46,24 +46,28 @@ public class Tab3Fragment extends Fragment {
             }
         });
 
+
         //on click, the go button at the bottom calls getFunFactByDifficulty
         Button go = (Button) v.findViewById(R.id.difficultyButton);
         go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Bundle args = new Bundle();
-
-                String level;
-                if (difficulty.equals("Easy"))
-                    level = "1";
-                else if (difficulty.equals("Medium"))
-                    level = "2";
-                else level = "3";
-                args.putString("difficulty", level);
+//                FragmentTransaction trans = getFragmentManager()
+//                        .beginTransaction();
+//                trans.replace(R.id.difficulty_root, new StaticFragment());
+//                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//                trans.addToBackStack(null);
+//                trans.commit();
 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.root_fragment, new ListMFFs());
-                //ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                Bundle args = new Bundle();
+                args.putString("difficulty", difficulty);
+
+                ListMFFs list = new ListMFFs();
+                list.setArguments(args);
+
+                ft.replace(R.id.difficulty_root, list);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 ft.addToBackStack(null);
                 ft.commit();
             }

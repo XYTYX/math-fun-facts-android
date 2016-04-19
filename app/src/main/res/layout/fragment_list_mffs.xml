@@ -2,11 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aidan.mathfunfacts.ListMFFs">
+    tools:context="com.example.aidan.mathfunfacts.ListMFFs"
+    android:id="@+id/List_MFFs">
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/List_MFFs"></ListView>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mff_list"></ListView>
+
 
 </FrameLayout>
