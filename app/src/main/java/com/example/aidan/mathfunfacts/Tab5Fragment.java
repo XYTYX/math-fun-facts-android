@@ -5,6 +5,7 @@ import android.app.SearchManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,6 +15,10 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 
 /**
@@ -70,7 +75,7 @@ public class Tab5Fragment extends Fragment {
                             Toast.LENGTH_LONG).show();
                     return true;
                 } else {
-                    //doSearch(s); THIS IS OUR SEARCH FUNCTION, TO BE WRITTEN
+                    doSearch(s);
                     return false;
                 }
             }
@@ -83,5 +88,53 @@ public class Tab5Fragment extends Fragment {
         item.setActionView(sv);
 
 //        actionBar.setCustomView(sv);
+    }
+
+    public void doSearch(String s) {
+
+        ArrayList<ParserMathFunFact> results = new ArrayList<>();
+
+        MathFunFactsCollection collection = new MathFunFactsCollection(getContext());
+
+        List<ParserMathFunFact> allFacts = collection.getAllMathFunFacts();
+        ListIterator<ParserMathFunFact> iter = allFacts.listIterator();
+        if(s.charAt(0)==' ') {
+            String copy = "";
+            int l = s.length();
+            int i;
+            for(i=0;i<l;i++) {
+                if(s.charAt(i)!=' ') {
+                    copy = s.substring(i);
+                    s = copy;
+                    break;
+                }
+            }
+        }
+        if(s.charAt(s.length()-1)==' ') {
+            String copy = "";
+            int l = s.length();
+            int i;
+            for(i=l-1;i>0;i--) {
+                if(s.charAt(i)!=' ') {
+                    copy = s.substring(0,i+1);
+                    s = copy;
+                    break;
+                }
+            }
+        }
+
+        while (iter.hasNext()) {
+            ParserMathFunFact mathfunfact = iter.next();
+            if(mathfunfact.getTitle().toLowerCase().contains(s.toLowerCase())) {
+                results.add(mathfunfact);
+                Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
+            }
+            else if(mathfunfact.getKeywords().toLowerCase().contains(s.toLowerCase())) {
+                results.add((mathfunfact));
+                Log.d("Title ++ keywords", mathfunfact.getTitle() + "++" + mathfunfact.getKeywords());
+            }
+        }
+
+
     }
 }
