@@ -1,16 +1,13 @@
 package com.example.aidan.mathfunfacts;
 
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -54,7 +51,21 @@ public class Tab3Fragment extends Fragment {
         go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                getFunFactByDifficulty(view, difficulty);
+                Bundle args = new Bundle();
+
+                String level;
+                if (difficulty.equals("Easy"))
+                    level = "1";
+                else if (difficulty.equals("Medium"))
+                    level = "2";
+                else level = "3";
+                args.putString("difficulty", level);
+
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.root_fragment, new ListMFFs());
+                //ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                ft.addToBackStack(null);
+                ft.commit();
             }
         });
         return  v;
@@ -63,9 +74,8 @@ public class Tab3Fragment extends Fragment {
 
 
     public void getFunFactByDifficulty(View view, String difficulty) {
-
         String level;
-        if(difficulty.equals("Easy"))
+        if (difficulty.equals("Easy"))
             level = "1";
         else if (difficulty.equals("Medium"))
             level = "2";

@@ -1,9 +1,6 @@
 package com.example.aidan.mathfunfacts;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -12,17 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.io.*;
-import java.util.ListIterator;
-import java.util.Random;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,9 +40,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.difficulty_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.subject_fragment_tab_icon_un_selected)));
         tabLayout.addTab(tabLayout.newTab().setIcon((R.drawable.search_fragment_tab_icon_un_selected)));
+
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-
-
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
 
@@ -65,29 +51,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-
                 switch (tab.getPosition()) {
                     case 0:
                         tab.setIcon(R.drawable.random_fragment_tab_icon_selected);
                         break;
                     case 1:
                         tab.setIcon(R.drawable.favorite_fragment_tab_icon_selected);
-
-
-//                        Intent j = new Intent(getApplicationContext(), favorites.class);
-//                        startActivity(j);
                         break;
                     case 2:
                         tab.setIcon(R.drawable.difficulty_fragment_tab_icon_selected);
-//
-//                        Intent i = new Intent(getApplicationContext(), Difficulty.class);
-//                        startActivity(i);
                         overridePendingTransition(0,0);
-
-
-
-//                        this.startActivity(new Intent(v.getContext(), newactivity.class));
-//                        this.overridePendingTransition(0, 0);
                         break;
                     case 3:
                         tab.setIcon(R.drawable.subject_fragment_tab_icon_selected);
