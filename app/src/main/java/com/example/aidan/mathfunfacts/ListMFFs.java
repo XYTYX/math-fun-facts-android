@@ -14,12 +14,19 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import org.xml.sax.Parser;
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
 import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 
 public class ListMFFs extends Fragment {
 
     private static final String TAG = "ListMFFs";
+
+    String whichTab;
 
     public ListMFFs() {
         // Required empty public constructor
@@ -34,9 +41,33 @@ public class ListMFFs extends Fragment {
 
         Bundle args = getArguments();
 
+        ArrayList<ParserMathFunFact> results = new ArrayList<>();
+
+        if (args.containsKey("filenames")) {
+            whichTab = "tab5";
+
+            //code experimentation
+            ArrayList<String> stringFilenames = args.getStringArrayList("filenames");
+
+            ListIterator iter = stringFilenames.listIterator();
+
+            while(iter.hasNext()) {
+                ParserMathFunFact temp = new ParserMathFunFact((String) iter.next(), getContext());
+                results.add(temp);
+            }
+
+
+        }
+
+        else {
+            whichTab = "tab3";
+            results = collection.findMFFWithLevel(args.getString("difficulty"));
+        }
+
         ListAdapter difficultyAdapter;
-        difficultyAdapter = new CustomAdapter(this.getContext(),collection.findMFFWithLevel(args.getString("difficulty")));
+        difficultyAdapter = new CustomAdapter(this.getContext(), results);
         ListView difficultyListView = (ListView) view.findViewById(R.id.mff_list);
+        //difficultyListView.setAdapter(difficultyAdapter);
         difficultyListView.setAdapter(difficultyAdapter);
 
         difficultyListView.setOnItemClickListener(
@@ -52,7 +83,13 @@ public class ListMFFs extends Fragment {
                         newArgs.putString("MFFFile", MFF.getFilename());
                         display.setArguments(newArgs);
 
-                        ft.replace(R.id.difficulty_root, display);
+                        if (whichTab.equals("tab3")) {
+                            ft.replace(R.id.difficulty_root, display);
+                        }
+                        else if (whichTab.equals("tab5")) {
+                            ft.replace(R.id.tab5, display);
+                        }
+
                         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                         ft.addToBackStack(null);
                         ft.commit();
