@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 
 /**
@@ -25,7 +26,6 @@ public class Tab1Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_tab1, container, false);
-        MathFunFactsCollection collection = new MathFunFactsCollection(this.getContext());
 
         WebView wv = (WebView) v.findViewById(R.id.webView);
         wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
