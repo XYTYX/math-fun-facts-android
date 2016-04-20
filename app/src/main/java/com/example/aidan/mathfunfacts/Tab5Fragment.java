@@ -4,6 +4,7 @@ import android.app.ListFragment;
 import android.app.SearchManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +27,8 @@ import java.util.ListIterator;
  */
 public class Tab5Fragment extends Fragment {
 
+    public ArrayList<String> filenames;
+
 //    ActionBar actionBar = getActivity().getActionBar();
     public Tab5Fragment() {
         // Required empty public constructor
@@ -40,8 +43,6 @@ public class Tab5Fragment extends Fragment {
 
         setHasOptionsMenu(true);
 
-
-
         // Inflate the layout for this fragment
 
         return v;
@@ -55,8 +56,6 @@ public class Tab5Fragment extends Fragment {
         item.setIcon(R.drawable.favorite_fragment_tab_icon_un_selected); // sets icon
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         SearchView sv = new SearchView(getActivity());
-
-
 
         // modifying the text inside edittext component
         int id = sv.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
@@ -75,7 +74,18 @@ public class Tab5Fragment extends Fragment {
                             Toast.LENGTH_LONG).show();
                     return true;
                 } else {
-                    doSearch(s);
+                    filenames = doSearch(s);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    Bundle args = new Bundle();
+                    args.putStringArrayList("filenames",filenames);
+
+                    ListMFFs list = new ListMFFs();
+                    list.setArguments(args);
+
+                    ft.replace(R.id.tab5, list);
+                    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                    ft.addToBackStack(null);
+                    ft.commit();
                     return false;
                 }
             }
@@ -90,9 +100,9 @@ public class Tab5Fragment extends Fragment {
 //        actionBar.setCustomView(sv);
     }
 
-    public void doSearch(String s) {
+    public ArrayList<String> doSearch(String s) {
 
-        ArrayList<ParserMathFunFact> results = new ArrayList<>();
+        ArrayList<String> results = new ArrayList<>();
 
         MathFunFactsCollection collection = new MathFunFactsCollection(getContext());
 
@@ -124,17 +134,20 @@ public class Tab5Fragment extends Fragment {
         }
 
         while (iter.hasNext()) {
+            
             ParserMathFunFact mathfunfact = iter.next();
+            String file = mathfunfact.getFilename();
+
             if(mathfunfact.getTitle().toLowerCase().contains(s.toLowerCase())) {
-                results.add(mathfunfact);
+                results.add(file);
                 Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
             }
             else if(mathfunfact.getKeywords().toLowerCase().contains(s.toLowerCase())) {
-                results.add((mathfunfact));
+                results.add((file));
                 Log.d("Title ++ keywords", mathfunfact.getTitle() + "++" + mathfunfact.getKeywords());
             }
         }
 
-
+        return results;
     }
 }

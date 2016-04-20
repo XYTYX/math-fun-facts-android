@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
                         tab.setIcon(R.drawable.search_fragment_tab_icon_un_selected);
                         break;
                 }
-
-
             }
 
             @Override
