@@ -87,7 +87,7 @@ public class ListMFFs extends Fragment {
                             ft.replace(R.id.difficulty_root, display);
                         }
                         else if (whichTab.equals("tab5")) {
-                            ft.replace(R.id.tab5, display);
+                            ft.replace(R.id.search_root, display);
                         }
 
                         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);

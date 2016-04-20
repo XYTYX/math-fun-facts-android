@@ -82,7 +82,7 @@ public class Tab5Fragment extends Fragment {
                     ListMFFs list = new ListMFFs();
                     list.setArguments(args);
 
-                    ft.replace(R.id.tab5, list);
+                    ft.replace(R.id.search_root, list);
                     ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                     ft.addToBackStack(null);
                     ft.commit();

@@ -34,7 +34,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 Tab4Fragment tab4 = new Tab4Fragment();
                 return tab4;
             case 4:
-                Tab5Fragment tab5 = new Tab5Fragment();
+                SearchRootFragment tab5 = new SearchRootFragment();
                 return tab5;
             default:
                 return null;
