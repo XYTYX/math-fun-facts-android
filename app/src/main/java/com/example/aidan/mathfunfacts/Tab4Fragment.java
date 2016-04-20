@@ -56,6 +56,7 @@ public class Tab4Fragment extends Fragment {
             }
         });
         return  v;
+
     }
 
     public void getFunFactBySubject(View view, String subject) {

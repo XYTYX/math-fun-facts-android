@@ -26,6 +26,7 @@ public class Tab1Fragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_tab1, container, false);
         MathFunFactsCollection collection = new MathFunFactsCollection(this.getContext());
+
         WebView wv = (WebView) v.findViewById(R.id.webView);
         wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
         return v;
