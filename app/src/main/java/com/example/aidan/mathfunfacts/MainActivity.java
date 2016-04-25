@@ -10,6 +10,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
         this.collection = new MathFunFactsCollection(this.getApplicationContext());
         this.list = collection.getAllMathFunFacts();
+
+        //as soon as you parse all math fun facts, read their rating from the save JSON file
+        InputStream inputStream = null;
+        try {
+            inputStream = getApplicationContext().openFileInput("rating.json");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            new JsonRatingReader(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 

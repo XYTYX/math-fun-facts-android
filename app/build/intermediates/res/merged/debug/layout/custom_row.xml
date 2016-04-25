@@ -11,4 +11,11 @@
         android:text="p"
         android:padding="10dp"
         android:textSize="16dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarOfList"
+
+        android:visibility="gone" />
 </LinearLayout>

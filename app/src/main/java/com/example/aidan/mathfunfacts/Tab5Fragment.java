@@ -139,6 +139,7 @@ public class Tab5Fragment extends Fragment {
             String file = mathfunfact.getFilename();
 
             if(mathfunfact.getTitle().toLowerCase().contains(s.toLowerCase())) {
+
                 results.add(file);
                 Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
             }

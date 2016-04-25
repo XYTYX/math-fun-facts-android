@@ -24,9 +24,18 @@ public class ParserMathFunFact {
     private String level;
     private String description;
     private String HTML_content;
+
     private String Filename;
+    private float rating = 0;
 
     Context context;
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+    public float getRating() {
+        return rating;
+    }
 
     public ParserMathFunFact(String Filename, Context context){
         this.context = context;
