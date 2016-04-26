@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aidan.mathfunfacts.Tab1Fragment"
-    android:padding="20dp">
+    tools:context="com.example.aidan.mathfunfacts.Tab4Fragment"
+    android:padding="20dp"
+    android:id="@+id/tab4">
 
     <!--<include layout="@layout/content_filtered_fun_fact" />-->
     <RadioGroup

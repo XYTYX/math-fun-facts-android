@@ -4,13 +4,19 @@ package com.example.aidan.mathfunfacts;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 
 /**
@@ -19,6 +25,8 @@ import android.widget.RadioGroup;
 public class Tab4Fragment extends Fragment {
 
     String subject;
+    public ArrayList<String> fileNamesForSubject;
+//    MathFunFactsCollection collection = new MathFunFactsCollection(getContext());
 
     public Tab4Fragment() {
         // Required empty public constructor
@@ -52,14 +60,35 @@ public class Tab4Fragment extends Fragment {
         go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                getFunFactBySubject(view, subject);
+
+               fileNamesForSubject = getFunFactBySubject(view, subject);
+
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Bundle args = new Bundle();
+                args.putStringArrayList("subject", fileNamesForSubject);
+
+                ListMFFs list = new ListMFFs();
+                list.setArguments(args);
+
+                ft.replace(R.id.tab4, list);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                ft.addToBackStack(null);
+                ft.commit();
+
+
+
+
             }
         });
         return  v;
-
     }
 
-    public void getFunFactBySubject(View view, String subject) {
+
+
+
+
+
+    public ArrayList<String> getFunFactBySubject(View view, String subject) {
         String subjectNum = "1";
         //numbers need to be confirmed if matching with the files
         switch(subject) {
@@ -88,8 +117,38 @@ public class Tab4Fragment extends Fragment {
             case "Other": subjectNum = "8";
         }
 
-        Intent intent = new Intent(this.getContext(), listByCriteria.class);
-        intent.putExtra("subject", subjectNum);
-        startActivity(intent);
+
+        ArrayList<String> results = makeArrayListOfFactsWithSubject(subjectNum);
+        return results;
+//        Intent intent = new Intent(this.getContext(), listByCriteria.class);
+//        intent.putExtra("subject", subjectNum);
+//        startActivity(intent);
     }
+
+    public ArrayList<String> makeArrayListOfFactsWithSubject(String subject) {
+
+        ArrayList<String> results = new ArrayList<>();
+
+        MathFunFactsCollection collection = new MathFunFactsCollection(getContext());
+
+        List<ParserMathFunFact> allFacts = collection.getAllMathFunFacts();
+        ListIterator<ParserMathFunFact> iter = allFacts.listIterator();
+
+
+        while (iter.hasNext()) {
+
+            ParserMathFunFact mathfunfact = iter.next();
+            String file = mathfunfact.getFilename();
+
+            if (mathfunfact.getSubjects().toLowerCase().contains(subject.toLowerCase())) {
+                results.add(file);
+
+            }
+
+        }
+
+        return results;
+    }
+
+
 }

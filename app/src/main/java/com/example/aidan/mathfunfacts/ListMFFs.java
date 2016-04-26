@@ -59,6 +59,23 @@ public class ListMFFs extends Fragment {
 
         }
 
+        else if (args.containsKey("subject")) {
+            whichTab = "tab4";
+
+            ArrayList<String> stringFilenames = args.getStringArrayList("subject");
+            ListIterator iter = stringFilenames.listIterator();
+            while(iter.hasNext()) {
+                ParserMathFunFact temp = new ParserMathFunFact((String) iter.next(), getContext());
+                results.add(temp);
+            }
+
+
+            //    subjectAdapter = new CustomAdapter(this,collection.findMFFWithSubject((String)bundle.get("subject")));
+
+//ListView difficultyListView = (ListView) findViewById(R.id.listByCriteria);
+//difficultyListView.setAdapter(difficultyAdapter);
+        }
+
         else {
             whichTab = "tab3";
             results = collection.findMFFWithLevel(args.getString("difficulty"));
@@ -85,6 +102,10 @@ public class ListMFFs extends Fragment {
 
                         if (whichTab.equals("tab3")) {
                             ft.replace(R.id.difficulty_root, display);
+                        }
+
+                        else if (whichTab.equals("tab4")) {
+                            ft.replace(R.id.tab4, display);
                         }
                         else if (whichTab.equals("tab5")) {
                             ft.replace(R.id.search_root, display);
