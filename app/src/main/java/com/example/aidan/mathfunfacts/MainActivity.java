@@ -40,10 +40,6 @@ public class MainActivity extends AppCompatActivity {
         InputStream inputStream = null;
         try {
             inputStream = getApplicationContext().openFileInput("rating.json");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
             new JsonRatingReader(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
