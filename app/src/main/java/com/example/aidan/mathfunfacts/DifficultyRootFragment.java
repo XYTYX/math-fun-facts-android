@@ -21,11 +21,11 @@ public class DifficultyRootFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_favorites_root, container, false);
+        View view = inflater.inflate(R.layout.fragment_difficulty_root, container, false);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
 
-        ft.replace(R.id.favorites_root, new Tab3Fragment());
+        ft.replace(R.id.difficulty_root, new Tab3Fragment());
 
         ft.commit();
 
