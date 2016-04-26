@@ -75,7 +75,7 @@ public class MathFunFactsCollection {
 
     public ParserMathFunFact findRandomMFF() {
         Random rand = new Random();
-        int n = rand.nextInt(199) + 1;
+        int n = rand.nextInt(MathFunFacts.size());
         return MathFunFacts.get(n);
     }
 
