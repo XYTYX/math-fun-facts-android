@@ -58,10 +58,16 @@ public class Tab3Fragment extends Fragment {
 //                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 //                trans.addToBackStack(null);
 //                trans.commit();
+                String level;
+                if (difficulty.equals("Easy"))
+                    level = "1";
+                else if (difficulty.equals("Medium"))
+                    level = "2";
+                else level = "3";
 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 Bundle args = new Bundle();
-                args.putString("difficulty", difficulty);
+                args.putString("difficulty", level);
 
                 ListMFFs list = new ListMFFs();
                 list.setArguments(args);
