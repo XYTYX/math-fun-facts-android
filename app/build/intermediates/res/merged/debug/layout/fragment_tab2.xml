@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aidan.mathfunfacts.Tab1Fragment">
+    tools:context="com.example.aidan.mathfunfacts.Tab1Fragment"
+    android:id="@+id/fav_root">
 
 
     <ListView

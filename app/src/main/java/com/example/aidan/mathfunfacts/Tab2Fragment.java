@@ -28,7 +28,6 @@ public class Tab2Fragment extends Fragment {
 
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -46,13 +45,23 @@ public class Tab2Fragment extends Fragment {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        //String text = String.valueOf(parent.getItemAtPosition(position));
+                        String text = String.valueOf(parent.getItemAtPosition(position));
                         ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
-                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
-                        intent.putExtra("MFFFile", MFF.getFilename());
-                        startActivity(intent);
+//                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
+//                        intent.putExtra("MFFFile", MFF.getFilename());
+//                        startActivity(intent);
 
-                        //Toast.makeText(MainActivity.this, "id is"+String.valueOf(view.getId()), Toast.LENGTH_SHORT).show();
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        Bundle args = new Bundle();
+                        args.putString("MFFFile", MFF.getFilename());
+
+                        DisplayOneMFF oneMFF = new DisplayOneMFF();
+                        oneMFF.setArguments(args);
+
+                        ft.replace(R.id.fav_root, oneMFF);
+                        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        ft.addToBackStack(null);
+                        ft.commit();
                     }
                 }
         );

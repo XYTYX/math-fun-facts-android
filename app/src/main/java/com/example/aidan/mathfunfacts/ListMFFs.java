@@ -68,12 +68,6 @@ public class ListMFFs extends Fragment {
                 ParserMathFunFact temp = new ParserMathFunFact((String) iter.next(), getContext());
                 results.add(temp);
             }
-
-
-            //    subjectAdapter = new CustomAdapter(this,collection.findMFFWithSubject((String)bundle.get("subject")));
-
-//ListView difficultyListView = (ListView) findViewById(R.id.listByCriteria);
-//difficultyListView.setAdapter(difficultyAdapter);
         }
 
         else {
