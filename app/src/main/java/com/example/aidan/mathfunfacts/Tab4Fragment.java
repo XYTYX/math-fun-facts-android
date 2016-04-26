@@ -70,7 +70,7 @@ public class Tab4Fragment extends Fragment {
                 ListMFFs list = new ListMFFs();
                 list.setArguments(args);
 
-                ft.replace(R.id.tab4, list);
+                ft.replace(R.id.subject_root, list);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 ft.addToBackStack(null);
                 ft.commit();

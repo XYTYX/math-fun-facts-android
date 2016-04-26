@@ -105,7 +105,7 @@ public class ListMFFs extends Fragment {
                         }
 
                         else if (whichTab.equals("tab4")) {
-                            ft.replace(R.id.tab4, display);
+                            ft.replace(R.id.subject_root, display);
                         }
                         else if (whichTab.equals("tab5")) {
                             ft.replace(R.id.search_root, display);
