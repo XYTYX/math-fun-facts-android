@@ -9,35 +9,35 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import org.w3c.dom.Text;
+
 import java.util.ArrayList;
-import java.util.List;
-import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 /**
  * Created by Ali on 4/12/2016.
  */
 
-public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
-    public CustomAdapter(Context context, ArrayList<ParserMathFunFact> MathFunFacts) {
+public class CustomAdapterByRating extends ArrayAdapter<ParserMathFunFact> {
+    public CustomAdapterByRating(Context context, ArrayList<ParserMathFunFact> MathFunFacts) {
         super(context, R.layout.custom_row, MathFunFacts);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater ListInflater = LayoutInflater.from(getContext());
-            View customView = ListInflater.inflate(R.layout.custom_row, parent, false);
+        View customView = ListInflater.inflate(R.layout.custom_row_by_rating, parent, false);
 
         String title = getItem(position).getTitle();
         String level = getItem(position).getLevel().toLowerCase();
         TextView titleListElement = (TextView) customView.findViewById(R.id.titleMFF);
-        titleListElement.setText(title);
+        titleListElement.setText(title+ "  (" +String.valueOf(getItem(position).getRating()) +" Stars)");
 
 
         //set the rating
         //RatingBar ratingBar = (RatingBar) customView.findViewById(R.id.ratingBarOfList);
         //ratingBar.setRating(getItem(position).getRating());
-
+        TextView rating = (TextView) customView.findViewById(R.id.rating);
+        rating.setText("");
+        //String.valueOf(getItem(position).getRating())
 
         //set the color depending on the difficulty
         if(level.equals("1")) {

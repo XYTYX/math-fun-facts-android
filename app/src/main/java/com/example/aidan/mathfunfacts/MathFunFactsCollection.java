@@ -5,8 +5,12 @@ import android.content.res.AssetManager;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -14,7 +18,7 @@ import java.util.Random;
 
 public class MathFunFactsCollection {
 
-    List<ParserMathFunFact> MathFunFacts;
+    ArrayList<ParserMathFunFact> MathFunFacts;
     Context context;
 
     // Parse all fun facts on create
@@ -26,6 +30,7 @@ public class MathFunFactsCollection {
 
 
     public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
+
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
         ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
         while (iter.hasNext()) {
@@ -50,8 +55,22 @@ public class MathFunFactsCollection {
             return results;
     }
 
-    public List<ParserMathFunFact> getAllMathFunFacts() {
-    return MathFunFacts;
+    public ArrayList<ParserMathFunFact> getAllMathFunFacts() {
+        return MathFunFacts;
+    }
+
+    public ParserMathFunFact getByFileName(String fileName){
+        for(ParserMathFunFact MFF : MathFunFacts){
+            if(MFF.getFilename().equals(fileName)){
+                return MFF;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<ParserMathFunFact> getAllMathFunFactsSortedByRating() {
+        Collections.sort(MathFunFacts, new RatingComparator());
+        return MathFunFacts;
     }
 
     public ParserMathFunFact findRandomMFF() {
@@ -72,8 +91,12 @@ public class MathFunFactsCollection {
             // TODO we should move the files to res instead of assets
 
             String[] files = am.list("");
+            ParserMathFunFact temp;
             for (int x = 1; x < 200; x++) {
-                MathFunFacts.add(new ParserMathFunFact(files[x],context));
+
+                 temp = new ParserMathFunFact(files[x],context);
+                MathFunFacts.add(temp);
+                //MathFunFactsSortedByRating.add(new ParserMathFunFact(files[x],context));
                // System.out.println("Level is *"+MathFunFacts.get(x).getLevel()+"*");
             }
         }

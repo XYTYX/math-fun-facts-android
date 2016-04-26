@@ -12,10 +12,11 @@
         android:padding="10dp"
         android:textSize="16dp" />
 
-    <RatingBar
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ratingBarOfList"
-
-        android:visibility="gone" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/rating"
+        android:layout_gravity="right" />
 </LinearLayout>

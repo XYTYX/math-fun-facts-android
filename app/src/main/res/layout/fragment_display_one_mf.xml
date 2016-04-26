@@ -2,11 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aidan.mathfunfacts.DisplayOneMFF">
+    tools:context="com.example.aidan.mathfunfacts.DisplayOneMFF"
+    android:background="#ffffff">
+
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/singleWebview" />
+        android:id="@+id/singleWebview"
+        android:layout_marginTop="35dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_gravity="right" />
 
 </FrameLayout>
