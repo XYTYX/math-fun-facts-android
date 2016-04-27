@@ -34,7 +34,11 @@
             android:name=".displaySingleMFF"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".favorites"></activity>
+        <activity android:name=".favorites" />
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
