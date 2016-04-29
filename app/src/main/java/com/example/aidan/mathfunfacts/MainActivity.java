@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 WebView wv = (WebView) findViewById(R.id.webView);
                 ParserMathFunFact MFF = collection.findRandomMFF();
                 currentMFF = MFF.getHtmlContent();
-                String HTML_content = currentMFF.replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> ");
+                String HTML_content = currentMFF.replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> <center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> </center><br>");
                 wv.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
 
 

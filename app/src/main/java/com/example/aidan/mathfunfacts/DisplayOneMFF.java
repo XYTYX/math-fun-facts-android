@@ -39,8 +39,8 @@ public class DisplayOneMFF extends Fragment {
         addListenerOnRatingBar(view);
 
         WebView webView = (WebView) view.findViewById(R.id.singleWebview);
-        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <img src=\"file:///android_asset/images/"+ MFF.getFilename() +".$1.gif\"> ");
-        webView.loadDataWithBaseURL("file:///android_asset",HTML_content,"text/html", "UTF-8","file:///android_asset");
+        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> <center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> </center><br>");
+        webView.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
 
 
         // Inflate the layout for this fragment
