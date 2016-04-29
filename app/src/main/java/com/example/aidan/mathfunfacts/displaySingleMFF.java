@@ -22,7 +22,7 @@ public class displaySingleMFF extends Activity {
         Bundle bundle = getIntent().getExtras();
         ParserMathFunFact MFF = new ParserMathFunFact((String) bundle.get("MFFFile"),getBaseContext());
         WebView webView = (WebView) findViewById(R.id.singleWebview);
-        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <img src=\"file:///android_asset/images/"+ MFF.getFilename() +".$1.gif\"> ");
+        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> <center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> </center><br>");
 
         webView.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
 
