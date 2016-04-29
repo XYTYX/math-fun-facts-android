@@ -2,6 +2,7 @@ package com.example.aidan.mathfunfacts;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,16 +33,33 @@ public class DisplayOneMFF extends Fragment {
         View view = inflater.inflate(R.layout.fragment_display_one_mf, container, false);
         Bundle args = getArguments();
 
+        final WebView webView = (WebView) view.findViewById(R.id.singleWebview);
+
+        if (args.containsKey("random")) {
+            MFF = collection.findRandomMFF();
+            FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    String currentMFF = collection.findRandomMFF().getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> " +
+                            "<center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> " +
+                            "</center><br>");;
+                    webView.loadData(currentMFF, "text/html", "UTF-8");
+                }
+            });
+        }
+        else {
+            MFF = collection.getByFileName(args.getString("MFFFile"));
+        }
 
 
-        MFF = collection.getByFileName(args.getString("MFFFile"));
+
         //add rating listener
         addListenerOnRatingBar(view);
 
-        WebView webView = (WebView) view.findViewById(R.id.singleWebview);
-        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> <center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> </center><br>");
+        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> " +
+                "<center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> " +
+                "</center><br>");
         webView.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
-
 
         // Inflate the layout for this fragment
         return view;
