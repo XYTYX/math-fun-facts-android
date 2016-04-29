@@ -2,6 +2,7 @@ package com.example.aidan.mathfunfacts;
 
 
 //import android.app.Fragment;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,8 +28,17 @@ public class Tab1Fragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_tab1, container, false);
 
-        WebView wv = (WebView) v.findViewById(R.id.webView);
+        final WebView wv = (WebView) v.findViewById(R.id.webView);
         wv.loadData(collection.findRandomMFF().getHTML_content(), "text/html", "UTF-8");
+
+        //final View view = v.findViewById(android.R.id.content);
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                 String currentMFF = collection.findRandomMFF().getHTML_content();
+                wv.loadData(currentMFF, "text/html", "UTF-8");
+            }
+        });
         return v;
     }
 

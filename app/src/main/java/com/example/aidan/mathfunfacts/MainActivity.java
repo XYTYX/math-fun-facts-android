@@ -113,15 +113,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final View view = this.findViewById(android.R.id.content);
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                WebView wv = (WebView) findViewById(R.id.webView);
-                currentMFF = collection.findRandomMFF().getHTML_content();
-                wv.loadData(currentMFF, "text/html", "UTF-8");
-            }
-        });
+//        final View view = this.findViewById(android.R.id.content);
+//        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                WebView wv = (WebView) findViewById(R.id.webView);
+//                currentMFF = collection.findRandomMFF().getHTML_content();
+//                wv.loadData(currentMFF, "text/html", "UTF-8");
+//            }
+//        });
         System.out.println("printed stack");
 
     }
