@@ -52,12 +52,7 @@ public class Tab3Fragment extends Fragment {
         go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-//                FragmentTransaction trans = getFragmentManager()
-//                        .beginTransaction();
-//                trans.replace(R.id.difficulty_root, new StaticFragment());
-//                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-//                trans.addToBackStack(null);
-//                trans.commit();
+
                 String level;
                 if (difficulty.equals("Easy"))
                     level = "1";
@@ -79,20 +74,5 @@ public class Tab3Fragment extends Fragment {
             }
         });
         return  v;
-    }
-
-
-
-    public void getFunFactByDifficulty(View view, String difficulty) {
-        String level;
-        if (difficulty.equals("Easy"))
-            level = "1";
-        else if (difficulty.equals("Medium"))
-            level = "2";
-        else level = "3";
-
-        Intent intent = new Intent(this.getContext(),listByCriteria.class);
-        intent.putExtra("difficulty", level);
-        startActivity(intent);
     }
 }

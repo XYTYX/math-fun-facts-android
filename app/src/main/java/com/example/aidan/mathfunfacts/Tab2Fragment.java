@@ -47,9 +47,6 @@ public class Tab2Fragment extends Fragment {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String text = String.valueOf(parent.getItemAtPosition(position));
                         ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
-//                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
-//                        intent.putExtra("MFFFile", MFF.getFilename());
-//                        startActivity(intent);
 
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         Bundle args = new Bundle();

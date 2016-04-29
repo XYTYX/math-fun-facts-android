@@ -120,9 +120,6 @@ public class Tab4Fragment extends Fragment {
 
         ArrayList<String> results = makeArrayListOfFactsWithSubject(subjectNum);
         return results;
-//        Intent intent = new Intent(this.getContext(), listByCriteria.class);
-//        intent.putExtra("subject", subjectNum);
-//        startActivity(intent);
     }
 
     public ArrayList<String> makeArrayListOfFactsWithSubject(String subject) {

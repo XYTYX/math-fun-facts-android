@@ -43,12 +43,15 @@ public class DisplayOneMFF extends Fragment {
                     String currentMFF = collection.findRandomMFF().getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> " +
                             "<center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> " +
                             "</center><br>");;
-                    webView.loadData(currentMFF, "text/html", "UTF-8");
+                    webView.loadDataWithBaseURL("file:///android_asset", currentMFF, "text/html",
+                            "UTF-8", "file:///android_asset");
                 }
             });
         }
         else {
             MFF = collection.getByFileName(args.getString("MFFFile"));
+            FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+            fab.hide();
         }
 
 

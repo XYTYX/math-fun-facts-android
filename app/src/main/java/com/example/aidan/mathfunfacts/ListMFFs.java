@@ -45,12 +45,8 @@ public class ListMFFs extends Fragment {
 
         if (args.containsKey("filenames")) {
             whichTab = "tab5";
-
-            //code experimentation
             ArrayList<String> stringFilenames = args.getStringArrayList("filenames");
-
             ListIterator iter = stringFilenames.listIterator();
-
             while(iter.hasNext()) {
                 ParserMathFunFact temp = new ParserMathFunFact((String) iter.next(), getContext());
                 results.add(temp);
@@ -109,10 +105,6 @@ public class ListMFFs extends Fragment {
                         ft.addToBackStack(null);
                         ft.commit();
 
-
-//                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
-//                        intent.putExtra("MFFFile", MFF.getFilename());
-//                        startActivity(intent);
                     }
                 }
         );
