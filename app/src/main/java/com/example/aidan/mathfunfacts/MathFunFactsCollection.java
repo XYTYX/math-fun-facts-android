@@ -120,8 +120,7 @@ public class MathFunFactsCollection {
         try {
             String[] files = am.list("");
             ParserMathFunFact temp;
-            //starting from 1 because the first file is a binary that we don't want to parse
-            for (int x = 1; x < files.length; x++) {
+            for (int x = 0; x < files.length; x++) {
                 //add only the files that have filename that start with 1, 2, 3
                 // because that how the funfacts are nameed if not binary
                 char firstCharOfFileName = files[x].charAt(0);
