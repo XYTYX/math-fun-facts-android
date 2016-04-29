@@ -21,7 +21,6 @@ import static com.example.aidan.mathfunfacts.MainActivity.collection;
  */
 public class Tab2Fragment extends Fragment {
 
-
     public Tab2Fragment() {
         // Required empty public constructor
     }
@@ -30,9 +29,6 @@ public class Tab2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
 
         View v = inflater.inflate(R.layout.fragment_tab2, container, false);
         ListAdapter ratingAdapter;
@@ -47,9 +43,6 @@ public class Tab2Fragment extends Fragment {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String text = String.valueOf(parent.getItemAtPosition(position));
                         ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
-//                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
-//                        intent.putExtra("MFFFile", MFF.getFilename());
-//                        startActivity(intent);
 
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         Bundle args = new Bundle();

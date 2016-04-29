@@ -43,8 +43,6 @@ public class Tab5Fragment extends Fragment {
 
         setHasOptionsMenu(true);
 
-        // Inflate the layout for this fragment
-
         return v;
     }
 
@@ -61,8 +59,6 @@ public class Tab5Fragment extends Fragment {
         int id = sv.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
         TextView textView = (TextView) sv.findViewById(id);
         textView.setHint("Search location...");
-        //textView.setHintTextColor(getResources().getColor(R.color.DarkGray));
-        //textView.setTextColor(getResources().getColor(R.color.clouds));
 
         // implementing the listener
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -97,7 +93,6 @@ public class Tab5Fragment extends Fragment {
         });
         item.setActionView(sv);
 
-//        actionBar.setCustomView(sv);
     }
 
     public ArrayList<String> doSearch(String s) {

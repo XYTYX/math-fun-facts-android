@@ -132,7 +132,6 @@ public class Difficulty extends AppCompatActivity {
 
         MathFunFactsCollection collection = new MathFunFactsCollection(this.getApplicationContext());
             Intent intent = new Intent(getApplicationContext(),listByCriteria.class);
-        //intent.putExtra("difficulty", level);
         startActivity(intent);
     }
 

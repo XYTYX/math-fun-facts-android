@@ -36,19 +36,15 @@ public class listByCriteria extends AppCompatActivity {
         ListView difficultyListView = (ListView) findViewById(R.id.listByCriteria);
         difficultyListView.setAdapter(difficultyAdapter);
 
-        //difficultyAdapter.getView(1,difficultyListView,difficultyListView).setBackgroundColor(Color.BLUE);
-        //difficultyListView.findViewById(1).setBackgroundColor(Color.BLUE);
         difficultyListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        //String text = String.valueOf(parent.getItemAtPosition(position));
                         ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
                         Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
                         intent.putExtra("MFFFile", MFF.getFilename());
                         startActivity(intent);
 
-                        //Toast.makeText(MainActivity.this, "id is"+String.valueOf(view.getId()), Toast.LENGTH_SHORT).show();
                     }
                 }
         );

@@ -33,12 +33,6 @@ public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {
         TextView titleListElement = (TextView) customView.findViewById(R.id.titleMFF);
         titleListElement.setText(title);
 
-
-        //set the rating
-        //RatingBar ratingBar = (RatingBar) customView.findViewById(R.id.ratingBarOfList);
-        //ratingBar.setRating(getItem(position).getRating());
-
-
         //set the color depending on the difficulty
         if(level.equals("1")) {
             //easy

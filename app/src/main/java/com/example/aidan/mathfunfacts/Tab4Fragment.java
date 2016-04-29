@@ -83,11 +83,6 @@ public class Tab4Fragment extends Fragment {
         return  v;
     }
 
-
-
-
-
-
     public ArrayList<String> getFunFactBySubject(View view, String subject) {
         String subjectNum = "1";
         //numbers need to be confirmed if matching with the files
@@ -120,9 +115,6 @@ public class Tab4Fragment extends Fragment {
 
         ArrayList<String> results = makeArrayListOfFactsWithSubject(subjectNum);
         return results;
-//        Intent intent = new Intent(this.getContext(), listByCriteria.class);
-//        intent.putExtra("subject", subjectNum);
-//        startActivity(intent);
     }
 
     public ArrayList<String> makeArrayListOfFactsWithSubject(String subject) {

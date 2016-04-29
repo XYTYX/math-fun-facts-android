@@ -109,10 +109,6 @@ public class ListMFFs extends Fragment {
                         ft.addToBackStack(null);
                         ft.commit();
 
-
-//                        Intent intent = new Intent(parent.getContext(),displaySingleMFF.class);
-//                        intent.putExtra("MFFFile", MFF.getFilename());
-//                        startActivity(intent);
                     }
                 }
         );

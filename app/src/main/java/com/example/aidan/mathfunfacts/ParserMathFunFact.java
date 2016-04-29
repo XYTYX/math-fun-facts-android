@@ -54,16 +54,12 @@ public class ParserMathFunFact {
 //          parsing the metadata
 
             this.title = reader.readLine().substring(7);
-//            Log.d("title", title);
 
             this.keywords = reader.readLine().substring(10);
-//            Log.d("keywords", keywords);
 
             this.subjects = reader.readLine().substring(9);
-//            Log.d("subjects", subjects);
 
             this.level = reader.readLine().substring(7);
-//            Log.d("level", level);
 
             StringBuilder total = new StringBuilder();
 

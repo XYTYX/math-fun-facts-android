@@ -5,8 +5,6 @@
     tools:context="com.example.aidan.mathfunfacts.Tab3Fragment"
     android:padding="20dp">`
 
-    <!--<include layout="@layout/activity_difficulty" />-->
-
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

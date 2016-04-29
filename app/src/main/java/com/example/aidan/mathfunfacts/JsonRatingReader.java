@@ -9,9 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
-/**
- * Created by Ali on 4/25/2016.
- */
 public class JsonRatingReader {
 
 

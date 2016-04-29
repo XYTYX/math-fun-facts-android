@@ -96,8 +96,6 @@ public class MathFunFactsCollection {
 
                  temp = new ParserMathFunFact(files[x],context);
                 MathFunFacts.add(temp);
-                //MathFunFactsSortedByRating.add(new ParserMathFunFact(files[x],context));
-               // System.out.println("Level is *"+MathFunFacts.get(x).getLevel()+"*");
             }
         }
         catch(IOException e){

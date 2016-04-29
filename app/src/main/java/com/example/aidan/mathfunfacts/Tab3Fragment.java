@@ -52,12 +52,6 @@ public class Tab3Fragment extends Fragment {
         go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-//                FragmentTransaction trans = getFragmentManager()
-//                        .beginTransaction();
-//                trans.replace(R.id.difficulty_root, new StaticFragment());
-//                trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-//                trans.addToBackStack(null);
-//                trans.commit();
                 String level;
                 if (difficulty.equals("Easy"))
                     level = "1";

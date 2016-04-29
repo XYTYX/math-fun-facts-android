@@ -6,7 +6,6 @@
     android:padding="20dp"
     android:id="@+id/tab4">
 
-    <!--<include layout="@layout/content_filtered_fun_fact" />-->
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,12 +72,5 @@
         android:layout_below="@+id/subjectSelector"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-        <!--android:text="Tab 4 Fragment"-->
-        <!--android:id="@+id/textView2"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_centerHorizontal="true" />-->
+
 </RelativeLayout>

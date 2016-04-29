@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 
 public class SearchRootFragment extends Fragment {
 
-    private static final String TAG = "SearchRootFragment";
-
     public SearchRootFragment() {
         // Required empty public constructor
     }

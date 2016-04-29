@@ -2,9 +2,6 @@ package com.example.aidan.mathfunfacts;
 
 import java.util.Comparator;
 
-/**
- * Created by Ali on 4/21/2016.
- */
 public class RatingComparator implements Comparator<ParserMathFunFact> {
 
     @Override
