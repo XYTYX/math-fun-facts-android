@@ -124,7 +124,8 @@ public class MathFunFactsCollection {
             for (int x = 1; x < files.length; x++) {
                 //add only the files that have filename that start with 1, 2, 3
                 // because that how the funfacts are nameed if not binary
-                if (files[x].charAt(0) == '1' || files[x].charAt(0) == '2' || files[x].charAt(0) == '3'){
+                char firstCharOfFileName = files[x].charAt(0);
+                if (firstCharOfFileName == '1' || firstCharOfFileName == '2' || firstCharOfFileName == '3'){
                     temp = new ParserMathFunFact(files[x],context);
                     MathFunFacts.add(temp);
                 }
