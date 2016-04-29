@@ -72,13 +72,13 @@ public class ParserMathFunFact {
             total.append(headerTitle);
 
 //            getting rid of FFdescription
-            total.append(reader.readLine().substring(16));
+            total.append(reader.readLine().substring(16) + " ");
 
             String line;
-            line = reader.readLine();
+            line = reader.readLine() + " ";
 
             while (line != null && !line.equals("Submitted by: ")) {
-                total.append(line);
+                total.append(line + " ");
                 line = reader.readLine();
             }
             this.HTML_content = total.toString();
