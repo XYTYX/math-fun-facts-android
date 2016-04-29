@@ -9,14 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+//This is a typical root fragment with nothing in it
+//it simply calls the child fragment immediately
 public class FavoritesRootFragment extends Fragment {
-
-    private static final String TAG = "DifficultyRootFragment";
 
     public FavoritesRootFragment() {
         // Required empty public constructor
     }
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

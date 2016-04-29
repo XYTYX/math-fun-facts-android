@@ -4,12 +4,17 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
+import org.xml.sax.Parser;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -37,14 +42,19 @@ public class DisplayOneMFF extends Fragment {
 
         if (args.containsKey("random")) {
             MFF = collection.findRandomMFF();
+
             FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    String currentMFF = collection.findRandomMFF().getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> " +
-                            "<center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> " +
-                            "</center><br>");;
-                    webView.loadDataWithBaseURL("file:///android_asset", currentMFF, "text/html",
-                            "UTF-8", "file:///android_asset");
+
+                    Bundle args = new Bundle();
+                    args.putString("random","");
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+                    DisplayOneMFF disp = new DisplayOneMFF();
+                    disp.setArguments(args);
+                    ft.replace(R.id.display_one, disp);
+                    ft.commit();
                 }
             });
         }
@@ -72,6 +82,7 @@ public class DisplayOneMFF extends Fragment {
 
         RatingBar ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
         ratingBar.setRating(MFF.getRating());
+        Log.d("rating =", Float.toString(MFF.getRating()));
 
         //if rating value is changed,
         //display the current rating value in the result (textview) automatically

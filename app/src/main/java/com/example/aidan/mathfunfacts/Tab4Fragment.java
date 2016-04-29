@@ -20,7 +20,7 @@ import java.util.ListIterator;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Subject Fragment
  */
 public class Tab4Fragment extends Fragment {
 
@@ -61,7 +61,12 @@ public class Tab4Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-               fileNamesForSubject = getFunFactBySubject(view, subject);
+                fileNamesForSubject = getFunFactBySubject(view, subject);
+
+                //call a fragment transaction, put the name of the file we want to
+                //display in the bundle, pass that bundle along, then call
+                //DisplayOneMFF to display the single selected fact, replace
+                //the root fragment
 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 Bundle args = new Bundle();

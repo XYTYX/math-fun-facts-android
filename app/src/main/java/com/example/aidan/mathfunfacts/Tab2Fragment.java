@@ -17,7 +17,9 @@ import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Favorites fragment, serves as a root fragment because
+ * we don't need to call more than one fragment on top of
+ * this one
  */
 public class Tab2Fragment extends Fragment {
 
@@ -31,13 +33,11 @@ public class Tab2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
-
         View v = inflater.inflate(R.layout.fragment_tab2, container, false);
         ListAdapter ratingAdapter;
         ratingAdapter = new CustomAdapterByRating(getContext(),collection.getAllMathFunFactsSortedByRating());
 
+        //calling the ListView
         ListView difficultyListView = (ListView) v.findViewById(R.id.listByRating);
         difficultyListView.setAdapter(ratingAdapter);
 
@@ -45,8 +45,13 @@ public class Tab2Fragment extends Fragment {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String text = String.valueOf(parent.getItemAtPosition(position));
+
                         ParserMathFunFact MFF = (ParserMathFunFact)parent.getItemAtPosition(position);
+
+                        //call a fragment transaction, put the name of the file we want to
+                        //display in the bundle, pass that bundle along, then call
+                        //DisplayOneMFF to display the single selected fact, replace
+                        //the root fragment
 
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         Bundle args = new Bundle();

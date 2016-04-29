@@ -43,6 +43,11 @@ public class ListMFFs extends Fragment {
 
         ArrayList<ParserMathFunFact> results = new ArrayList<>();
 
+        //ListMFFs must handle being called by tab3, tab4, and tab5
+        //they all do slightly different things to pass their arguments along
+        //because the items in the bundle are all different, stored under different
+        //keys
+
         if (args.containsKey("filenames")) {
             whichTab = "tab5";
             ArrayList<String> stringFilenames = args.getStringArrayList("filenames");
@@ -57,7 +62,6 @@ public class ListMFFs extends Fragment {
 
         else if (args.containsKey("subject")) {
             whichTab = "tab4";
-
             ArrayList<String> stringFilenames = args.getStringArrayList("subject");
             ListIterator iter = stringFilenames.listIterator();
             while(iter.hasNext()) {
@@ -74,13 +78,20 @@ public class ListMFFs extends Fragment {
         ListAdapter difficultyAdapter;
         difficultyAdapter = new CustomAdapter(this.getContext(), results);
         ListView difficultyListView = (ListView) view.findViewById(R.id.mff_list);
-        //difficultyListView.setAdapter(difficultyAdapter);
         difficultyListView.setAdapter(difficultyAdapter);
 
+        //set ClickListener to take us to a single fact
+        //when selected in the ListView
         difficultyListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        //call a fragment transaction, put the name of the file we want to
+                        //display in the bundle, pass that bundle along, then call
+                        //DisplayOneMFF to display the single selected fact, replace
+                        //the root fragment depending on which fragment called this fragment
+                        //originally
 
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
 
@@ -93,7 +104,6 @@ public class ListMFFs extends Fragment {
                         if (whichTab.equals("tab3")) {
                             ft.replace(R.id.difficulty_root, display);
                         }
-
                         else if (whichTab.equals("tab4")) {
                             ft.replace(R.id.subject_root, display);
                         }
@@ -108,7 +118,6 @@ public class ListMFFs extends Fragment {
                     }
                 }
         );
-
         // Inflate the layout for this fragment
         return view;
     }

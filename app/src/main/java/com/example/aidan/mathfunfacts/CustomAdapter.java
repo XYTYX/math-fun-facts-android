@@ -16,6 +16,9 @@ import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 /**
  * Created by Ali on 4/12/2016.
+ * This adapter helps with being able to
+ * select a fact from a list, and returning that
+ * fact
  */
 
 public class CustomAdapter extends ArrayAdapter<ParserMathFunFact> {

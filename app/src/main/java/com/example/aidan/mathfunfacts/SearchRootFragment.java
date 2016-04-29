@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SearchRootFragment extends Fragment {
+//This is a typical root fragment with nothing in it
+//it simply calls the child fragment immediately
 
-    private static final String TAG = "SearchRootFragment";
+public class SearchRootFragment extends Fragment {
+    
 
     public SearchRootFragment() {
         // Required empty public constructor

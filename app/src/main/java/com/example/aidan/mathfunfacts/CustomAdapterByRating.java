@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 /**
  * Created by Ali on 4/12/2016.
+ * This class was created to sort by rating.
+ * This is used when calling the favorites fragment
  */
 
 public class CustomAdapterByRating extends CustomAdapter {

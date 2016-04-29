@@ -23,8 +23,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 Bundle args = new Bundle();
-                args.putString("random","10001.1-4");
-                //Tab1Fragment tab1 = new Tab1Fragment();
+                args.putString("random","");
                 DisplayOneMFF tab1 = new DisplayOneMFF();
                 tab1.setArguments(args);
                 return tab1;
