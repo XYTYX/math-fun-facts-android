@@ -81,7 +81,6 @@ public class DisplayOneMFF extends Fragment {
 
                 try {
                     FileInputStream fis = getContext().openFileInput("rating.json");
-                    System.out.println("content of json file is "+ getFileContent(fis,"UTF-8"));
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
