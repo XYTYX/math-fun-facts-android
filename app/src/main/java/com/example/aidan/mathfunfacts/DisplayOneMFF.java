@@ -39,7 +39,7 @@ public class DisplayOneMFF extends Fragment {
         addListenerOnRatingBar(view);
 
         WebView webView = (WebView) view.findViewById(R.id.singleWebview);
-        webView.loadData(MFF.getHTML_content(),"text/html", "UTF-8");
+        webView.loadData(MFF.getHtmlContent(),"text/html", "UTF-8");
 
 
         // Inflate the layout for this fragment

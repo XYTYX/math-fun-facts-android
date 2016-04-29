@@ -22,6 +22,6 @@ public class displaySingleMFF extends Activity {
         Bundle bundle = getIntent().getExtras();
         ParserMathFunFact MFF = new ParserMathFunFact((String) bundle.get("MFFFile"),getBaseContext());
         WebView webView = (WebView) findViewById(R.id.singleMFFwebview);
-        webView.loadData(MFF.getHTML_content(),"text/html", "UTF-8");
+        webView.loadData(MFF.getHtmlContent(),"text/html", "UTF-8");
     }
 }

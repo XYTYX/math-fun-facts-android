@@ -59,7 +59,7 @@ public class FilteredFunFact extends AppCompatActivity {
         Random random = new Random();
         int index = random.nextInt(files.size());
         ParserMathFunFact file = files.get(index);
-        webView.loadData(file.getHTML_content(),"text/html", "UTF-8");
+        webView.loadData(file.getHtmlContent(),"text/html", "UTF-8");
 
     }
 
