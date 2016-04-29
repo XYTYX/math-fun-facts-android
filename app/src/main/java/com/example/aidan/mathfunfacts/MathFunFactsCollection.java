@@ -4,63 +4,83 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
 public class MathFunFactsCollection {
-
-    ArrayList<ParserMathFunFact> MathFunFacts;
+    ArrayList<ParserMathFunFact> mathFunFacts;
     Context context;
 
-    // Parse all fun facts on create
+    /**
+     * Parse all fun facts on create as soon as the MathFunFactsColllection is created
+     * @param context
+     */
     public MathFunFactsCollection(Context context) {
-        this.MathFunFacts = new ArrayList<ParserMathFunFact>();
+        this.mathFunFacts = new ArrayList<ParserMathFunFact>();
         this.context = context;
         ParseAllMathFunFactFile(context);
     }
 
-
+    /**
+     * find all the MathFunFacts with a certain level
+     *helper method for the search by level fragment
+     * @param level
+     * @return  ArrayList<ParserMathFunFact>
+     */
     public ArrayList<ParserMathFunFact> findMFFWithLevel(String level) {
 
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
+        ListIterator<ParserMathFunFact> iter = mathFunFacts.listIterator();
+
         while (iter.hasNext()) {
             ParserMathFunFact mathfunfact = iter.next();
             if (mathfunfact.getLevel().equals(level)) {
                 results.add(mathfunfact);
             }
         }
+
         return results;
     }
 
+    /**
+     * find all the MathFunFacts with a certain subject
+     *helper method for the search by subject fragment
+     * @param subject
+     * @return ArrayList<ParserMathFunFact>
+     */
     public ArrayList<ParserMathFunFact> findMFFWithSubject(String subject) {
-        Log.d("finding subject: ",subject);
         ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
-        ListIterator<ParserMathFunFact> iter = MathFunFacts.listIterator();
-            while (iter.hasNext()) {
-                ParserMathFunFact mathfunfact = iter.next();
-    			if(mathfunfact.getSubjects().contains(subject)) {
-                    results.add(mathfunfact);
-                }
+        ListIterator<ParserMathFunFact> iter = mathFunFacts.listIterator();
+
+        while (iter.hasNext()) {
+            ParserMathFunFact mathfunfact = iter.next();
+            if(mathfunfact.getSubjects().contains(subject)) {
+                results.add(mathfunfact);
             }
-            return results;
+        }
+
+        return results;
     }
 
+
+    /**
+     * return all MFFS
+     * @return ArrayList<ParserMathFunFact>
+     */
     public ArrayList<ParserMathFunFact> getAllMathFunFacts() {
-        return MathFunFacts;
+        return mathFunFacts;
     }
 
+    /**
+     * return the MFF that has a specific filename
+     * @param fileName
+     * @return ParserMathFunFact
+     */
     public ParserMathFunFact getByFileName(String fileName){
-        for(ParserMathFunFact MFF : MathFunFacts){
+        for(ParserMathFunFact MFF : mathFunFacts){
             if(MFF.getFilename().equals(fileName)){
                 return MFF;
             }
@@ -68,36 +88,44 @@ public class MathFunFactsCollection {
         return null;
     }
 
+    /**
+     *sort the MFFs by rating using a comparator since it is what s needed for
+     *the favorite fragment
+     * @return ArrayList<ParserMathFunFact
+     */
     public ArrayList<ParserMathFunFact> getAllMathFunFactsSortedByRating() {
-        Collections.sort(MathFunFacts, new RatingComparator());
-        return MathFunFacts;
+        Collections.sort(mathFunFacts, new RatingComparator());
+        return mathFunFacts;
     }
 
+    /**
+     * randomly pick a MFF from the array to display in the random display MFF first fragment
+     * @return ParserMathFunFact
+     */
     public ParserMathFunFact findRandomMFF() {
         Random rand = new Random();
-        int n = rand.nextInt(MathFunFacts.size());
-        return MathFunFacts.get(n);
+        int n = rand.nextInt(mathFunFacts.size());
+        return mathFunFacts.get(n);
     }
 
-    // Method called on creatio
+
+    /**
+     * go through all the files present in the assets folder.
+     * parse them, and add them to our array of MFFs
+     * Method called on create
+     * @param context
+     */
     public void ParseAllMathFunFactFile(Context context){
+
         AssetManager am = context.getAssets();
+
         try {
-
-            // I start at 1 and end at 200 because index 0's file is
-            // differently formatted from the rest, and because our files
-            // are in assets, we dip into binary files we don't want to
-            // be messing with.
-            // TODO we should move the files to res instead of assets
-
             String[] files = am.list("");
             ParserMathFunFact temp;
-            for (int x = 1; x < 200; x++) {
-
-                 temp = new ParserMathFunFact(files[x],context);
-                MathFunFacts.add(temp);
-                //MathFunFactsSortedByRating.add(new ParserMathFunFact(files[x],context));
-               // System.out.println("Level is *"+MathFunFacts.get(x).getLevel()+"*");
+            //starting from 1 because the first file is a binary that we don't want to parse
+            for (int x = 1; x < files.length; x++) {
+                temp = new ParserMathFunFact(files[x],context);
+                mathFunFacts.add(temp);
             }
         }
         catch(IOException e){

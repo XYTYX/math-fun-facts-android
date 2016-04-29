@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 WebView wv = (WebView) findViewById(R.id.webView);
-                currentMFF = collection.findRandomMFF().getHTML_content();
+                currentMFF = collection.findRandomMFF().getHtmlContent();
                 wv.loadData(currentMFF, "text/html", "UTF-8");
             }
         });
