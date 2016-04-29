@@ -35,6 +35,7 @@ public class JsonRatingReader {
 
 
     public void readRatingsArray(JsonReader reader) throws IOException {
+        //read the array and go through all the objects inside
         reader.beginArray();
         while (reader.hasNext()) {
             readRating(reader);
@@ -44,11 +45,13 @@ public class JsonRatingReader {
 
 
     public void readRating(JsonReader reader) throws IOException {
+        //assume that if not specificed these proprieties are null
         float rating = 0;
         String filename = null;
 
-
+        //start reading an object from the array
         reader.beginObject();
+        //look for name/value pairs i.e. filename & rating
         while (reader.hasNext()) {
             String name = reader.nextName();
             if (name.equals("filename")) {
@@ -60,6 +63,7 @@ public class JsonRatingReader {
             }
         }
         reader.endObject();
+        //insert that object in the specific ParserMathFunFact in the collection
         insertRatingInParserMathFunFactObject(rating, filename);
     }
 

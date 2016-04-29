@@ -39,7 +39,8 @@ public class DisplayOneMFF extends Fragment {
         addListenerOnRatingBar(view);
 
         WebView webView = (WebView) view.findViewById(R.id.singleWebview);
-        webView.loadData(MFF.getHTML_content(),"text/html", "UTF-8");
+        String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <br> <center><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> </center><br>");
+        webView.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
 
 
         // Inflate the layout for this fragment
@@ -80,7 +81,6 @@ public class DisplayOneMFF extends Fragment {
 
                 try {
                     FileInputStream fis = getContext().openFileInput("rating.json");
-                    System.out.println("content of json file is "+ getFileContent(fis,"UTF-8"));
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
