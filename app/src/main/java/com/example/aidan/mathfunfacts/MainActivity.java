@@ -117,8 +117,12 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 WebView wv = (WebView) findViewById(R.id.webView);
-                currentMFF = collection.findRandomMFF().getHtmlContent();
-                wv.loadData(currentMFF, "text/html", "UTF-8");
+                ParserMathFunFact MFF = collection.findRandomMFF();
+                currentMFF = MFF.getHtmlContent();
+                String HTML_content = currentMFF.replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <img src=\"file:///android_asset/images/" + MFF.getFilename() + ".$1.gif\"> ");
+                wv.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
+
+
             }
         });
         System.out.println("printed stack");

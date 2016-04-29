@@ -25,7 +25,7 @@ public class displaySingleMFF extends Activity {
         String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", " <img src=\"file:///android_asset/images/10001.1-4-5.$1.gif\"> ");
         System.out.println(HTML_content);
 
-        webView.loadDataWithBaseURL("file:///android_asset",HTML_content,"text/html", "UTF-8","file:///android_asset");
+        webView.loadDataWithBaseURL("file:///android_asset", HTML_content, "text/html", "UTF-8", "file:///android_asset");
 
     }
 }
