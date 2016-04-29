@@ -127,7 +127,6 @@ public class MathFunFactsCollection {
                 if (files[x].charAt(0) == '1' || files[x].charAt(0) == '2' || files[x].charAt(0) == '3'){
                     temp = new ParserMathFunFact(files[x],context);
                     MathFunFacts.add(temp);
-                    System.out.println("a fun fact added");
                 }
             }
 
