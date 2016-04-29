@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="/Users/Anders/Dropbox/AndroidStudioProjects/math-fun-facts-android/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/Anders/Dropbox/AndroidStudioProjects/math-fun-facts-android/app/src/debug/jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="C:\Users\Ali\Desktop\math-fun-facts-android\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Ali\Desktop\math-fun-facts-android\app\src\debug\jniLibs"/></dataSet></merger>
->>>>>>> ratingJson
