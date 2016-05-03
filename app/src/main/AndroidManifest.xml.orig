@@ -19,13 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Difficulty"
-            android:label="@string/title_activity_difficulty"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".FilteredFunFact"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
+=======
         <activity
             android:name=".listByCriteria"
             android:label="@string/title_activity_filtered_fun_fact"
@@ -39,6 +37,7 @@
             android:name=".Info"
             android:label="@string/title_activity_info"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> info
     </application>
 
 </manifest>

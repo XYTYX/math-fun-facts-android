@@ -608,18 +608,32 @@ int id custom 0x7f0c0050
 int id customPanel 0x7f0c004f
 int id decor_content_parent 0x7f0c0058
 int id default_activity_button 0x7f0c0040
-int id design_menu_item_action_area 0x7f0c0077
-int id design_menu_item_action_area_stub 0x7f0c0076
-int id design_menu_item_text 0x7f0c0075
-int id design_navigation_view 0x7f0c0074
+<<<<<<< HEAD
+int id design_menu_item_action_area 0x7f0c0076
+int id design_menu_item_action_area_stub 0x7f0c0075
+int id design_menu_item_text 0x7f0c0074
+int id design_navigation_view 0x7f0c0073
+int id difficult 0x7f0c0088
+int id difficultyButton 0x7f0c0089
+int id difficultySelector 0x7f0c0085
+int id difficulty_root 0x7f0c0078
+int id disableHome 0x7f0c000e
+int id display_fun_fact_webview 0x7f0c006d
+int id display_one 0x7f0c0079
+int id easy 0x7f0c0086
+=======
+int id design_menu_item_action_area 0x7f0c0078
+int id design_menu_item_action_area_stub 0x7f0c0077
+int id design_menu_item_text 0x7f0c0076
+int id design_navigation_view 0x7f0c0075
 int id difficult 0x7f0c0089
 int id difficultyButton 0x7f0c008a
 int id difficultySelector 0x7f0c0086
-int id difficulty_root 0x7f0c0079
+int id difficulty_root 0x7f0c007a
 int id disableHome 0x7f0c000e
 int id display_fun_fact_webview 0x7f0c006d
-int id display_one 0x7f0c007a
 int id easy 0x7f0c0087
+>>>>>>> info
 int id edit_query 0x7f0c005c
 int id end 0x7f0c0020
 int id end_padder 0x7f0c00a4
@@ -657,7 +671,11 @@ int id mff_list 0x7f0c007f
 int id middle 0x7f0c0031
 int id mini 0x7f0c002f
 int id multiply 0x7f0c0026
-int id navigation_header_container 0x7f0c0073
+<<<<<<< HEAD
+int id navigation_header_container 0x7f0c0072
+=======
+int id navigation_header_container 0x7f0c0074
+>>>>>>> info
 int id never 0x7f0c0035
 int id none 0x7f0c0010
 int id normal 0x7f0c000c
@@ -671,8 +689,14 @@ int id probability 0x7f0c0092
 int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007
 int id radio 0x7f0c0054
+<<<<<<< HEAD
+int id ratingBar 0x7f0c007b
+int id ratingBarOfList 0x7f0c006f
+=======
+int id rating 0x7f0c0071
 int id ratingBar 0x7f0c007c
 int id ratingBarOfList 0x7f0c0070
+>>>>>>> info
 int id right 0x7f0c0023
 int id screen 0x7f0c0027
 int id scroll 0x7f0c0018
@@ -696,10 +720,17 @@ int id shortcut 0x7f0c0053
 int id showCustom 0x7f0c0011
 int id showHome 0x7f0c0012
 int id showTitle 0x7f0c0013
-int id singleMFFwebview 0x7f0c0078
+<<<<<<< HEAD
+int id singleMFFwebview 0x7f0c0077
+int id singleWebview 0x7f0c007a
+int id snackbar_action 0x7f0c0071
+int id snackbar_text 0x7f0c0070
+=======
+int id singleMFFwebview 0x7f0c0079
 int id singleWebview 0x7f0c007b
-int id snackbar_action 0x7f0c0072
-int id snackbar_text 0x7f0c0071
+int id snackbar_action 0x7f0c0073
+int id snackbar_text 0x7f0c0072
+>>>>>>> info
 int id snap 0x7f0c0019
 int id spacer 0x7f0c0045
 int id split_action_bar 0x7f0c0008

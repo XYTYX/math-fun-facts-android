@@ -25,8 +25,25 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.aidan.mathfunfacts.Difficulty"
+            android:label="@string/title_activity_difficulty"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.aidan.mathfunfacts.FilteredFunFact"
             android:label="@string/title_activity_filtered_fun_fact"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.aidan.mathfunfacts.listByCriteria"
+            android:label="@string/title_activity_filtered_fun_fact"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.aidan.mathfunfacts.displaySingleMFF"
+            android:label="@string/title_activity_filtered_fun_fact"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.aidan.mathfunfacts.favorites" />
+        <activity
+            android:name="com.example.aidan.mathfunfacts.Info"
+            android:label="@string/title_activity_info"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

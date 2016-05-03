@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aidan.mathfunfacts">
+    package="com.example.aidan.mathfunfacts"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.aidan.mathfunfacts.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,26 +25,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Difficulty"
-            android:label="@string/title_activity_difficulty"
+            android:name="com.example.aidan.mathfunfacts.FilteredFunFact"
+            android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
+=======
         <activity
-            android:name=".FilteredFunFact"
+            android:name="com.example.aidan.mathfunfacts.listByCriteria"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".listByCriteria"
+            android:name="com.example.aidan.mathfunfacts.displaySingleMFF"
             android:label="@string/title_activity_filtered_fun_fact"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.aidan.mathfunfacts.favorites" />
         <activity
-            android:name=".displaySingleMFF"
-            android:label="@string/title_activity_filtered_fun_fact"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".favorites" />
-        <activity
-            android:name=".Info"
+            android:name="com.example.aidan.mathfunfacts.Info"
             android:label="@string/title_activity_info"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+>>>>>>> info
     </application>
 
 </manifest>
