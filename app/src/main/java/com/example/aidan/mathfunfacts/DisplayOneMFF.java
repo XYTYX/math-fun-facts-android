@@ -129,16 +129,18 @@ public class DisplayOneMFF extends Fragment {
             FileInputStream fis,
             String          encoding ) throws IOException
     {
-        try( BufferedReader br =
-                     new BufferedReader( new InputStreamReader(fis, encoding )))
-        {
+        BufferedReader br =
+                new BufferedReader(new InputStreamReader(fis, encoding));
+        try {
             StringBuilder sb = new StringBuilder();
             String line;
-            while(( line = br.readLine()) != null ) {
-                sb.append( line );
-                sb.append( '\n' );
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+                sb.append('\n');
             }
             return sb.toString();
+        } finally {
+            br.close();
         }
     }
     //end testing
