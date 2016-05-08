@@ -52,8 +52,8 @@ public class ParserMathFunFact {
             StringBuilder total = new StringBuilder();
 
             //wrapping the title with h2 tags
-            String headerTitle = "<h2>" + this.title + "</h2>";
-            total.append(headerTitle);
+//            String headerTitle = "<h2>" + this.title + "</h2>";
+//            total.append(headerTitle);
 
 //            getting rid of FFdescription
             total.append(reader.readLine().substring(16) + " ");
