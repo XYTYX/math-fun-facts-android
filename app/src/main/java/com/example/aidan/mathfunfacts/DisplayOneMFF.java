@@ -79,7 +79,7 @@ public class DisplayOneMFF extends Fragment {
         //replace FFact(bla+bla2) by see fun fact bla bla2
         HTML_content = HTML_content.replaceAll("(\\w+)\\+(\\w+)", "$1 $2 ");
         HTML_content = HTML_content.replaceAll("\\+(\\w+)", "$1 ");
-        HTML_content = HTML_content.replaceAll("FFact\\Q(\\E([a-zA-Z1-9 +_]+)\\Q)\\E", "the fun fact $1");
+        HTML_content = HTML_content.replaceAll("FFact\\Q(\\E([a-zA-Z1-9 +_]+)\\Q)\\E", " $1");
         //wrap presentating and behind the fact by h2 tag
         HTML_content = HTML_content.replaceAll("Presentation suggestions:", "<h3>Presentation suggestions:</h3>");
         HTML_content = HTML_content.replaceAll("Behind the fact:", "<h3>Behind the fact:</h3>");
