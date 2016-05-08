@@ -35,6 +35,7 @@ public class Tab5Fragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class Tab5Fragment extends Fragment {
 
         // Implementing ActionBar Search inside a fragment
         MenuItem item = menu.add("Search");
+
         item.setIcon(R.drawable.favorite_fragment_tab_icon_un_selected); // sets icon
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         SearchView sv = new SearchView(getActivity());
@@ -150,5 +152,10 @@ public class Tab5Fragment extends Fragment {
         }
 
         return results;
+    }
+
+    public void onDestroyView() {
+        super.onDestroyView();
+        // not cleaning up.
     }
 }

@@ -61,24 +61,27 @@ public class Tab4Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                fileNamesForSubject = getFunFactBySubject(view, subject);
+                if(subject != null) {
+                    fileNamesForSubject = getFunFactBySubject(view, subject);
 
-                //call a fragment transaction, put the name of the file we want to
-                //display in the bundle, pass that bundle along, then call
-                //DisplayOneMFF to display the single selected fact, replace
-                //the root fragment
+                    //call a fragment transaction, put the name of the file we want to
+                    //display in the bundle, pass that bundle along, then call
+                    //DisplayOneMFF to display the single selected fact, replace
+                    //the root fragment
 
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                Bundle args = new Bundle();
-                args.putStringArrayList("subject", fileNamesForSubject);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    Bundle args = new Bundle();
+                    args.putStringArrayList("subject", fileNamesForSubject);
 
-                ListMFFs list = new ListMFFs();
-                list.setArguments(args);
+                    ListMFFs list = new ListMFFs();
+                    list.setArguments(args);
 
-                ft.replace(R.id.subject_root, list);
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                ft.addToBackStack(null);
-                ft.commit();
+                    ft.replace(R.id.subject_root, list);
+                    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                    ft.addToBackStack(null);
+                    ft.commit();
+
+                }
 
 
 
@@ -86,6 +89,10 @@ public class Tab4Fragment extends Fragment {
             }
         });
         return  v;
+    }
+    public void onDestroyView() {
+        super.onDestroyView();
+        // not cleaning up.
     }
 
 

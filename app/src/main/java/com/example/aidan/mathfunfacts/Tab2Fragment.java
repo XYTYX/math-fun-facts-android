@@ -22,7 +22,7 @@ import static com.example.aidan.mathfunfacts.MainActivity.collection;
  * this one
  */
 public class Tab2Fragment extends Fragment {
-
+    View v;
 
     public Tab2Fragment() {
         // Required empty public constructor
@@ -33,7 +33,7 @@ public class Tab2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_tab2, container, false);
+        v = inflater.inflate(R.layout.fragment_tab2, container, false);
         ListAdapter ratingAdapter;
         ratingAdapter = new CustomAdapterByRating(getContext(),collection.getAllMathFunFactsSortedByRating());
 
@@ -69,6 +69,10 @@ public class Tab2Fragment extends Fragment {
         );
 
         return v;
+    }
+    public void onDestroyView() {
+        super.onDestroyView();
+        // not cleaning up.
     }
 
 }
