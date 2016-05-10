@@ -76,8 +76,8 @@ public class DisplayOneMFF extends Fragment {
         //replace Ffig(1) by figure 1
         String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", "Figure $1");
         //replace FFact(bla+bla2) by see fun fact bla bla2
-        HTML_content = HTML_content.replaceAll("([a-zA-Z_  :]+)\\+([a-zA-Z_  :]+)", "$1 $2 ");
-        HTML_content = HTML_content.replaceAll("\\+([a-zA-Z_  :]+)", "$1 ");
+        HTML_content = HTML_content.replaceAll("([a-zA-Z  _:-]+)\\+([a-zA-Z_  :-]+)", "$1 $2 ");
+        HTML_content = HTML_content.replaceAll("\\+([a-zA-Z_  :-]+)", "$1 ");
         HTML_content = HTML_content.replaceAll("FFact\\Q(\\E([a-zA-Z1-9 +_]+)\\Q)\\E", " $1");
         //wrap presentating and behind the fact by h2 tag
         HTML_content = HTML_content.replaceAll("Presentation suggestions:", "<h3>Presentation suggestions:</h3>");
