@@ -22,7 +22,7 @@ public class Info extends AppCompatActivity {
         String htmlContent = "";
         WebView wv = (WebView) findViewById(R.id.infoWebView);
         htmlContent = htmlContent + "<h2><b>Developed for: </b></h2>";
-        htmlContent = htmlContent + "<center><h3>Professor Francis E. Su</h3>";
+        htmlContent = htmlContent + "<center><h3>Prof. Francis E. Su</h3>";
         htmlContent = htmlContent + "<h4>Benediktsson-Karwa Professor of Mathematics</h4>";
         htmlContent = htmlContent + "<h5>Department of Mathematics</h5>";
         htmlContent = htmlContent + "<h5>Harvey Mudd College</h5></center><br>";
