@@ -18,7 +18,7 @@ public class Info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-    //test
+    //test2
         String htmlContent = "";
         WebView wv = (WebView) findViewById(R.id.infoWebView);
         htmlContent = htmlContent + "<h2><b>Developed for: </b></h2>";
