@@ -82,6 +82,7 @@ public class DisplayOneMFF extends Fragment {
         //wrap presentating and behind the fact by h2 tag
         HTML_content = HTML_content.replaceAll("Presentation suggestions:", "<h3>Presentation suggestions:</h3>");
         HTML_content = HTML_content.replaceAll("Behind the fact:", "<h3>Behind the fact:</h3>");
+        HTML_content = HTML_content.replaceAll("Reference:", "<h4>Reference:</h4>");
         //go through the images folder find all the images correspending to the MFF
         //print the first at the top and other at the bottom
         if(checkFile(MFF.getFilename() + ".1.gif", getContext()) ){
