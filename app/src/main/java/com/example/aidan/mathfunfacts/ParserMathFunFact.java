@@ -65,6 +65,21 @@ public class ParserMathFunFact {
                 total.append(line + " ");
                 line = reader.readLine();
             }
+
+            StringBuilder Reference = new StringBuilder();
+            int ReferenceFound = 0;
+            while(line != null){
+                if(line.contains("Reference:") || ReferenceFound == 1 ){
+                    Reference.append(line + " ");
+                    ReferenceFound = 1;
+                }
+                line = reader.readLine();
+
+            }
+            //see if the reference does not contain anything (size 12 counting space and \n)
+            if(!(Reference.toString().length() <= 12)) total.append("<br>" + Reference.toString());
+
+
             this.htmlContent = total.toString();
 
         } catch (IOException e) {
