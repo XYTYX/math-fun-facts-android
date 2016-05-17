@@ -49,12 +49,39 @@ public class Tab1Fragment extends Fragment {
         String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", "Figure $1");
 
         //replace FFact(bla+bla2) by see fun fact bla bla2
-        HTML_content = HTML_content.replaceAll("([a-zA-Z  _:-]+)\\+([a-zA-Z_  :-]+)", "$1 $2 ");
-        HTML_content = HTML_content.replaceAll("\\+([a-zA-Z_  :-]+)", "$1 ");
-        HTML_content = HTML_content.replaceAll("FFact\\Q(\\E([a-zA-Z1-9 +_]+)\\Q)\\E", " $1");
+        char[] temp = HTML_content.toCharArray();
+        int i = 0;
+        int size = temp.length;
+        while (i != size ){
+            if(        temp[i] == 'F'
+                    && temp[i + 1] == 'F'
+                    && temp[i + 2] == 'a'
+                    && temp[i + 3] == 'c'
+                    && temp[i + 4] == 't'
+                    && temp[i + 5] == '('
+                    ){
+                i += 6;
+                while(temp[i] != ')'){
+                    if(temp[i] == '+'){
+                        temp[i] = ' ';
+                    }
+                    i++;
+                }
+                temp[i] = ' ';
+            }
+
+            i++;
+        }
+        HTML_content = "";
+        for (char c : temp)
+            HTML_content += Character.toString(c);
+        HTML_content = HTML_content.replaceAll("FFact\\(", "");
+
         //wrap presentating and behind the fact by h2 tag
         HTML_content = HTML_content.replaceAll("Presentation suggestions:", "<h3>Presentation suggestions:</h3>");
         HTML_content = HTML_content.replaceAll("Behind the fact:", "<h3>Behind the fact:</h3>");
+        HTML_content = HTML_content.replaceAll("Reference:", "<h4>Reference:</h4>");
+
         //go through the images folder find all the images correspending to the MFF
         //print the first at the top and other at the bottom
         if(checkFile(MFF.getFilename() + ".1.gif", getContext()) ){
@@ -63,7 +90,7 @@ public class Tab1Fragment extends Fragment {
                             +"<center><figure><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".1.gif" +"\">" +"  <figcaption>Figure 1</figcaption></figure></center>"
                             + HTML_content;
 
-            Integer i = 2;
+            i = 2;
             while (checkFile(MFF.getFilename() + "."+ i +".gif", getContext()) ) {
                 HTML_content +=  "<center><figure><img src=\"file:///android_asset/images/" + MFF.getFilename() + "."+i+".gif" +"\">" +"  <figcaption>Figure "+i+"</figcaption></figure></center>";
                 i++;
@@ -84,15 +111,45 @@ public class Tab1Fragment extends Fragment {
 
                 //add rating listener
                 addListenerOnRatingBar(v);
+
+
                 String HTML_content = MFF.getHtmlContent().replaceAll("FFig\\Q(\\E([0-9]+)\\Q)\\E", "Figure $1");
 
                 //replace FFact(bla+bla2) by see fun fact bla bla2
-                HTML_content = HTML_content.replaceAll("([a-zA-Z_  :]+)\\+([a-zA-Z_  :]+)", "$1 $2 ");
-                HTML_content = HTML_content.replaceAll("\\+([a-zA-Z_  :]+)", "$1 ");
-                HTML_content = HTML_content.replaceAll("FFact\\Q(\\E([a-zA-Z1-9 +_]+)\\Q)\\E", " $1");
+                //replace FFact(bla+bla2) by see fun fact bla bla2
+                char[] temp = HTML_content.toCharArray();
+                int i = 0;
+                int size = temp.length;
+                while (i != size ){
+                    if(        temp[i] == 'F'
+                            && temp[i + 1] == 'F'
+                            && temp[i + 2] == 'a'
+                            && temp[i + 3] == 'c'
+                            && temp[i + 4] == 't'
+                            && temp[i + 5] == '('
+                            ){
+                        i += 6;
+                        while(temp[i] != ')'){
+                            if(temp[i] == '+'){
+                                temp[i] = ' ';
+                            }
+                            i++;
+                        }
+                        temp[i] = ' ';
+                    }
+
+                    i++;
+                }
+                HTML_content = "";
+                for (char c : temp)
+                    HTML_content += Character.toString(c);
+                HTML_content = HTML_content.replaceAll("FFact\\(", "");
+
                 //wrap presentating and behind the fact by h2 tag
                 HTML_content = HTML_content.replaceAll("Presentation suggestions:", "<h3>Presentation suggestions:</h3>");
                 HTML_content = HTML_content.replaceAll("Behind the fact:", "<h3>Behind the fact:</h3>");
+                HTML_content = HTML_content.replaceAll("Reference:", "<h4>Reference:</h4>");
+
                 //go through the images folder find all the images correspending to the MFF
                 //print the first at the top and other at the bottom
                 if(checkFile(MFF.getFilename() + ".1.gif", getContext()) ){
@@ -101,7 +158,7 @@ public class Tab1Fragment extends Fragment {
                                     +"<center><figure><img src=\"file:///android_asset/images/" + MFF.getFilename() + ".1.gif" +"\">" +"  <figcaption>Figure 1</figcaption></figure></center>"
                                     + HTML_content;
 
-                    Integer i = 2;
+                    i = 2;
                     while (checkFile(MFF.getFilename() + "."+ i +".gif", getContext()) ) {
                         HTML_content +=  "<center><figure><img src=\"file:///android_asset/images/" + MFF.getFilename() + "."+i+".gif" +"\">" +"  <figcaption>Figure "+i+"</figcaption></figure></center>";
                         i++;
