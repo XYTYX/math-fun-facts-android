@@ -55,6 +55,7 @@ public class Tab5Fragment extends Fragment {
         // Implementing ActionBar Search inside a fragment
         MenuItem item = menu.add("Search");
 
+
         item.setIcon(R.drawable.favorite_fragment_tab_icon_un_selected); // sets icon
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         SearchView sv = new SearchView(getActivity());
@@ -77,12 +78,21 @@ public class Tab5Fragment extends Fragment {
                     return true;
                 } else {
                     filenames = doSearch(s);
+
+                    if(filenames.size() == 0){
+                        Toast.makeText(getActivity(),
+                                "No result found, please try again",
+                                Toast.LENGTH_LONG).show();
+                        return false;
+                    }
+
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
                     Bundle args = new Bundle();
                     args.putStringArrayList("filenames",filenames);
 
                     ListMFFs list = new ListMFFs();
                     list.setArguments(args);
+
 
                     ft.replace(R.id.search_root, list);
                     ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -156,6 +166,7 @@ public class Tab5Fragment extends Fragment {
 
     public void onDestroyView() {
         super.onDestroyView();
+        setHasOptionsMenu(false);
         // not cleaning up.
     }
 }
