@@ -2,28 +2,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aidan.mathfunfacts.Tab5Fragment">
+    tools:context="com.example.aidan.mathfunfacts.Tab5Fragment"
+    android:nestedScrollingEnabled="false">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <EditText
+    <SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/searchView"
+        android:queryHint="Enter your search"
+        android:minHeight="40dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:editable="true"
-        android:elegantTextHeight="false"
-        android:freezesText="false"
-        android:width="@dimen/tab_max_width" />
+        android:layout_alignLeft="@+id/errorMessage"
+        android:layout_alignStart="@+id/errorMessage" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:headerDividersEnabled="true" />
+        android:headerDividersEnabled="true"
+        android:layout_marginTop="50dp"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        android:minWidth="@dimen/tab_max_width"
+        android:contextClickable="true"
+        android:focusable="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,4 +38,5 @@
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:textSize="16dp" />
+
 </RelativeLayout>

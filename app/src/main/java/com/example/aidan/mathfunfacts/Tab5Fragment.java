@@ -89,45 +89,39 @@ public class Tab5Fragment extends Fragment {
         );
         final TextView errorMessage = (TextView) v.findViewById(R.id.errorMessage);
 
-        TextView search = (TextView) v.findViewById(R.id.editText);
-        TextWatcher listener = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
+        SearchView searchBar = (SearchView) v.findViewById(R.id.searchView);
+        searchBar.setEnabled(true);
+        searchBar.setIconifiedByDefault(false);
+        searchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                                             @Override
+                                             public boolean onQueryTextSubmit(String query) {
+                                                 return false;
+                                             }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                ArrayList<ParserMathFunFact> searchResults = doSearch(s.toString());
-                char[] c = "".toCharArray();
-                if (searchResults.size() == 0 && s.length() != 0){
-                    c = "No result found, please try again".toCharArray();
+                                             @Override
+                                             public boolean onQueryTextChange(String newText) {
+                                                 char[] c = "".toCharArray();
+                                                 ArrayList<ParserMathFunFact> searchResults = doSearch(newText.toString());
+                                                 if (searchResults.size() == 0 && newText.length() != 0) {
+                                                     c = "No result found, please try again".toCharArray();
+                                                 }
+                                                 //set the error message
+                                                 errorMessage.setText(c, 0, c.length);
+                                                 ListAdapter searchResultAdapter;
+                                                 if (newText.length() != 0) {
+                                                     searchResultAdapter = new CustomAdapterByRating(getContext(), searchResults);
+                                                 } else {
+                                                     searchResultAdapter = new CustomAdapterByRating(getContext(), collection.getAllMathFunFactsSortedByRating());
+                                                 }
 
-                }
-                //set the error message
-                errorMessage.setText(c,0,c.length);
-                ListAdapter searchResultAdapter;
-                if(s.length() != 0){
-                    searchResultAdapter = new CustomAdapterByRating(getContext(),searchResults);
-                }
-                else{
-                    searchResultAdapter = new CustomAdapterByRating(getContext(),collection.getAllMathFunFactsSortedByRating());
-                }
+                                                 ListView difficultyListView = (ListView) v.findViewById(R.id.listView);
+                                                 difficultyListView.setAdapter(searchResultAdapter);
+                                                 return false;
+                                             }
+                                         }
+        );
 
-                ListView difficultyListView = (ListView) v.findViewById(R.id.listView);
-                difficultyListView.setAdapter(searchResultAdapter);
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-
-
-
-        };
-        search.addTextChangedListener(listener);
 
 
         // Inflate the layout for this fragment
@@ -175,11 +169,11 @@ public class Tab5Fragment extends Fragment {
             if(mathfunfact.getTitle().toLowerCase().contains(s.toLowerCase())) {
 
                 results.add(mathfunfact);
-                Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
+                //Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
             }
             else if(mathfunfact.getKeywords().toLowerCase().contains(s.toLowerCase())) {
                 results.add(mathfunfact);
-                Log.d("Title ++ keywords", mathfunfact.getTitle() + "++" + mathfunfact.getKeywords());
+                //Log.d("Title ++ keywords", mathfunfact.getTitle() + "++" + mathfunfact.getKeywords());
             }
         }
 
