@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,6 +15,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +25,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+
+import static com.example.aidan.mathfunfacts.MainActivity.collection;
 
 
 /**
@@ -42,84 +49,100 @@ public class Tab5Fragment extends Fragment {
 
         final View v = inflater.inflate(R.layout.fragment_tab5, container, false);
 
-        setHasOptionsMenu(true);
+
+        ListAdapter searchResultAdapter;
+        searchResultAdapter = new CustomAdapterByRating(getContext(),collection.getAllMathFunFactsSortedByRating());
+
+        //calling the ListView
+        ListView searchListView = (ListView) v.findViewById(R.id.listView);
+        searchListView.setAdapter(searchResultAdapter);
+
+
+        searchListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        //call a fragment transaction, put the name of the file we want to
+                        //display in the bundle, pass that bundle along, then call
+                        //DisplayOneMFF to display the single selected fact, replace
+                        //the root fragment depending on which fragment called this fragment
+                        //originally
+
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+                        DisplayOneMFF display = new DisplayOneMFF();
+                        Bundle newArgs = new Bundle();
+                        ParserMathFunFact MFF = (ParserMathFunFact) parent.getItemAtPosition(position);
+                        newArgs.putString("MFFFile", MFF.getFilename());
+                        display.setArguments(newArgs);
+
+                            ft.replace(R.id.search_root, display);
+
+
+                        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                        ft.addToBackStack(null);
+                        ft.commit();
+
+                    }
+                }
+        );
+        final TextView errorMessage = (TextView) v.findViewById(R.id.errorMessage);
+
+        TextView search = (TextView) v.findViewById(R.id.editText);
+        TextWatcher listener = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ArrayList<ParserMathFunFact> searchResults = doSearch(s.toString());
+                char[] c = "".toCharArray();
+                if (searchResults.size() == 0 && s.length() != 0){
+                    c = "No result found, please try again".toCharArray();
+
+                }
+                //set the error message
+                errorMessage.setText(c,0,c.length);
+                ListAdapter searchResultAdapter;
+                if(s.length() != 0){
+                    searchResultAdapter = new CustomAdapterByRating(getContext(),searchResults);
+                }
+                else{
+                    searchResultAdapter = new CustomAdapterByRating(getContext(),collection.getAllMathFunFactsSortedByRating());
+                }
+
+                ListView difficultyListView = (ListView) v.findViewById(R.id.listView);
+                difficultyListView.setAdapter(searchResultAdapter);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+
+
+        };
+        search.addTextChangedListener(listener);
+
 
         // Inflate the layout for this fragment
 
         return v;
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public ArrayList<ParserMathFunFact> doSearch(String s) {
 
-        // Implementing ActionBar Search inside a fragment
-        MenuItem item = menu.add("Search");
+        ArrayList<ParserMathFunFact> results = new ArrayList<ParserMathFunFact>();
 
-
-        item.setIcon(R.drawable.favorite_fragment_tab_icon_un_selected); // sets icon
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        SearchView sv = new SearchView(getActivity());
-
-        // modifying the text inside edittext component
-        int id = sv.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
-        TextView textView = (TextView) sv.findViewById(id);
-        textView.setHint("Search location...");
-        //textView.setHintTextColor(getResources().getColor(R.color.DarkGray));
-        //textView.setTextColor(getResources().getColor(R.color.clouds));
-
-        // implementing the listener
-        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                if (s.length() < 3) {
-                    Toast.makeText(getActivity(),
-                            "Your search query must be at least 3 characters long",
-                            Toast.LENGTH_LONG).show();
-                    return true;
-                } else {
-                    filenames = doSearch(s);
-
-                    if(filenames.size() == 0){
-                        Toast.makeText(getActivity(),
-                                "No result found, please try again",
-                                Toast.LENGTH_LONG).show();
-                        return false;
-                    }
-
-                    FragmentTransaction ft = getFragmentManager().beginTransaction();
-                    Bundle args = new Bundle();
-                    args.putStringArrayList("filenames",filenames);
-
-                    ListMFFs list = new ListMFFs();
-                    list.setArguments(args);
-
-
-                    ft.replace(R.id.search_root, list);
-                    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                    ft.addToBackStack(null);
-                    ft.commit();
-                    return false;
-                }
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return true;
-            }
-        });
-        item.setActionView(sv);
-
-//        actionBar.setCustomView(sv);
-    }
-
-    public ArrayList<String> doSearch(String s) {
-
-        ArrayList<String> results = new ArrayList<>();
-
-        MathFunFactsCollection collection = new MathFunFactsCollection(getContext());
 
         List<ParserMathFunFact> allFacts = collection.getAllMathFunFacts();
         ListIterator<ParserMathFunFact> iter = allFacts.listIterator();
+        if(s.isEmpty()) return results;
         if(s.charAt(0)==' ') {
             String copy = "";
             int l = s.length();
@@ -148,15 +171,14 @@ public class Tab5Fragment extends Fragment {
         while (iter.hasNext()) {
             
             ParserMathFunFact mathfunfact = iter.next();
-            String file = mathfunfact.getFilename();
 
             if(mathfunfact.getTitle().toLowerCase().contains(s.toLowerCase())) {
 
-                results.add(file);
+                results.add(mathfunfact);
                 Log.d("Title ++ title", mathfunfact.getTitle() +  "++" + mathfunfact.getTitle());
             }
             else if(mathfunfact.getKeywords().toLowerCase().contains(s.toLowerCase())) {
-                results.add((file));
+                results.add(mathfunfact);
                 Log.d("Title ++ keywords", mathfunfact.getTitle() + "++" + mathfunfact.getKeywords());
             }
         }
@@ -166,7 +188,6 @@ public class Tab5Fragment extends Fragment {
 
     public void onDestroyView() {
         super.onDestroyView();
-        setHasOptionsMenu(false);
         // not cleaning up.
     }
 }

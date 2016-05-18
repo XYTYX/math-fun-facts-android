@@ -6,12 +6,32 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:editable="true"
+        android:elegantTextHeight="false"
+        android:freezesText="false"
+        android:width="@dimen/tab_max_width" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:headerDividersEnabled="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Search above!"
-        android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/errorMessage"
+        android:soundEffectsEnabled="false"
+        android:editable="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16dp" />
 </RelativeLayout>
