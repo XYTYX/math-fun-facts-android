@@ -33,7 +33,7 @@ public class MathFunFactsCollection {
 
     /**
      * find all the MathFunFacts with a certain level
-     *helper method for the search by level fragment
+     * helper method for the search by level fragment
      * @param level
      * @return  ArrayList<ParserMathFunFact>
      */
