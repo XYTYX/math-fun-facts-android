@@ -53,7 +53,7 @@ public class Tab2Fragment extends Fragment {
                         //DisplayOneMFF to display the single selected fact, replace
                         //the root fragment
 
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         Bundle args = new Bundle();
                         args.putString("MFFFile", MFF.getFilename());
 
@@ -63,7 +63,7 @@ public class Tab2Fragment extends Fragment {
                         ft.replace(R.id.fav_root, oneMFF);
                         ft.addToBackStack(null);
                         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                        ft.addToBackStack(null);
+                        //ft.addToBackStack(null);
                         ft.commit();
                     }
                 }

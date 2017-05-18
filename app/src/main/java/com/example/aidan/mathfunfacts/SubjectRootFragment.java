@@ -22,12 +22,13 @@ public class SubjectRootFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_subject_root, container, false);
 
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.addToBackStack(null);
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
 
         ft.replace(R.id.subject_root, new Tab4Fragment());
 
+
+        //ft.addToBackStack(null);
         ft.commit();
 
         return view;

@@ -69,7 +69,7 @@ public class Tab4Fragment extends Fragment {
                     //DisplayOneMFF to display the single selected fact, replace
                     //the root fragment
 
-                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                     Bundle args = new Bundle();
                     args.putStringArrayList("subject", fileNamesForSubject);
 

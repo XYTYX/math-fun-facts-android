@@ -22,8 +22,8 @@ public class FavoritesRootFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_difficulty_root, container, false);
 
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.addToBackStack(null);
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        //ft.addToBackStack(null);
 
         ft.replace(R.id.favorites_root, new Tab2Fragment());
 

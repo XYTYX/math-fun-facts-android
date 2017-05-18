@@ -69,7 +69,7 @@ public class Tab5Fragment extends Fragment {
                         //the root fragment depending on which fragment called this fragment
                         //originally
 
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
                         DisplayOneMFF display = new DisplayOneMFF();
                         Bundle newArgs = new Bundle();

@@ -25,12 +25,11 @@ public class SearchRootFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search_root, container, false);
 
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.addToBackStack(null);
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 
 
         ft.replace(R.id.search_root, new Tab5Fragment());
-
+        //ft.addToBackStack(null);
         ft.commit();
 
         return view;
