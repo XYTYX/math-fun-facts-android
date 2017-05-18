@@ -51,6 +51,8 @@ public class DisplayOneMFF extends Fragment {
                     Bundle args = new Bundle();
                     args.putString("random","");
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.addToBackStack(null);
+
 
                     DisplayOneMFF disp = new DisplayOneMFF();
                     disp.setArguments(args);

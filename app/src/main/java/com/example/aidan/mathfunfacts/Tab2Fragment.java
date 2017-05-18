@@ -61,6 +61,7 @@ public class Tab2Fragment extends Fragment {
                         oneMFF.setArguments(args);
 
                         ft.replace(R.id.fav_root, oneMFF);
+                        ft.addToBackStack(null);
                         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                         ft.addToBackStack(null);
                         ft.commit();

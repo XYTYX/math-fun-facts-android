@@ -26,6 +26,8 @@ public class SearchRootFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_search_root, container, false);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.addToBackStack(null);
+
 
         ft.replace(R.id.search_root, new Tab5Fragment());
 

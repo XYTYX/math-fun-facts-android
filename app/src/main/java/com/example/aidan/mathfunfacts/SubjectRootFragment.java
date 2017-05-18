@@ -23,6 +23,8 @@ public class SubjectRootFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_subject_root, container, false);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.addToBackStack(null);
+
 
         ft.replace(R.id.subject_root, new Tab4Fragment());
 
